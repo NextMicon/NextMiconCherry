@@ -1,299 +1,502 @@
 (kicad_pcb
-  (version 20240108)
-  (generator "pcbnew")
-  (generator_version "8.0")
-  (general
-    (thickness 1.6)
-    (legacy_teardrops no)
-  )
-  (paper "A4")
-  (title_block
-    (title "Cherry FPGA Dev Board")
-    (company "NextMicon")
-    (rev "1.0")
-    (date "2026-04-01")
-    (comment 1 "50mm x 35mm, 2-layer, 1.6mm FR4")
-  )
-  (layers
-    (0 "F.Cu" signal)
-    (31 "B.Cu" signal)
-    (32 "B.Adhes" user "B.Adhesive")
-    (33 "F.Adhes" user "F.Adhesive")
-    (34 "B.Paste" user)
-    (35 "F.Paste" user)
-    (36 "B.SilkS" user "B.Silkscreen")
-    (37 "F.SilkS" user "F.Silkscreen")
-    (38 "B.Mask" user)
-    (39 "F.Mask" user)
-    (44 "Edge.Cuts" user)
-    (45 "Margin" user)
-    (46 "B.CrtYd" user "B.Courtyard")
-    (47 "F.CrtYd" user "F.Courtyard")
-    (48 "B.Fab" user)
-    (49 "F.Fab" user)
-  )
-  (setup
-    (stackup
-      (layer "F.SilkS" (type "Top Silk Screen"))
-      (layer "F.Paste" (type "Top Solder Paste"))
-      (layer "F.Mask" (type "Top Solder Mask") (thickness 0.01))
-      (layer "F.Cu" (type "copper") (thickness 0.035))
-      (layer "dielectric 1" (type "core") (thickness 1.51) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
-      (layer "B.Cu" (type "copper") (thickness 0.035))
-      (layer "B.Mask" (type "Bottom Solder Mask") (thickness 0.01))
-      (layer "B.Paste" (type "Bottom Solder Paste"))
-      (layer "B.SilkS" (type "Bottom Silk Screen"))
-      (copper_finish "HASL with lead")
-    )
-    (pad_to_mask_clearance 0.05)
-    (allow_soldermask_bridges_in_footprints no)
-    (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
-      (plot_on_all_layers_selection 0x0000000_00000000)
-      (disableapertmacros no)
-      (usegerberextensions yes)
-      (usegerberattributes yes)
-      (usegerberadvancedattributes yes)
-      (creategerberjobfile yes)
-      (svguseinch no)
-      (svgprecision 4)
-      (excludeedgelayer yes)
-      (plotframeref no)
-      (viasonmask no)
-      (mode 1)
-      (useauxorigin no)
-      (hpglpennumber 1)
-      (hpglpenspeed 20)
-      (hpglpendiameter 15.000000)
-      (pdf_front_fp_property_popups yes)
-      (pdf_back_fp_property_popups yes)
-      (dxfpolygonmode yes)
-      (dxfimperialunits yes)
-      (dxfusepcbnewfont yes)
-      (psnegative no)
-      (psa4output no)
-      (plotreference yes)
-      (plotvalue yes)
-      (plotfptext yes)
-      (plotinvisibletext no)
-      (sketchpadsonfab no)
-      (subtractmaskfromsilk no)
-      (outputformat 1)
-      (mirror no)
-      (drillshape 1)
-      (scaleselection 1)
-      (outputdirectory "../out/")
-    )
-    (grid_origin 0 0)
-  )
-
-  ;; ================================================================
-  ;; DESIGN RULES
-  ;; ================================================================
-  (net_class "Default" ""
-    (clearance 0.2)
-    (trace_width 0.2)
-    (via_diameter 0.6)
-    (via_drill 0.3)
-    (uvia_diameter 0.3)
-    (uvia_drill 0.1)
-    (diff_pair_width 0.2)
-    (diff_pair_gap 0.15)
-  )
-  (net_class "Power" "Power traces - wider for current capacity"
-    (clearance 0.25)
-    (trace_width 0.5)
-    (via_diameter 0.8)
-    (via_drill 0.4)
-  )
-  (net_class "USB" "USB differential pair"
-    (clearance 0.2)
-    (trace_width 0.3)
-    (via_diameter 0.6)
-    (via_drill 0.3)
-    (diff_pair_width 0.3)
-    (diff_pair_gap 0.15)
-  )
-
-  ;; ================================================================
-  ;; NETS
-  ;; ================================================================
-  (net 0 "")
-  (net 1 "GND")
-  (net 2 "+5V")
-  (net 3 "+3V3")
-  (net 4 "+1V2")
-  (net 5 "USB_DP")
-  (net 6 "USB_DM")
-  (net 7 "SPI_SCK")
-  (net 8 "SPI_MOSI")
-  (net 9 "SPI_MISO")
-  (net 10 "SPI_SS_FLASH")
-  (net 11 "SPI_SS_FPGA")
-  (net 12 "CRESET_B")
-  (net 13 "CDONE")
-  (net 14 "UART_TX")
-  (net 15 "UART_RX")
-  (net 16 "XTAL1")
-  (net 17 "XTAL2")
-  (net 18 "VBUS")
-  (net 19 "GPIO_0")
-  (net 20 "GPIO_1")
-  (net 21 "GPIO_2")
-  (net 22 "GPIO_3")
-  (net 23 "GPIO_4")
-  (net 24 "GPIO_5")
-  (net 25 "GPIO_6")
-  (net 26 "GPIO_7")
-  (net 27 "GPIO_8")
-  (net 28 "GPIO_9")
-
-  ;; ================================================================
-  ;; BOARD OUTLINE (50mm x 35mm with rounded corners)
-  ;; Origin at (100, 80), board extends to (150, 115)
-  ;; ================================================================
-  (gr_line (start 102 80) (end 148 80)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000001-0000-0000-0000-000000000001"))
-  (gr_arc (start 148 80) (mid 149.414 80.586) (end 150 82)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000002-0000-0000-0000-000000000001"))
-  (gr_line (start 150 82) (end 150 113)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000003-0000-0000-0000-000000000001"))
-  (gr_arc (start 150 113) (mid 149.414 114.414) (end 148 115)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000004-0000-0000-0000-000000000001"))
-  (gr_line (start 148 115) (end 102 115)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000005-0000-0000-0000-000000000001"))
-  (gr_arc (start 102 115) (mid 100.586 114.414) (end 100 113)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000006-0000-0000-0000-000000000001"))
-  (gr_line (start 100 113) (end 100 82)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000007-0000-0000-0000-000000000001"))
-  (gr_arc (start 100 82) (mid 100.586 80.586) (end 102 80)
-    (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (uuid "40000008-0000-0000-0000-000000000001"))
-
-  ;; ================================================================
-  ;; MOUNTING HOLES (M2, 4 corners)
-  ;; ================================================================
-  (footprint "MountingHole:MountingHole_2.2mm_M2" (layer "F.Cu")
-    (uuid "50000001-0000-0000-0000-000000000001")
-    (at 103 83)
-    (property "Reference" "H1" (at 0 -2.5 0) (layer "F.SilkS") (uuid "50000001-0001-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (property "Value" "MountingHole" (at 0 2.5 0) (layer "F.Fab") (uuid "50000001-0002-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (pad "" thru_hole circle (at 0 0) (size 4.4 4.4) (drill 2.2) (layers "*.Cu" "*.Mask"))
-  )
-  (footprint "MountingHole:MountingHole_2.2mm_M2" (layer "F.Cu")
-    (uuid "50000002-0000-0000-0000-000000000001")
-    (at 147 83)
-    (property "Reference" "H2" (at 0 -2.5 0) (layer "F.SilkS") (uuid "50000002-0001-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (property "Value" "MountingHole" (at 0 2.5 0) (layer "F.Fab") (uuid "50000002-0002-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (pad "" thru_hole circle (at 0 0) (size 4.4 4.4) (drill 2.2) (layers "*.Cu" "*.Mask"))
-  )
-  (footprint "MountingHole:MountingHole_2.2mm_M2" (layer "F.Cu")
-    (uuid "50000003-0000-0000-0000-000000000001")
-    (at 103 112)
-    (property "Reference" "H3" (at 0 -2.5 0) (layer "F.SilkS") (uuid "50000003-0001-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (property "Value" "MountingHole" (at 0 2.5 0) (layer "F.Fab") (uuid "50000003-0002-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (pad "" thru_hole circle (at 0 0) (size 4.4 4.4) (drill 2.2) (layers "*.Cu" "*.Mask"))
-  )
-  (footprint "MountingHole:MountingHole_2.2mm_M2" (layer "F.Cu")
-    (uuid "50000004-0000-0000-0000-000000000001")
-    (at 147 112)
-    (property "Reference" "H4" (at 0 -2.5 0) (layer "F.SilkS") (uuid "50000004-0001-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (property "Value" "MountingHole" (at 0 2.5 0) (layer "F.Fab") (uuid "50000004-0002-0000-0000-000000000001") (effects (font (size 1 1) (thickness 0.15))))
-    (pad "" thru_hole circle (at 0 0) (size 4.4 4.4) (drill 2.2) (layers "*.Cu" "*.Mask"))
-  )
-
-  ;; ================================================================
-  ;; SILKSCREEN - Board info and component placement guide
-  ;; ================================================================
-  (gr_text "Cherry" (at 125 82.5) (layer "F.SilkS") (uuid "60000001-0000-0000-0000-000000000001")
-    (effects (font (size 2 2) (thickness 0.3)) (justify left))
-  )
-  (gr_text "NextMicon" (at 125 114) (layer "F.SilkS") (uuid "60000002-0000-0000-0000-000000000001")
-    (effects (font (size 1 1) (thickness 0.15)) (justify left))
-  )
-
-  ;; Component placement guide (silkscreen text)
-  ;; USB-C connector: left edge, centered vertically
-  (gr_text "USB-C" (at 103 97.5) (layer "F.SilkS") (uuid "60000010-0000-0000-0000-000000000001")
-    (effects (font (size 0.8 0.8) (thickness 0.12)) (justify left))
-  )
-  ;; FT2232H: center-left area
-  (gr_text "U1" (at 113 97.5) (layer "F.SilkS") (uuid "60000011-0000-0000-0000-000000000001")
-    (effects (font (size 0.8 0.8) (thickness 0.12)))
-  )
-  ;; iCE40: center-right area
-  (gr_text "U2" (at 130 97.5) (layer "F.SilkS") (uuid "60000012-0000-0000-0000-000000000001")
-    (effects (font (size 0.8 0.8) (thickness 0.12)))
-  )
-  ;; SPI Flash: near iCE40, lower
-  (gr_text "U3" (at 130 107) (layer "F.SilkS") (uuid "60000013-0000-0000-0000-000000000001")
-    (effects (font (size 0.8 0.8) (thickness 0.12)))
-  )
-  ;; LDOs: top area
-  (gr_text "3.3V" (at 118 87) (layer "F.SilkS") (uuid "60000014-0000-0000-0000-000000000001")
-    (effects (font (size 0.8 0.8) (thickness 0.12)))
-  )
-  (gr_text "1.2V" (at 128 87) (layer "F.SilkS") (uuid "60000015-0000-0000-0000-000000000001")
-    (effects (font (size 0.8 0.8) (thickness 0.12)))
-  )
-  ;; GPIO Header: right edge
-  (gr_text "GPIO" (at 145 97.5) (layer "F.SilkS") (uuid "60000016-0000-0000-0000-000000000001")
-    (effects (font (size 0.8 0.8) (thickness 0.12)))
-  )
-
-  ;; ================================================================
-  ;; GROUND POUR (B.Cu) - Full ground plane on back copper
-  ;; ================================================================
-  (zone (net 1) (net_name "GND") (layer "B.Cu") (uuid "70000001-0000-0000-0000-000000000001")
-    (hatch edge 0.5)
-    (connect_pads (clearance 0.3))
-    (min_thickness 0.2)
-    (fill yes (thermal_gap 0.5) (thermal_bridge_width 0.5))
-    (polygon
-      (pts
-        (xy 100 80) (xy 150 80) (xy 150 115) (xy 100 115)
-      )
-    )
-  )
-
-  ;; ================================================================
-  ;; COMPONENT PLACEMENT GUIDE (text notes on Fab layer)
-  ;; ================================================================
-  ;; Approximate component positions for PCB layout:
-  ;;
-  ;; PLACEMENT STRATEGY (50mm x 35mm board):
-  ;;
-  ;; TOP EDGE (y=80-88):
-  ;;   - LDO 3.3V (U4) at ~(118, 85)
-  ;;   - LDO 1.2V (U5) at ~(128, 85)
-  ;;   - Power decoupling caps nearby
-  ;;
-  ;; LEFT EDGE (x=100-108):
-  ;;   - USB-C connector (J1) at ~(100, 97.5), edge-mounted
-  ;;   - Ferrite bead (FB1) near USB connector
-  ;;
-  ;; CENTER-LEFT (x=108-120):
-  ;;   - FT2232HL (U1) at ~(113, 97.5)
-  ;;   - 12MHz crystal (Y1) near OSCI/OSCO pins
-  ;;   - Crystal load caps (C13-C14) near crystal
-  ;;   - FT2232H decoupling caps (C1-C4) near power pins
-  ;;
-  ;; CENTER-RIGHT (x=125-138):
-  ;;   - iCE40LP8K (U2) at ~(130, 97.5)
-  ;;   - iCE40 decoupling caps (C5-C8) near power pins
-  ;;   - W25Q32 Flash (U3) at ~(130, 107)
-  ;;   - Flash decoupling cap (C9) near flash
-  ;;
-  ;; RIGHT EDGE (x=140-150):
-  ;;   - GPIO header (J2) at ~(146, 97.5), edge-mounted
-  ;;   - LEDs (D1-D4) near header
-  ;;   - Buttons (SW1-SW2) near header
-  ;;
-  ;; BOTTOM LAYER:
-  ;;   - Full GND pour
-  ;;   - Additional routing as needed
-
-  (gr_text "COMPONENT PLACEMENT:\nJ1(USB-C): left edge\nU1(FT2232H): center-left\nU2(iCE40): center-right\nU3(Flash): below U2\nU4(3.3V): top center-left\nU5(1.2V): top center-right\nJ2(GPIO): right edge"
-    (at 125 97.5) (layer "F.Fab") (uuid "80000001-0000-0000-0000-000000000001")
-    (effects (font (size 1 1) (thickness 0.15)) (justify left))
-  )
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(general
+		(thickness 1.6)
+		(legacy_teardrops no)
+	)
+	(paper "A4")
+	(title_block
+		(title "Cherry FPGA Dev Board")
+		(date "2026-06-01")
+		(rev "1.0")
+		(company "Next Micon")
+		(comment 1 "51mm x 21mm (Raspberry Pi Pico compatible)")
+		(comment 2 "2-layer, 1.6mm FR4")
+	)
+	(layers
+		(0 "F.Cu" signal)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+	)
+	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "HASL with lead")
+			(dielectric_constraints no)
+		)
+		(pad_to_mask_clearance 0.05)
+		(allow_soldermask_bridges_in_footprints no)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
+		(pcbplotparams
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+			(disableapertmacros no)
+			(usegerberextensions yes)
+			(usegerberattributes yes)
+			(usegerberadvancedattributes yes)
+			(creategerberjobfile yes)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
+			(svgprecision 4)
+			(plotframeref no)
+			(mode 1)
+			(useauxorigin no)
+			(pdf_front_fp_property_popups yes)
+			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
+			(dxfpolygonmode yes)
+			(dxfimperialunits yes)
+			(dxfusepcbnewfont yes)
+			(psnegative no)
+			(psa4output no)
+			(plot_black_and_white yes)
+			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
+			(subtractmaskfromsilk no)
+			(outputformat 1)
+			(mirror no)
+			(drillshape 1)
+			(scaleselection 1)
+			(outputdirectory "../out/")
+		)
+	)
+	(footprint "Cherry:MountingHole_2.1mm_M2"
+		(layer "F.Cu")
+		(uuid "50000001-0000-0000-0000-000000000001")
+		(at 102 84.8)
+		(property "Reference" "H1"
+			(at 0 -2.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "50000001-0001-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "50000001-0002-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "da4a2a21-9909-4a2a-a92c-cc8ecc96f480")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7c5952e4-cb78-4c07-a231-80502cae35c8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(duplicate_pad_numbers_are_jumpers no)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 3.8 3.8)
+			(drill 2.1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "97f6ef80-6c19-4dca-8ed7-9962066ede9d")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Cherry:MountingHole_2.1mm_M2"
+		(layer "F.Cu")
+		(uuid "50000002-0000-0000-0000-000000000001")
+		(at 149 84.8)
+		(property "Reference" "H2"
+			(at 0 -2.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "50000002-0001-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "50000002-0002-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3c0db5a2-02f6-4d79-b92b-b128c07f8d88")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "64e7d642-b0af-4744-a9d1-3bf66f656184")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(duplicate_pad_numbers_are_jumpers no)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 3.8 3.8)
+			(drill 2.1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "d046f6ec-367e-483b-9d96-f2949621c0c5")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Cherry:MountingHole_2.1mm_M2"
+		(layer "F.Cu")
+		(uuid "50000003-0000-0000-0000-000000000001")
+		(at 102 96.2)
+		(property "Reference" "H3"
+			(at 0 -2.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "50000003-0001-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "50000003-0002-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a0c2d382-a6eb-4d77-82f0-4120a4800735")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1275278e-49b4-4472-8df5-f2d4af7671c7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(duplicate_pad_numbers_are_jumpers no)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 3.8 3.8)
+			(drill 2.1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "e7c11d8a-4e81-4b19-aacf-e64c4426f204")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Cherry:MountingHole_2.1mm_M2"
+		(layer "F.Cu")
+		(uuid "50000004-0000-0000-0000-000000000001")
+		(at 149 96.2)
+		(property "Reference" "H4"
+			(at 0 -2.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "50000004-0001-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 2.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "50000004-0002-0000-0000-000000000001")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b7d05adf-8e81-4f07-902b-0ed22baa78ef")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "37828d04-1f96-4f93-b43a-ec490ddeb574")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(duplicate_pad_numbers_are_jumpers no)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 3.8 3.8)
+			(drill 2.1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "a0362aeb-84bc-467b-a68a-fa423d0418f0")
+		)
+		(embedded_fonts no)
+	)
+	(gr_arc
+		(start 100 80.5)
+		(mid 100.146447 80.146447)
+		(end 100.5 80)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000008-0000-0000-0000-000000000001")
+	)
+	(gr_line
+		(start 100 100.5)
+		(end 100 80.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000007-0000-0000-0000-000000000001")
+	)
+	(gr_line
+		(start 100.5 80)
+		(end 150.5 80)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000001-0000-0000-0000-000000000001")
+	)
+	(gr_arc
+		(start 100.5 101)
+		(mid 100.146447 100.853553)
+		(end 100 100.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000006-0000-0000-0000-000000000001")
+	)
+	(gr_arc
+		(start 150.5 80)
+		(mid 150.853553 80.146447)
+		(end 151 80.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000002-0000-0000-0000-000000000001")
+	)
+	(gr_line
+		(start 150.5 101)
+		(end 100.5 101)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000005-0000-0000-0000-000000000001")
+	)
+	(gr_line
+		(start 151 80.5)
+		(end 151 100.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000003-0000-0000-0000-000000000001")
+	)
+	(gr_arc
+		(start 151 100.5)
+		(mid 150.853553 100.853553)
+		(end 150.5 101)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "40000004-0000-0000-0000-000000000001")
+	)
+	(gr_text "NextMicon"
+		(at 133.5 93.5 0)
+		(layer "F.SilkS")
+		(uuid "60000002-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "Cherry"
+		(at 133.5 90 0)
+		(layer "F.SilkS")
+		(uuid "60000001-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left)
+		)
+	)
+	(zone
+		(net "GND")
+		(layer "B.Cu")
+		(uuid "70000001-0000-0000-0000-000000000001")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0.3)
+		)
+		(min_thickness 0.2)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 100 80) (xy 151 80) (xy 151 101) (xy 100 101)
+			)
+		)
+	)
+	(embedded_fonts no)
 )

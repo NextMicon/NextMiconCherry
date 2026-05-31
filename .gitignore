@@ -1,2 +1,4 @@
 out/*
 **.lck
+*.kicad_prl
+*-backups/
