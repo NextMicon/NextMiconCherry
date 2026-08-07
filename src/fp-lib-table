@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Cherry")(type "KiCad")(uri "${KIPRJMOD}/../lib/footprints/Cherry.pretty")(options "")(descr "Cherry project local footprints"))
+)
