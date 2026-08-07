@@ -3541,7 +3541,7 @@
 	(footprint "Cherry:R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "4c0b1ca8-00a7-40b3-b760-c6a1feaffc70")
-		(at 155.9 91.5)
+		(at 151.5 91.5)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R17"
@@ -6965,7 +6965,7 @@
 	(footprint "Cherry:LED_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "8d074c11-8ea8-4724-a761-ffe87d3a0faa")
-		(at 158.7 89.5)
+		(at 154.3 89.5)
 		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
 		(tags "LED")
 		(property "Reference" "D3"
@@ -7478,7 +7478,7 @@
 	(footprint "Cherry:PinHeader_2x06_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "98f2c50f-83ae-4581-aba3-e1e3d9310ec7")
-		(at 148.36 90.5)
+		(at 158.52 90.5)
 		(descr "Pin header 2x06, 2.54mm pitch, vertical, odd-even numbering, origin at center")
 		(tags "pin header 2x06")
 		(property "Reference" "J3"
@@ -9061,7 +9061,7 @@
 	(footprint "Cherry:SW_Push_1P1T_NO_CK_KMR2"
 		(layer "F.Cu")
 		(uuid "c0cf543c-d3b8-4a42-937b-3abc1026c26f")
-		(at 157.6 85.6)
+		(at 152.5 85.6)
 		(descr "CK components KMR2 tactile switch http://www.ckswitches.com/media/1479/kmr2.pdf")
 		(tags "tactile switch kmr2")
 		(property "Reference" "SW1"
@@ -10550,7 +10550,7 @@
 	(footprint "Cherry:SW_Push_1P1T_NO_CK_KMR2"
 		(layer "F.Cu")
 		(uuid "cbac6dc0-00cd-4bc8-a32b-e3b772eb5431")
-		(at 157.6 95.4)
+		(at 152.5 95.4)
 		(descr "CK components KMR2 tactile switch http://www.ckswitches.com/media/1479/kmr2.pdf")
 		(tags "tactile switch kmr2")
 		(property "Reference" "SW2"
@@ -11378,7 +11378,7 @@
 	(footprint "Cherry:R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "e61c647b-3ec1-4c65-8dfe-efb12bfb4186")
-		(at 155.4 92.9)
+		(at 151 92.9)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R12"
@@ -12306,7 +12306,7 @@
 	(footprint "Cherry:R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "f75bb22e-c12c-4da1-bb1f-6858a245ba13")
-		(at 155.9 89.5)
+		(at 151.5 89.5)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R16"
@@ -12624,7 +12624,7 @@
 	(footprint "Cherry:LED_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "ffa8ba78-a546-4c7e-9c4f-48602fed46c8")
-		(at 158.7 91.5)
+		(at 154.3 91.5)
 		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
 		(tags "LED")
 		(property "Reference" "D4"
