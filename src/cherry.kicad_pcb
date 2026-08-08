@@ -7478,7 +7478,7 @@
 	(footprint "Cherry:PinHeader_1x06_P2.54mm"
 		(layer "F.Cu")
 		(uuid "d58a626a-a078-4d2d-9def-20f0193d2053")
-		(at 158.52 90.5 90)
+		(at 159.81 90.5 90)
 		(descr "Pin header 1x06, 2.54mm pitch, vertical, origin at center")
 		(tags "pin header 1x06")
 		(property "Reference" "J3"
