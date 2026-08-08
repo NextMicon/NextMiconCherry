@@ -33,4 +33,15 @@
 	(fp_line (start 1.6 -0.9) (end 1.6 0.9) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "bb778d80-fc87-4b97-947a-7ad31147ecf7"))
 	(fp_line (start 1.6 0.9) (end -1.6 0.9) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "9f582b57-1140-4e21-ac7b-5afd6ccf43a1"))
 	(fp_line (start -1.6 0.9) (end -1.6 -0.9) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "ced5c7ed-3d1f-4c1a-bf58-c337f9150c70"))
+	(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

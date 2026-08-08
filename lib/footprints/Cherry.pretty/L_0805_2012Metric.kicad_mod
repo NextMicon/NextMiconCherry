@@ -33,4 +33,15 @@
 	(fp_line (start 1.6 -0.9) (end 1.6 0.9) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "9a55711e-9ad7-4906-8f0b-b051073ee0ac"))
 	(fp_line (start 1.6 0.9) (end -1.6 0.9) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "680644f2-15cc-4114-a926-9ddadce1f233"))
 	(fp_line (start -1.6 0.9) (end -1.6 -0.9) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "2fba4622-e91e-4213-972b-6c84da901135"))
+	(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_0805_2012Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

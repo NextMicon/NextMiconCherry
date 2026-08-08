@@ -117,4 +117,15 @@
 	(fp_line (start 4.5 -4.5) (end 4.5 4.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "d8a3a4c8-bbf3-4859-95a7-701e11237ecb"))
 	(fp_line (start 4.5 4.5) (end -4.5 4.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "9bd2a7d3-a204-4f73-8118-86ffbc1cc79e"))
 	(fp_line (start -4.5 4.5) (end -4.5 -4.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "cee72eec-71d2-45d4-b599-7726eb8d4cd7"))
+	(model "${KICAD10_3DMODEL_DIR}/Package_BGA.3dshapes/TFBGA-100_8x8mm_Layout10x10_P0.8mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
