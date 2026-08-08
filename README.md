@@ -10,12 +10,12 @@ FPGA Board for Beginners
 
 ## Specs
 
-- FPGA: Lattice iCE40LP8K (7680 LUTs, BGA-81)
-- USB: FT2232HL (Channel A: SPI -> Flash, Channel B: UART -> FPGA)
+- FPGA: Lattice iCE40LP8K (7680 LUTs)
+- USB: FT2232HL (Ch A: SPI -> Flash, Ch B: UART -> FPGA)
 - Flash: W25Q32 (32Mbit SPI, auto-boot)
-- Power: USB 5V -> 3.3V (AMS1117) -> 1.2V (AP2112K)
-- GPIO: 2x20 castellated + through-hole pins, 2.54mm pitch (3.3V logic)
-- Board: 51mm x 21mm (Raspberry Pi Pico compatible footprint), 2-layer FR4
+- Power: USB 5V -> 3.3V -> 1.2V
+- GPIO: 24 PinHeader x2 (3.3V logic)
+- Board: 51mm x 21mm, 2-layer FR4
 
 ## BOM
 

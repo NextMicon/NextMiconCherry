@@ -7123,7 +7123,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 210.82) (xy 83.82 210.82)
+			(xy 54.61 210.82) (xy 64.77 210.82)
 		)
 		(stroke
 			(width 0)
@@ -7623,7 +7623,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 223.52) (xy 83.82 224.79)
+			(xy 64.77 223.52) (xy 64.77 224.79)
 		)
 		(stroke
 			(width 0)
@@ -7633,7 +7633,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 213.36) (xy 68.58 215.9)
+			(xy 71.12 213.36) (xy 71.12 215.9)
 		)
 		(stroke
 			(width 0)
@@ -8663,7 +8663,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 213.36) (xy 68.58 213.36)
+			(xy 54.61 213.36) (xy 71.12 213.36)
 		)
 		(stroke
 			(width 0)
@@ -9313,7 +9313,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 210.82) (xy 83.82 215.9)
+			(xy 64.77 210.82) (xy 64.77 215.9)
 		)
 		(stroke
 			(width 0)
@@ -9733,7 +9733,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 223.52) (xy 68.58 224.79)
+			(xy 71.12 223.52) (xy 71.12 224.79)
 		)
 		(stroke
 			(width 0)
@@ -14144,7 +14144,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:R")
-		(at 83.82 219.71 0)
+		(at 64.77 219.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14154,7 +14154,7 @@
 		(dnp no)
 		(uuid "2436cd1d-1a77-5a1b-b66b-e22f9f805b31")
 		(property "Reference" "R5"
-			(at 80.37 218.01 0)
+			(at 61.32 218.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14164,7 +14164,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 79.32 221.41 0)
+			(at 60.27 221.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14174,7 +14174,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:R_0402_1005Metric"
-			(at 83.82 219.71 0)
+			(at 64.77 219.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14185,7 +14185,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 219.71 0)
+			(at 64.77 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14195,7 +14195,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.82 219.71 0)
+			(at 64.77 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14665,7 +14665,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 68.58 224.79 0)
+		(at 71.12 224.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14675,7 +14675,7 @@
 		(dnp no)
 		(uuid "2cc291e5-1270-5165-a937-8c78ef4abe00")
 		(property "Reference" "#PWR0021"
-			(at 68.58 222.25 0)
+			(at 71.12 222.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14686,7 +14686,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 68.58 228.88 0)
+			(at 71.12 228.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14696,7 +14696,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 224.79 0)
+			(at 71.12 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14706,7 +14706,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 224.79 0)
+			(at 71.12 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14716,7 +14716,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 224.79 0)
+			(at 71.12 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17921,7 +17921,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:R")
-		(at 68.58 219.71 0)
+		(at 71.12 219.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17931,7 +17931,7 @@
 		(dnp no)
 		(uuid "5ebef0ee-7ebb-521e-8437-bf8bfcf24a31")
 		(property "Reference" "R6"
-			(at 72.03 218.01 0)
+			(at 74.57 218.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17941,7 +17941,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 73.08 221.41 0)
+			(at 75.62 221.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17951,7 +17951,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:R_0402_1005Metric"
-			(at 68.58 219.71 0)
+			(at 71.12 219.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17962,7 +17962,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 219.71 0)
+			(at 71.12 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17972,7 +17972,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 219.71 0)
+			(at 71.12 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22047,7 +22047,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 83.82 224.79 0)
+		(at 64.77 224.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22057,7 +22057,7 @@
 		(dnp no)
 		(uuid "b26b9e1f-08fe-593e-8f8b-d158ec2e7050")
 		(property "Reference" "#PWR0019"
-			(at 83.82 222.25 0)
+			(at 64.77 222.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22068,7 +22068,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.82 228.88 0)
+			(at 64.77 228.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22078,7 +22078,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 224.79 0)
+			(at 64.77 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22088,7 +22088,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 224.79 0)
+			(at 64.77 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22098,7 +22098,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.82 224.79 0)
+			(at 64.77 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
