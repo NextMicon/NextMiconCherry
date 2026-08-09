@@ -8145,17 +8145,7 @@
 			(type default)
 		)
 		(uuid "6473c414-11aa-5563-80cb-5d7e4f98a925")
-	)
-	(wire
-		(pts
-			(xy 45.72 270.51) (xy 45.72 271.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65104fce-527c-564e-890c-29eef73ce5b5")
-	)
+	)
 	(wire
 		(pts
 			(xy 259.08 58.42) (xy 261.62 58.42)
@@ -9735,17 +9725,7 @@
 			(type default)
 		)
 		(uuid "c67f54f2-35af-4490-84c9-36f645f381de")
-	)
-	(wire
-		(pts
-			(xy 45.72 262.89) (xy 45.72 261.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6c13308-ed61-550f-9d66-dcba1940f1f2")
-	)
+	)
 	(wire
 		(pts
 			(xy 345.44 99.06) (xy 350.52 99.06)
@@ -15111,81 +15091,7 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Cherry:+3V3")
-		(at 45.72 261.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2d85a503-2e5b-522b-a6f5-9c3700e8aa2b")
-		(property "Reference" "#PWR0562"
-			(at 45.72 259.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 45.72 257.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 261.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 261.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 261.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5e01e0be-3cab-4a89-82dd-5f7c37c69ca9")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "#PWR0562")
-					(unit 1)
-				)
-			)
-		)
-	)
+	)
 	(symbol
 		(lib_id "Cherry:GND")
 		(at 345.44 88.9 90)
@@ -22880,81 +22786,7 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Cherry:GND")
-		(at 45.72 271.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bc1b5e25-71ca-5147-9967-50f98e7bc09a")
-		(property "Reference" "#PWR0564"
-			(at 45.72 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 275.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 271.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 271.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 271.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c344597c-b0cd-43eb-bcd3-c4fae6f25962")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "#PWR0564")
-					(unit 1)
-				)
-			)
-		)
-	)
+	)
 	(symbol
 		(lib_id "Cherry:+3V3")
 		(at 34.29 87.63 0)
@@ -23887,84 +23719,7 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Cherry:C")
-		(at 45.72 266.7 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ccf90b57-77c1-5312-901e-d2221830c9e6")
-		(property "Reference" "C7"
-			(at 49.17 265 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF"
-			(at 50.745 268.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 45.72 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 266.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 266.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "04f2b5f8-44cc-4fb3-b9e7-d5c4e3ccc4f6")
-		)
-		(pin "1"
-			(uuid "b8a25686-f36f-430e-8c53-d834884338f0")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
+	)
 	(symbol
 		(lib_id "Cherry:C")
 		(at 227.33 266.7 0)

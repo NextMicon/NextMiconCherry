@@ -58,7 +58,7 @@ FPGA Board for Beginners
 | C5                 | 4.7uF | 0603    | 1   | FT2232H VREGOUT/VCORE                      |
 | C15, C19, C25      | 10uF  | 0805    | 3   | Rail bulk (+3V3A / +1V2 / +3V3)            |
 | C27                | 10uF  | 0603    | 1   | iCE40 VCCPLL filter                        |
-| C6-C14, C16-C18, C20-C24, C26, C28 | 100nF | 0402 | 19 | IC decoupling (C26 = VCCPLL filter) |
+| C6, C8-C14, C16-C18, C20-C24, C26, C28 | 100nF | 0402 | 18 | IC decoupling (C26 = VCCPLL filter) |
 | L1-L2              | 1uH   | 0805    | 2   | Buck inductor (pick Isat >= 1.5A)          |
 | R1 / R2            | 180k / 39.2k | 0402 | 2 | 3.3V feedback divider (1%)              |
 | R3 / R4            | 100k  | 0402    | 2   | 1.2V feedback divider (1%)                 |
