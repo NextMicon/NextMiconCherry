@@ -6206,6 +6206,427 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Cherry:FT2232HL"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -15.24 55.88 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(property "Value" "FT2232HQ"
+				(at -15.24 58.42 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(property "Footprint" "Cherry:LQFP-64_10x10mm_P0.5mm"
+				(at 0 -57.15 0)
+				(effects (font (size 1.27 1.27)) (hide yes))
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)) (hide yes))
+			)
+			(property "Description" "Dual High Speed USB 2.0 to UART/FIFO/MPSSE, QFN-64"
+				(at 0 0 0)
+				(effects (font (size 1.27 1.27)) (hide yes))
+			)
+			(symbol "FT2232HL_0_1"
+				(rectangle
+					(start -15.24 54.61)
+					(end 15.24 -54.61)
+					(stroke (width 0.254) (type default))
+					(fill (type background))
+				)
+			)
+			(symbol "FT2232HL_1_1"
+				(pin power_in line
+					(at -17.78 52.07 0)
+					(length 2.54)
+					(name "VREGIN" (effects (font (size 1.27 1.27))))
+					(number "50" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_out line
+					(at -17.78 49.53 0)
+					(length 2.54)
+					(name "VREGOUT" (effects (font (size 1.27 1.27))))
+					(number "49" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 46.99 0)
+					(length 2.54)
+					(name "VCORE" (effects (font (size 1.27 1.27))))
+					(number "12" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 44.45 0)
+					(length 2.54)
+					(name "VCORE" (effects (font (size 1.27 1.27))))
+					(number "37" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 41.91 0)
+					(length 2.54)
+					(name "VCORE" (effects (font (size 1.27 1.27))))
+					(number "64" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 39.37 0)
+					(length 2.54)
+					(name "VCCIO" (effects (font (size 1.27 1.27))))
+					(number "20" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 36.83 0)
+					(length 2.54)
+					(name "VCCIO" (effects (font (size 1.27 1.27))))
+					(number "31" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 34.29 0)
+					(length 2.54)
+					(name "VCCIO" (effects (font (size 1.27 1.27))))
+					(number "42" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 31.75 0)
+					(length 2.54)
+					(name "VCCIO" (effects (font (size 1.27 1.27))))
+					(number "56" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 29.21 0)
+					(length 2.54)
+					(name "VPHY" (effects (font (size 1.27 1.27))))
+					(number "4" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 26.67 0)
+					(length 2.54)
+					(name "VPLL" (effects (font (size 1.27 1.27))))
+					(number "9" (effects (font (size 1.27 1.27))))
+				)
+				(pin input line
+					(at -17.78 21.59 0)
+					(length 2.54)
+					(name "OSCI" (effects (font (size 1.27 1.27))))
+					(number "2" (effects (font (size 1.27 1.27))))
+				)
+				(pin output line
+					(at -17.78 19.05 0)
+					(length 2.54)
+					(name "OSCO" (effects (font (size 1.27 1.27))))
+					(number "3" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at -17.78 13.97 0)
+					(length 2.54)
+					(name "DP" (effects (font (size 1.27 1.27))))
+					(number "8" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at -17.78 11.43 0)
+					(length 2.54)
+					(name "DM" (effects (font (size 1.27 1.27))))
+					(number "7" (effects (font (size 1.27 1.27))))
+				)
+				(pin passive line
+					(at -17.78 3.81 0)
+					(length 2.54)
+					(name "REF" (effects (font (size 1.27 1.27))))
+					(number "6" (effects (font (size 1.27 1.27))))
+				)
+				(pin input line
+					(at -17.78 1.27 0)
+					(length 2.54)
+					(name "TEST" (effects (font (size 1.27 1.27))))
+					(number "13" (effects (font (size 1.27 1.27))))
+				)
+				(pin input line
+					(at -17.78 6.35 0)
+					(length 2.54)
+					(name "~{RESET}" (effects (font (size 1.27 1.27))))
+					(number "14" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -3.81 0)
+					(length 2.54)
+					(name "AGND" (effects (font (size 1.27 1.27))))
+					(number "10" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -6.35 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "1" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -8.89 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "5" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -11.43 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "11" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -13.97 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "15" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -16.51 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "25" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -19.05 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "35" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -21.59 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "47" (effects (font (size 1.27 1.27))))
+				)
+				(pin power_in line
+					(at -17.78 -24.13 0)
+					(length 2.54)
+					(name "GND" (effects (font (size 1.27 1.27))))
+					(number "51" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 52.07 180)
+					(length 2.54)
+					(name "ADBUS0" (effects (font (size 1.27 1.27))))
+					(number "16" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 49.53 180)
+					(length 2.54)
+					(name "ADBUS1" (effects (font (size 1.27 1.27))))
+					(number "17" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 46.99 180)
+					(length 2.54)
+					(name "ADBUS2" (effects (font (size 1.27 1.27))))
+					(number "18" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 44.45 180)
+					(length 2.54)
+					(name "ADBUS3" (effects (font (size 1.27 1.27))))
+					(number "19" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 41.91 180)
+					(length 2.54)
+					(name "ADBUS4" (effects (font (size 1.27 1.27))))
+					(number "21" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 39.37 180)
+					(length 2.54)
+					(name "ADBUS5" (effects (font (size 1.27 1.27))))
+					(number "22" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 36.83 180)
+					(length 2.54)
+					(name "ADBUS6" (effects (font (size 1.27 1.27))))
+					(number "23" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 34.29 180)
+					(length 2.54)
+					(name "ADBUS7" (effects (font (size 1.27 1.27))))
+					(number "24" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 29.21 180)
+					(length 2.54)
+					(name "ACBUS0" (effects (font (size 1.27 1.27))))
+					(number "26" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 26.67 180)
+					(length 2.54)
+					(name "ACBUS1" (effects (font (size 1.27 1.27))))
+					(number "27" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 24.13 180)
+					(length 2.54)
+					(name "ACBUS2" (effects (font (size 1.27 1.27))))
+					(number "28" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 21.59 180)
+					(length 2.54)
+					(name "ACBUS3" (effects (font (size 1.27 1.27))))
+					(number "29" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 19.05 180)
+					(length 2.54)
+					(name "ACBUS4" (effects (font (size 1.27 1.27))))
+					(number "30" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 16.51 180)
+					(length 2.54)
+					(name "ACBUS5" (effects (font (size 1.27 1.27))))
+					(number "32" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 13.97 180)
+					(length 2.54)
+					(name "ACBUS6" (effects (font (size 1.27 1.27))))
+					(number "33" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 11.43 180)
+					(length 2.54)
+					(name "ACBUS7" (effects (font (size 1.27 1.27))))
+					(number "34" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 6.35 180)
+					(length 2.54)
+					(name "BDBUS0" (effects (font (size 1.27 1.27))))
+					(number "38" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 3.81 180)
+					(length 2.54)
+					(name "BDBUS1" (effects (font (size 1.27 1.27))))
+					(number "39" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 1.27 180)
+					(length 2.54)
+					(name "BDBUS2" (effects (font (size 1.27 1.27))))
+					(number "40" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -1.27 180)
+					(length 2.54)
+					(name "BDBUS3" (effects (font (size 1.27 1.27))))
+					(number "41" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -3.81 180)
+					(length 2.54)
+					(name "BDBUS4" (effects (font (size 1.27 1.27))))
+					(number "43" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -6.35 180)
+					(length 2.54)
+					(name "BDBUS5" (effects (font (size 1.27 1.27))))
+					(number "44" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -8.89 180)
+					(length 2.54)
+					(name "BDBUS6" (effects (font (size 1.27 1.27))))
+					(number "45" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -11.43 180)
+					(length 2.54)
+					(name "BDBUS7" (effects (font (size 1.27 1.27))))
+					(number "46" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -16.51 180)
+					(length 2.54)
+					(name "BCBUS0" (effects (font (size 1.27 1.27))))
+					(number "48" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -19.05 180)
+					(length 2.54)
+					(name "BCBUS1" (effects (font (size 1.27 1.27))))
+					(number "52" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -21.59 180)
+					(length 2.54)
+					(name "BCBUS2" (effects (font (size 1.27 1.27))))
+					(number "53" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -24.13 180)
+					(length 2.54)
+					(name "BCBUS3" (effects (font (size 1.27 1.27))))
+					(number "54" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -26.67 180)
+					(length 2.54)
+					(name "BCBUS4" (effects (font (size 1.27 1.27))))
+					(number "55" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -29.21 180)
+					(length 2.54)
+					(name "BCBUS5" (effects (font (size 1.27 1.27))))
+					(number "57" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -31.75 180)
+					(length 2.54)
+					(name "BCBUS6" (effects (font (size 1.27 1.27))))
+					(number "58" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -34.29 180)
+					(length 2.54)
+					(name "BCBUS7" (effects (font (size 1.27 1.27))))
+					(number "59" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -39.37 180)
+					(length 2.54)
+					(name "EECS" (effects (font (size 1.27 1.27))))
+					(number "63" (effects (font (size 1.27 1.27))))
+				)
+				(pin output line
+					(at 17.78 -41.91 180)
+					(length 2.54)
+					(name "EECLK" (effects (font (size 1.27 1.27))))
+					(number "62" (effects (font (size 1.27 1.27))))
+				)
+				(pin bidirectional line
+					(at 17.78 -44.45 180)
+					(length 2.54)
+					(name "EEDATA" (effects (font (size 1.27 1.27))))
+					(number "61" (effects (font (size 1.27 1.27))))
+				)
+				(pin output line
+					(at 17.78 -49.53 180)
+					(length 2.54)
+					(name "~{SUSPEND}" (effects (font (size 1.27 1.27))))
+					(number "36" (effects (font (size 1.27 1.27))))
+				)
+				(pin output line
+					(at 17.78 -52.07 180)
+					(length 2.54)
+					(name "~{PWREN}" (effects (font (size 1.27 1.27))))
+					(number "60" (effects (font (size 1.27 1.27))))
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Switch"
 		(exclude_from_sim no)
@@ -12451,7 +12872,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "089393ef-3fee-5c6f-87de-3d629cdd5972")
-		(property "Reference" "C15"
+		(property "Reference" "C16"
 			(at 152.565 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12511,7 +12932,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C15")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -12741,7 +13162,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Cherry:FT2232H-56Q")
+		(lib_id "Cherry:FT2232HL")
 		(at 72.39 106.68 0)
 		(unit 1)
 		(body_style 1)
@@ -12761,7 +13182,7 @@
 				)
 			)
 		)
-		(property "Value" "FT2232H-56Q"
+		(property "Value" "FT2232HL"
 			(at 72.39 163.576 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12771,7 +13192,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Cherry:QFN-56-1EP_8x8mm_P0.5mm_EP5.9x5.9mm"
+		(property "Footprint" "Cherry:LQFP-64_10x10mm_P0.5mm"
 			(at 72.39 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -12802,176 +13223,197 @@
 				)
 			)
 		)
-		(pin "5"
-			(uuid "11c4df8a-64dc-48b2-9a27-91d5f5a24883")
-		)
-		(pin "7"
-			(uuid "6dd7066f-fb4d-4697-a2fe-bcb94e3f96ca")
-		)
-		(pin "21"
-			(uuid "e2a47806-ceb4-41dd-b1f1-d7ee0bb0ddf2")
-		)
-		(pin "3"
-			(uuid "7cf30fd5-44cf-4853-bffb-e8c4ea36c494")
-		)
-		(pin "4"
-			(uuid "76789f20-3117-464f-8821-04b9da8cb2ca")
-		)
-		(pin "41"
-			(uuid "449c259b-8451-48fb-b8ef-b7c4b2a4bce5")
-		)
-		(pin "6"
-			(uuid "69ac676f-d300-4c24-8186-c909ae807eee")
-		)
-		(pin "16"
-			(uuid "6c2ac780-4afa-4173-aed8-c53538688634")
-		)
-		(pin "10"
-			(uuid "b17a4175-750f-4177-892e-972e28554e1a")
-		)
-		(pin "9"
-			(uuid "34319581-82c3-4816-8c9e-70f7235de26b")
-		)
-		(pin "15"
-			(uuid "38c6fc37-4700-483b-8594-a6573cd21586")
-		)
-		(pin "17"
-			(uuid "2a2eb7fd-a53c-49b2-9bce-192717e82031")
-		)
-		(pin "20"
-			(uuid "ff206040-a3e3-423d-b677-65c6a4c34abb")
-		)
-		(pin "45"
-			(uuid "ab21cb66-1169-47fb-b94d-6f52616f6fbf")
-		)
-		(pin "13"
-			(uuid "16cf82d9-008b-42f9-a2d6-442713b92f22")
-		)
-		(pin "14"
-			(uuid "83c08c3c-e338-4ca1-9cb6-18fd056820dd")
-		)
-		(pin "8"
-			(uuid "6f2dacb7-b959-45a1-9269-087f33a643cc")
-		)
-		(pin "22"
-			(uuid "054c25fa-2d96-42ff-99f2-77a17456d3bd")
-		)
-		(pin "23"
-			(uuid "5c7f7b65-2b55-4125-9ef2-97a0980f642f")
-		)
-		(pin "24"
-			(uuid "ceaacadc-0e67-4298-ba8e-95121f2763b6")
-		)
-		(pin "19"
-			(uuid "cfc930db-668b-4cfa-a15b-d70b6c5a0a04")
+		(pin "1"
+			(uuid "d897b4e3-c79d-42d5-aa7e-1d16b9689718")
 		)
 		(pin "2"
-			(uuid "b1fd7673-ee69-4905-abea-3772914a1df4")
+			(uuid "62b35422-a548-412f-80a5-ebffaa64e6c3")
+		)
+		(pin "3"
+			(uuid "3f6132ee-3ae8-46a1-85e4-dc378122f049")
+		)
+		(pin "4"
+			(uuid "234acf94-bdca-4104-96c5-d88111e84ce9")
+		)
+		(pin "5"
+			(uuid "fbc391fd-fb9e-457f-ad46-9bfb95008de9")
+		)
+		(pin "6"
+			(uuid "65b975fa-7e3b-4071-ba27-03f8329019e9")
+		)
+		(pin "7"
+			(uuid "536a9ab3-4758-468e-84f6-9bac6f819b93")
+		)
+		(pin "8"
+			(uuid "b713a6de-7379-46ff-bd73-f590678de4f6")
+		)
+		(pin "9"
+			(uuid "f2878107-e93d-48d5-a7bc-0ffbf45c291b")
+		)
+		(pin "10"
+			(uuid "6696f879-b15d-4d31-9d2b-2dad3e5e184d")
 		)
 		(pin "11"
-			(uuid "9bfe5ccb-4318-4608-ad51-6bbaf72e55c1")
-		)
-		(pin "25"
-			(uuid "d2caa23a-b90f-4254-8e1e-2c2a8e77e073")
-		)
-		(pin "26"
-			(uuid "3d0a718c-ae72-402e-8132-0e6be7ae79e9")
-		)
-		(pin "36"
-			(uuid "5dc54d34-6245-478e-a918-55ce1c3b535f")
+			(uuid "d133e4e7-92c3-4300-a052-b15cdcafc2a1")
 		)
 		(pin "12"
-			(uuid "aab915fd-7231-47ed-9982-d4e507e53d27")
+			(uuid "fad79a74-4bda-4805-88c6-e769def66fd9")
 		)
-		(pin "27"
-			(uuid "602e2ab4-72ee-4b34-adce-4cf22a882a82")
+		(pin "13"
+			(uuid "9d0f9abc-bcbd-42df-85ff-84cbad17d022")
 		)
-		(pin "28"
-			(uuid "088b5a3e-56a5-4961-bb19-927f0cb01ba2")
+		(pin "14"
+			(uuid "599f75c6-045b-4bfa-a17b-41e429aa18b3")
 		)
-		(pin "30"
-			(uuid "251ed70c-c3cb-41b5-9815-bacadca43eb5")
+		(pin "15"
+			(uuid "f9bf4bf8-b06d-4d0f-86ea-e5f4f2c726f9")
 		)
-		(pin "29"
-			(uuid "05321741-5da0-440c-9a18-19c426feb7da")
+		(pin "16"
+			(uuid "c1d97c06-aa5e-4b75-ad59-c121f5439236")
 		)
-		(pin "31"
-			(uuid "a3de944d-787a-489a-a6df-3abef6fd03aa")
+		(pin "17"
+			(uuid "5e2ff27c-5397-4290-8dc4-7d5f6132314d")
 		)
 		(pin "18"
-			(uuid "9fb441a1-e212-4cd9-ab59-dd3afc07e546")
+			(uuid "2e5d711e-7ca0-4a44-ba64-3edac18083ce")
 		)
-		(pin "44"
-			(uuid "5af2b7ed-1b33-49cd-8cb6-7e968e92f5ff")
+		(pin "19"
+			(uuid "f60d2444-9a89-4dfc-927e-aca1ddad1222")
 		)
-		(pin "51"
-			(uuid "c8a3cf7d-437d-4184-a764-871dbc93b4ae")
+		(pin "20"
+			(uuid "b6d902b4-a2af-495b-bb47-10fce467c34a")
 		)
-		(pin "54"
-			(uuid "8d813ca2-41ef-4f20-b4fd-1899e50c18d8")
+		(pin "21"
+			(uuid "9051ecf4-e43d-4532-b733-c1eb465d2b04")
+		)
+		(pin "22"
+			(uuid "f4f968df-68df-4182-aa2f-71bd8dff991f")
+		)
+		(pin "23"
+			(uuid "0d3e8fcc-9ef9-4542-af1d-30df9b7b4aee")
+		)
+		(pin "24"
+			(uuid "b4ff8935-5ade-4f41-bbc1-e314f56444fb")
+		)
+		(pin "25"
+			(uuid "6ea3e36b-98d5-448d-bf07-271678d50a68")
+		)
+		(pin "26"
+			(uuid "c4b59a4a-51b3-406d-b215-d52b5b28414a")
+		)
+		(pin "27"
+			(uuid "af72cfdd-ed26-4f69-90d2-03d0c82326e0")
+		)
+		(pin "28"
+			(uuid "531827f0-3330-486f-9121-40427e244028")
+		)
+		(pin "29"
+			(uuid "c2e8e628-dfb2-4404-95cb-57cf5082e3bf")
+		)
+		(pin "30"
+			(uuid "77dd91db-2589-4128-af2e-b429cbb253e6")
+		)
+		(pin "31"
+			(uuid "f543b33d-5d43-4f61-937d-2612ee71ec3d")
 		)
 		(pin "32"
-			(uuid "6e488c62-93b2-4c90-b5c8-1928eb69b036")
-		)
-		(pin "53"
-			(uuid "171cfe23-eee7-47d9-8de2-6842dad7e527")
-		)
-		(pin "47"
-			(uuid "6bcf54e7-9ae3-4a1b-87b2-641e28838329")
-		)
-		(pin "1"
-			(uuid "18712342-e663-46fc-8444-dabe3fcbef91")
-		)
-		(pin "48"
-			(uuid "5ed8e517-c0fc-45af-b56e-a8ba58a634f8")
-		)
-		(pin "37"
-			(uuid "58ed8a30-e25d-4d1a-b4c0-aac2aed0b800")
-		)
-		(pin "38"
-			(uuid "f244687d-66ad-4a1a-847c-aadb22058a5a")
-		)
-		(pin "39"
-			(uuid "71344a28-f219-436f-b300-1b68ff298d17")
-		)
-		(pin "40"
-			(uuid "dd4d97e4-7664-42a8-910e-a34674f620db")
+			(uuid "52a4a306-b925-46fb-975d-9c9a9469c679")
 		)
 		(pin "33"
-			(uuid "08e5e581-d3d4-401b-ba19-108a96a8c5ff")
-		)
-		(pin "43"
-			(uuid "8ef194d3-affe-4716-a582-657dd9526a26")
+			(uuid "12ba0817-68c7-4f86-8c1f-ed483b16eef0")
 		)
 		(pin "34"
-			(uuid "87c7899a-d2fb-470c-897d-f67dede7339d")
+			(uuid "0c23a212-3c0c-4cb3-bbf3-91b02234ade7")
 		)
 		(pin "35"
-			(uuid "7711c93a-a35a-4763-a6c6-3c1930ee87ba")
+			(uuid "f0433883-a420-49ad-8dd4-2b18c4efde83")
+		)
+		(pin "36"
+			(uuid "dbe8d85e-5b15-4b35-87e1-41a9a41f9d94")
+		)
+		(pin "37"
+			(uuid "2455307c-9f5f-4108-a7ca-daa8504d14ac")
+		)
+		(pin "38"
+			(uuid "83ac72e0-7473-4703-b5a2-012a13fa3610")
+		)
+		(pin "39"
+			(uuid "25125755-8f65-408b-9abb-dd1c923a85e1")
+		)
+		(pin "40"
+			(uuid "6eff8939-cafb-405b-9185-2e0e363f20c3")
+		)
+		(pin "41"
+			(uuid "1be31e3b-9264-446d-ac96-2a131509802a")
 		)
 		(pin "42"
-			(uuid "f29d5d9c-d13b-4443-a248-9d7b2450b7cb")
+			(uuid "c871782d-0a44-40a2-a214-454b032ecfbc")
 		)
-		(pin "50"
-			(uuid "169019b9-4150-4d39-93f6-4dec60215303")
+		(pin "43"
+			(uuid "ff432fc0-b22a-4d5f-b721-b1a94b01ee4b")
+		)
+		(pin "44"
+			(uuid "7adafe71-cf87-41f9-93bd-989027780803")
+		)
+		(pin "45"
+			(uuid "92083555-2c02-4d3a-841b-4f40b8c52129")
 		)
 		(pin "46"
-			(uuid "a40b1541-a10a-4a72-b743-491ee5d80c28")
+			(uuid "308b2c53-1a7c-4f56-940b-576d692a20c7")
+		)
+		(pin "47"
+			(uuid "e729254b-37f0-4fcc-825f-81184c12fc58")
+		)
+		(pin "48"
+			(uuid "4b056a9b-3c83-4518-af5f-180686312ed8")
 		)
 		(pin "49"
-			(uuid "cb5ad742-0f71-453a-81ce-6c55a72b52f4")
+			(uuid "0a5d4023-84d8-412d-8b7b-4943b26d5006")
+		)
+		(pin "50"
+			(uuid "6c925806-faa3-42b6-8ec8-aeb3847d5fc5")
+		)
+		(pin "51"
+			(uuid "3efa91de-4f74-4786-954b-0b2300f30b56")
 		)
 		(pin "52"
-			(uuid "ff59ee69-cff0-47ab-8258-a5a7704fd34d")
+			(uuid "b3ad772f-489e-4018-99c1-efbb745f50df")
+		)
+		(pin "53"
+			(uuid "80f30623-d366-4730-87ed-88559f484105")
+		)
+		(pin "54"
+			(uuid "e7538be4-619b-4b6d-9d46-0bcce7ce17ad")
 		)
 		(pin "55"
-			(uuid "cabbbb94-5406-4116-b261-121741488013")
+			(uuid "3bb0d3c9-0f3c-4abd-a1ff-c8ff34e98c66")
 		)
 		(pin "56"
-			(uuid "e15c2155-a6b8-4922-8788-8519649eaff8")
+			(uuid "a9712bcc-7148-4a7c-8d5b-a1011c1c7efa")
 		)
 		(pin "57"
-			(uuid "8a4d6edb-8e5b-480e-bedf-ac40a85d887a")
+			(uuid "d82130bb-bc53-4a4f-aa7d-4f6e085f7c56")
+		)
+		(pin "58"
+			(uuid "e637e4e6-b57b-4a96-82c6-f3734251302e")
+		)
+		(pin "59"
+			(uuid "46d4f0e5-dbb6-45f6-b028-b73772afab8b")
+		)
+		(pin "60"
+			(uuid "076686e9-c704-4d65-82d5-4f601fa53793")
+		)
+		(pin "61"
+			(uuid "c10b53b6-bcef-4e58-8054-d3a1c9b6613a")
+		)
+		(pin "62"
+			(uuid "bd1b6ca6-c1c3-4b2a-8b32-fcf303305d60")
+		)
+		(pin "63"
+			(uuid "3ce679a6-2fb7-48b7-ad55-e9d6eda25ad4")
+		)
+		(pin "64"
+			(uuid "18327836-38d1-4bff-a8d9-aa7a895d7e84")
 		)
 		(instances
 			(project "cherry"
@@ -13759,7 +14201,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1a22cc7d-88b1-505c-868c-7ea0ef0efe67")
-		(property "Reference" "C11"
+		(property "Reference" "C26"
 			(at 106.845 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13769,8 +14211,8 @@
 				)
 			)
 		)
-		(property "Value" "4.7uF"
-			(at 107.895 268.4 0)
+		(property "Value" "10uF"
+			(at 107.37 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13779,7 +14221,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Cherry:C_0603_1608Metric"
+		(property "Footprint" "Cherry:C_0805_2012Metric"
 			(at 102.87 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -13819,7 +14261,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C11")
+					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -14284,8 +14726,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2413f82f-b2d2-5786-a81e-817dd30359b2")
-		(property "Reference" "C14"
-			(at 141.135 265 0)
+		(property "Reference" "C5"
+			(at 140.61 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14344,7 +14786,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C14")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -15105,7 +15547,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2db2b584-63f5-5456-a30e-cd1a3a32ab00")
-		(property "Reference" "C6"
+		(property "Reference" "C9"
 			(at 49.17 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15165,7 +15607,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C6")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -15182,7 +15624,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2db39dac-f212-59a9-a25d-a4933cd4081f")
-		(property "Reference" "R10"
+		(property "Reference" "R12"
 			(at 161.455 46.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15242,7 +15684,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R10")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -16165,7 +16607,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "41ddaa07-c438-55b2-bf20-b442d4c2fe3e")
-		(property "Reference" "C13"
+		(property "Reference" "C15"
 			(at 129.705 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16225,7 +16667,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C13")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -16541,7 +16983,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "48988b8c-af31-57a9-ad2d-e219bf98bfd2")
-		(property "Reference" "R12"
+		(property "Reference" "R11"
 			(at 364.325 209.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16601,7 +17043,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R12")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -16618,7 +17060,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "498aad05-dc30-5e6d-a50e-82e8b0c82769")
-		(property "Reference" "C23"
+		(property "Reference" "C24"
 			(at 266.865 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16678,7 +17120,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C23")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -16695,8 +17137,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4b1ac229-017c-5e5e-a60c-0eed1d78b9ca")
-		(property "Reference" "C9"
-			(at 83.46 265 0)
+		(property "Reference" "C12"
+			(at 83.985 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16755,7 +17197,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C9")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -17464,8 +17906,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5379af17-2da2-5770-9c59-028b3361c54b")
-		(property "Reference" "C8"
-			(at 72.03 265 0)
+		(property "Reference" "C11"
+			(at 72.555 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17524,7 +17966,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C8")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -17618,7 +18060,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "57dfacb0-e8f9-5242-bf2a-5c613e21a8cb")
-		(property "Reference" "C26"
+		(property "Reference" "C28"
 			(at 172.212 63.754 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17678,7 +18120,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C26")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -18367,7 +18809,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "650e0f33-168d-5148-adef-c2e92a3d1af1")
-		(property "Reference" "C21"
+		(property "Reference" "C22"
 			(at 244.005 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18427,7 +18869,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C21")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -18444,7 +18886,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6599a29f-5eb0-5d0b-b36d-f20d08cf9ae1")
-		(property "Reference" "C5"
+		(property "Reference" "C8"
 			(at 37.74 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18504,7 +18946,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C5")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -18960,7 +19402,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6c828511-d420-5c7d-9f2e-6bcfd5155dec")
-		(property "Reference" "C16"
+		(property "Reference" "C18"
 			(at 186.855 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19020,7 +19462,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C16")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -19185,7 +19627,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7724fd45-e167-5bdf-b9c9-817d78ccf8c0")
-		(property "Reference" "R11"
+		(property "Reference" "R10"
 			(at 151.295 46.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19245,7 +19687,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R11")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -19345,7 +19787,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "798d7307-a32f-54d4-a0db-93acf281ea27")
-		(property "Reference" "C22"
+		(property "Reference" "C23"
 			(at 255.435 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19405,7 +19847,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C22")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -19442,7 +19884,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Cherry:C_0603_1608Metric"
+		(property "Footprint" "Cherry:C_0805_2012Metric"
 			(at 125.73 240.03 0)
 			(hide yes)
 			(show_name no)
@@ -20712,7 +21154,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "93a7fe19-f774-54a6-8d78-4927a00dd68a")
-		(property "Reference" "C19"
+		(property "Reference" "C20"
 			(at 221.145 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20772,7 +21214,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C19")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -21678,8 +22120,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a33c29e7-8c57-5b39-82e7-2b86bb66883b")
-		(property "Reference" "C24"
-			(at 278.295 265 0)
+		(property "Reference" "C7"
+			(at 277.77 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21738,7 +22180,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C24")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -23284,8 +23726,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c470bbfe-0daf-5482-a423-2c4e97387d07")
-		(property "Reference" "C18"
-			(at 209.715 265 0)
+		(property "Reference" "C6"
+			(at 209.19 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23344,7 +23786,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C18")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -23661,7 +24103,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cec89328-fa9b-588c-9753-b0663968f1f4")
-		(property "Reference" "C20"
+		(property "Reference" "C21"
 			(at 232.575 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23721,7 +24163,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C20")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -24656,7 +25098,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "deb3f5ce-d718-5edb-8478-4f71da457b81")
-		(property "Reference" "C17"
+		(property "Reference" "C19"
 			(at 198.285 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24716,7 +25158,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C17")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -24733,7 +25175,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e005aaf0-fef2-5861-9f45-7a37cb986861")
-		(property "Reference" "C10"
+		(property "Reference" "C13"
 			(at 95.415 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24793,7 +25235,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C10")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -25635,7 +26077,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f2f18d12-c742-5d36-b19a-4af0adb81576")
-		(property "Reference" "C12"
+		(property "Reference" "C14"
 			(at 118.275 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25695,7 +26137,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C12")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -26159,8 +26601,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fc227c74-8106-5500-bd8c-28d27a4d76cc")
-		(property "Reference" "C7"
-			(at 60.6 265 0)
+		(property "Reference" "C10"
+			(at 61.125 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26219,7 +26661,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C7")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -26506,6 +26948,439 @@
 			(justify left bottom)
 		)
 		(uuid "4f40716f-e319-4588-8229-dd456a675dd3")
+	)
+	(wire
+		(pts
+			(xy 52.07 64.77) (xy 54.61 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50b36127-f109-4e6b-9b40-a9913da129a6")
+	)
+	(wire
+		(pts
+			(xy 52.07 74.93) (xy 54.61 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38fc73b1-5005-4fb5-a75e-c7865641ee75")
+	)
+	(wire
+		(pts
+			(xy 52.07 110.49) (xy 54.61 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ae09e58-1351-409c-9bd6-7182aeedda90")
+	)
+	(wire
+		(pts
+			(xy 52.07 120.65) (xy 54.61 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "152c6f86-5331-440a-88e7-a8c3426a70e1")
+	)
+	(wire
+		(pts
+			(xy 52.07 123.19) (xy 54.61 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a97dcf29-e7d7-44d1-ac0a-92819513ed6e")
+	)
+	(wire
+		(pts
+			(xy 52.07 125.73) (xy 54.61 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3ca8038-007c-4b18-8c46-cc0f9b3e7611")
+	)
+	(wire
+		(pts
+			(xy 52.07 128.27) (xy 54.61 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfa5ceae-47c7-417c-92da-57063158094d")
+	)
+	(wire
+		(pts
+			(xy 52.07 130.81) (xy 54.61 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b1e9a80-5f3f-4e60-b5a0-eec4680b8819")
+	)
+	(junction
+		(at 52.07 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f12c6c2-df19-48f4-9ea0-bb2a62177e82")
+	)
+	(junction
+		(at 52.07 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ddac6e52-f0f0-4f18-9190-5f50a0315961")
+	)
+	(junction
+		(at 52.07 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "92a6f05f-d185-4206-8b8b-91f19a184c6a")
+	)
+	(junction
+		(at 52.07 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e430fba-8598-472f-a129-e4eb78762258")
+	)
+	(label "VCORE"
+		(at 52.07 64.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cd257f44-b9c7-41dd-80ac-0094ed04db85")
+	)
+	(symbol
+		(lib_id "Cherry:+3V3")
+		(at 52.07 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c43e24ec-75bb-5885-b295-00c1b9faeeb9")
+		(property "Reference" "#PWR0180"
+			(at 52.07 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 49.27 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c170e0c5-e342-495c-95ad-9019e7bf07f9")
+		)
+		(instances
+			(project "cherry"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR0180")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Cherry:C")
+		(at 160.02 266.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2eb7b131-c790-4496-bf59-89062beb9b86")
+		(property "Reference" "C17"
+			(at 163.995 265 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 165.045 268.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Cherry:C_0402_1005Metric"
+			(at 160.02 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 266.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 266.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c27e9d85-8194-424d-bfbe-3f2c81c8172e")
+		)
+		(pin "1"
+			(uuid "7408dc9c-67a4-4439-bc53-b54dd77a4ff3")
+		)
+		(instances
+			(project "cherry"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Cherry:+3V3")
+		(at 160.02 261.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c8c5cb0f-a071-426c-97e9-a0336c0b4a16")
+		(property "Reference" "#PWR0680"
+			(at 160.02 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 160.02 257.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 261.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 261.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 261.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ab6acb34-6c8e-4d49-9629-825e913ab5ce")
+		)
+		(instances
+			(project "cherry"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR0680")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Cherry:GND")
+		(at 160.02 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1019c594-16af-4aa7-bfaf-ca30dc758445")
+		(property "Reference" "#PWR0681"
+			(at 160.02 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 275.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "760c92a1-9fe0-4130-baa3-fa78fa289fd0")
+		)
+		(instances
+			(project "cherry"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR0681")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 160.02 262.89) (xy 160.02 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4787b14d-11c6-43b7-85f4-4656ff191d9a")
+	)
+	(wire
+		(pts
+			(xy 160.02 270.51) (xy 160.02 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "247aa383-33c4-4b97-bc72-bf0e3de471ef")
 	)
 	(sheet_instances
 		(path "/"
