@@ -1704,11 +1704,36 @@
 				)
 			)
 			(symbol "Ferrite_Bead_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
+				(polyline
+					(pts
+						(xy -2.7686 0.4064) (xy -1.7018 2.2606) (xy 2.7686 -0.3048) (xy 1.6764 -2.159) (xy -2.7686 0.4064)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 1.2954)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -1.2192)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -1719,7 +1744,7 @@
 			(symbol "Ferrite_Bead_1_1"
 				(pin passive line
 					(at 0 3.81 270)
-					(length 1.27)
+					(length 2.54)
 					(name ""
 						(effects
 							(font
@@ -1737,7 +1762,7 @@
 				)
 				(pin passive line
 					(at 0 -3.81 90)
-					(length 1.27)
+					(length 2.54)
 					(name ""
 						(effects
 							(font
@@ -5808,7 +5833,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Cherry:W25Q32JVSSIQ"
+		(symbol "Cherry:W25Q32JVSSIM"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -5824,7 +5849,7 @@
 					)
 				)
 			)
-			(property "Value" "W25Q32JVSSIQ"
+			(property "Value" "W25Q32JVSSIM"
 				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5867,7 +5892,7 @@
 					)
 				)
 			)
-			(symbol "W25Q32JVSSIQ_0_1"
+			(symbol "W25Q32JVSSIM_0_1"
 				(rectangle
 					(start -10.16 8.89)
 					(end 10.16 -8.89)
@@ -5880,7 +5905,7 @@
 					)
 				)
 			)
-			(symbol "W25Q32JVSSIQ_1_1"
+			(symbol "W25Q32JVSSIM_1_1"
 				(pin input line
 					(at 12.7 6.35 180)
 					(length 2.54)
@@ -6292,7 +6317,7 @@
 	)
 	(text "USB-C"
 		(exclude_from_sim no)
-		(at 33.782 175.006 0)
+		(at 25.4 175.006 0)
 		(effects
 			(font
 				(size 2 2)
@@ -6708,7 +6733,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 270.51) (xy 227.33 271.78)
+			(xy 228.6 270.51) (xy 228.6 271.78)
 		)
 		(stroke
 			(width 0)
@@ -6748,7 +6773,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 270.51) (xy 91.44 271.78)
+			(xy 80.01 270.51) (xy 80.01 271.78)
 		)
 		(stroke
 			(width 0)
@@ -6898,7 +6923,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 262.89) (xy 57.15 261.62)
+			(xy 45.72 262.89) (xy 45.72 261.62)
 		)
 		(stroke
 			(width 0)
@@ -6968,7 +6993,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 262.89) (xy 250.19 261.62)
+			(xy 251.46 262.89) (xy 251.46 261.62)
 		)
 		(stroke
 			(width 0)
@@ -7008,7 +7033,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 262.89) (xy 227.33 261.62)
+			(xy 228.6 262.89) (xy 228.6 261.62)
 		)
 		(stroke
 			(width 0)
@@ -7298,7 +7323,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 270.51) (xy 204.47 271.78)
+			(xy 205.74 270.51) (xy 205.74 271.78)
 		)
 		(stroke
 			(width 0)
@@ -7448,7 +7473,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 262.89) (xy 204.47 261.62)
+			(xy 205.74 262.89) (xy 205.74 261.62)
 		)
 		(stroke
 			(width 0)
@@ -7528,7 +7553,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 262.89) (xy 68.58 261.62)
+			(xy 57.15 262.89) (xy 57.15 261.62)
 		)
 		(stroke
 			(width 0)
@@ -7578,7 +7603,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 262.89) (xy 193.04 261.62)
+			(xy 194.31 262.89) (xy 194.31 261.62)
 		)
 		(stroke
 			(width 0)
@@ -7738,7 +7763,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 262.89) (xy 137.16 261.62)
+			(xy 125.73 262.89) (xy 125.73 261.62)
 		)
 		(stroke
 			(width 0)
@@ -7798,7 +7823,7 @@
 	)
 	(wire
 		(pts
-			(xy 284.48 270.51) (xy 284.48 271.78)
+			(xy 285.75 270.51) (xy 285.75 271.78)
 		)
 		(stroke
 			(width 0)
@@ -7908,7 +7933,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 270.51) (xy 57.15 271.78)
+			(xy 45.72 270.51) (xy 45.72 271.78)
 		)
 		(stroke
 			(width 0)
@@ -7988,7 +8013,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 262.89) (xy 273.05 261.62)
+			(xy 274.32 262.89) (xy 274.32 261.62)
 		)
 		(stroke
 			(width 0)
@@ -8038,7 +8063,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 262.89) (xy 80.01 261.62)
+			(xy 68.58 262.89) (xy 68.58 261.62)
 		)
 		(stroke
 			(width 0)
@@ -8068,7 +8093,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 270.51) (xy 102.87 271.78)
+			(xy 91.44 270.51) (xy 91.44 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8145,7 +8170,8 @@
 			(type default)
 		)
 		(uuid "6473c414-11aa-5563-80cb-5d7e4f98a925")
-	)
+	)
+
 	(wire
 		(pts
 			(xy 259.08 58.42) (xy 261.62 58.42)
@@ -8238,7 +8264,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 270.51) (xy 148.59 271.78)
+			(xy 137.16 270.51) (xy 137.16 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8278,7 +8304,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 262.89) (xy 102.87 261.62)
+			(xy 91.44 262.89) (xy 91.44 261.62)
 		)
 		(stroke
 			(width 0)
@@ -8308,7 +8334,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 262.89) (xy 238.76 261.62)
+			(xy 240.03 262.89) (xy 240.03 261.62)
 		)
 		(stroke
 			(width 0)
@@ -8328,7 +8354,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 270.51) (xy 137.16 271.78)
+			(xy 125.73 270.51) (xy 125.73 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8338,7 +8364,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 270.51) (xy 114.3 271.78)
+			(xy 102.87 270.51) (xy 102.87 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8388,7 +8414,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 270.51) (xy 215.9 271.78)
+			(xy 217.17 270.51) (xy 217.17 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8398,7 +8424,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 270.51) (xy 181.61 271.78)
+			(xy 182.88 270.51) (xy 182.88 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8598,7 +8624,7 @@
 	)
 	(wire
 		(pts
-			(xy 284.48 262.89) (xy 284.48 261.62)
+			(xy 285.75 262.89) (xy 285.75 261.62)
 		)
 		(stroke
 			(width 0)
@@ -8688,7 +8714,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 262.89) (xy 91.44 261.62)
+			(xy 80.01 262.89) (xy 80.01 261.62)
 		)
 		(stroke
 			(width 0)
@@ -8698,7 +8724,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 270.51) (xy 261.62 271.78)
+			(xy 262.89 270.51) (xy 262.89 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8728,7 +8754,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 270.51) (xy 68.58 271.78)
+			(xy 57.15 270.51) (xy 57.15 271.78)
 		)
 		(stroke
 			(width 0)
@@ -8788,7 +8814,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 262.89) (xy 215.9 261.62)
+			(xy 217.17 262.89) (xy 217.17 261.62)
 		)
 		(stroke
 			(width 0)
@@ -8978,7 +9004,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 262.89) (xy 148.59 261.62)
+			(xy 137.16 262.89) (xy 137.16 261.62)
 		)
 		(stroke
 			(width 0)
@@ -9108,7 +9134,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 270.51) (xy 238.76 271.78)
+			(xy 240.03 270.51) (xy 240.03 271.78)
 		)
 		(stroke
 			(width 0)
@@ -9358,7 +9384,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 262.89) (xy 160.02 261.62)
+			(xy 148.59 262.89) (xy 148.59 261.62)
 		)
 		(stroke
 			(width 0)
@@ -9388,7 +9414,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 262.89) (xy 181.61 261.62)
+			(xy 182.88 262.89) (xy 182.88 261.62)
 		)
 		(stroke
 			(width 0)
@@ -9618,7 +9644,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 270.51) (xy 193.04 271.78)
+			(xy 194.31 270.51) (xy 194.31 271.78)
 		)
 		(stroke
 			(width 0)
@@ -9638,7 +9664,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 270.51) (xy 160.02 271.78)
+			(xy 148.59 270.51) (xy 148.59 271.78)
 		)
 		(stroke
 			(width 0)
@@ -9725,7 +9751,8 @@
 			(type default)
 		)
 		(uuid "c67f54f2-35af-4490-84c9-36f645f381de")
-	)
+	)
+
 	(wire
 		(pts
 			(xy 345.44 99.06) (xy 350.52 99.06)
@@ -9798,7 +9825,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 270.51) (xy 250.19 271.78)
+			(xy 251.46 270.51) (xy 251.46 271.78)
 		)
 		(stroke
 			(width 0)
@@ -9908,7 +9935,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 270.51) (xy 80.01 271.78)
+			(xy 68.58 270.51) (xy 68.58 271.78)
 		)
 		(stroke
 			(width 0)
@@ -9918,7 +9945,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 262.89) (xy 125.73 261.62)
+			(xy 114.3 262.89) (xy 114.3 261.62)
 		)
 		(stroke
 			(width 0)
@@ -10048,7 +10075,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 262.89) (xy 114.3 261.62)
+			(xy 102.87 262.89) (xy 102.87 261.62)
 		)
 		(stroke
 			(width 0)
@@ -10188,7 +10215,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 270.51) (xy 125.73 271.78)
+			(xy 114.3 270.51) (xy 114.3 271.78)
 		)
 		(stroke
 			(width 0)
@@ -10388,7 +10415,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 262.89) (xy 261.62 261.62)
+			(xy 262.89 262.89) (xy 262.89 261.62)
 		)
 		(stroke
 			(width 0)
@@ -10418,7 +10445,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 270.51) (xy 273.05 271.78)
+			(xy 274.32 270.51) (xy 274.32 271.78)
 		)
 		(stroke
 			(width 0)
@@ -10506,16 +10533,6 @@
 		)
 		(uuid "0013a06b-85da-49a3-a7b5-cec35cb72317")
 	)
-	(label "USB_DM"
-		(at 90.17 198.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "02bf0d18-f608-4854-bb57-ad697d0e1621")
-	)
 	(label "GPIO_50"
 		(at 378.46 90.17 180)
 		(effects
@@ -10555,16 +10572,6 @@
 			(justify right bottom)
 		)
 		(uuid "094a972e-110a-42fa-9fc2-9804a73b45d1")
-	)
-	(label "UART_RX"
-		(at 261.62 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0d936255-fe42-5b71-8e61-6c9bebab9492")
 	)
 	(label "FT_MISO"
 		(at 92.71 59.69 0)
@@ -10646,16 +10653,6 @@
 		)
 		(uuid "21ee2b42-92fe-4d50-ab80-bb4c3eba4b02")
 	)
-	(label "USB_DM"
-		(at 52.07 95.25 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "21f44015-5dc1-5bc2-9842-27783fd8856a")
-	)
 	(label "GPIO_5"
 		(at 215.9 121.92 180)
 		(effects
@@ -10715,16 +10712,6 @@
 			(justify right bottom)
 		)
 		(uuid "29b8a2f8-c47e-45b8-a02d-781b440fc81f")
-	)
-	(label "USB_DM"
-		(at 74.93 198.12 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2adb73f7-6020-4d3a-b81a-9eb9783337be")
 	)
 	(label "FT_SCK"
 		(at 92.71 54.61 0)
@@ -10816,16 +10803,6 @@
 		)
 		(uuid "33372e4d-0fbf-4b86-ae72-72eb55b97f20")
 	)
-	(label "USB_DP"
-		(at 74.93 200.66 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "35386ad2-9df4-4c5b-ad3d-adf018a7802b")
-	)
 	(label "GPIO_26"
 		(at 347.98 60.96 180)
 		(effects
@@ -10837,7 +10814,7 @@
 		(uuid "3859dbae-ac54-47b5-9b3a-a5718858ea1a")
 	)
 	(label "VCORE"
-		(at 114.3 261.62 90)
+		(at 102.87 261.62 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10925,16 +10902,6 @@
 			(justify right bottom)
 		)
 		(uuid "4818f39c-7586-5bb5-b871-aa3b808e92ee")
-	)
-	(label "USB_DP"
-		(at 90.17 200.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4855e159-2d11-4548-88e5-6ca9ff984373")
 	)
 	(label "GPIO_29"
 		(at 347.98 68.58 180)
@@ -11117,7 +11084,7 @@
 		(uuid "61e3a26e-1798-569b-8dcd-79754b904201")
 	)
 	(label "VCORE"
-		(at 102.87 261.62 90)
+		(at 91.44 261.62 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11177,7 +11144,7 @@
 		(uuid "67ce3153-406a-4595-8ec3-62a58cf1b6ae")
 	)
 	(label "+3V3A"
-		(at 125.73 261.62 90)
+		(at 114.3 261.62 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11207,7 +11174,7 @@
 		(uuid "6946b0f7-2b56-5ab0-bff1-6b3de151b8b5")
 	)
 	(label "+3V3A"
-		(at 137.16 261.62 90)
+		(at 125.73 261.62 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11247,12 +11214,12 @@
 		(uuid "6ab56bec-7156-436e-a0d8-edf51d15c97e")
 	)
 	(label "VBUS"
-		(at 82.55 190.5 90)
+		(at 82.55 190.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "6ccdac44-1468-481e-958e-0d8ed262c9f4")
 	)
@@ -11267,7 +11234,7 @@
 		(uuid "6d12cfc7-478d-4259-900b-0e37ff07048b")
 	)
 	(label "+3V3A"
-		(at 148.59 261.62 90)
+		(at 137.16 261.62 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11275,16 +11242,6 @@
 			(justify left bottom)
 		)
 		(uuid "6d7e2018-5bc8-5e98-8533-0b4822aed2f3")
-	)
-	(label "UART_TX"
-		(at 92.71 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "71c33770-a8d4-52ad-9ef0-610c12e5029a")
 	)
 	(label "GPIO_38"
 		(at 261.62 149.86 0)
@@ -11566,16 +11523,6 @@
 		)
 		(uuid "ad1cfb6a-7954-4ab4-80cc-bae2cf271e9c")
 	)
-	(label "UART_TX"
-		(at 261.62 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "af4b52ee-ef54-5bfc-ad09-e9cfee61eb2f")
-	)
 	(label "GPIO_7"
 		(at 318.77 73.66 180)
 		(effects
@@ -11836,16 +11783,6 @@
 		)
 		(uuid "d35d1998-3222-4572-9614-a654f8ac5563")
 	)
-	(label "USB_DP"
-		(at 52.07 92.71 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d712b0a6-5560-519c-b2af-57481a66326c")
-	)
 	(label "GPIO_17"
 		(at 318.77 99.06 180)
 		(effects
@@ -11905,16 +11842,6 @@
 			(justify right bottom)
 		)
 		(uuid "e5b736aa-217f-4279-951d-e9a5037555f4")
-	)
-	(label "UART_RX"
-		(at 92.71 102.87 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8324477-5cd9-5ea7-b8e4-aead46275776")
 	)
 	(label "GPIO_4"
 		(at 318.77 66.04 180)
@@ -12057,7 +11984,7 @@
 		(uuid "fcdeb9f6-1411-4b7d-8c07-ac82163216c8")
 	)
 	(label "VCORE"
-		(at 91.44 261.62 90)
+		(at 80.01 261.62 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12515,7 +12442,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 160.02 266.7 0)
+		(at 148.59 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12524,8 +12451,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "089393ef-3fee-5c6f-87de-3d629cdd5972")
-		(property "Reference" "C16"
-			(at 163.995 265 0)
+		(property "Reference" "C15"
+			(at 152.565 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12535,7 +12462,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 165.045 268.4 0)
+			(at 153.615 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12545,7 +12472,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 160.02 266.7 0)
+			(at 148.59 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12556,7 +12483,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 266.7 0)
+			(at 148.59 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12566,7 +12493,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 160.02 266.7 0)
+			(at 148.59 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12584,7 +12511,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C16")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -13066,7 +12993,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0ed828e5-42c3-5a20-b998-2f1ff4c20fed")
-		(property "Reference" "R16"
+		(property "Reference" "R21"
 			(at 283.375 209.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13126,7 +13053,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R16")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -13291,7 +13218,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "11b1b579-8aa1-4091-94a5-3c2b8604d331")
-		(property "Reference" "R22"
+		(property "Reference" "R18"
 			(at 114.3 70.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13351,7 +13278,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R22")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -13442,7 +13369,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "13895842-e64a-42c0-a3a9-6cd5e543757e")
-		(property "Reference" "J5"
+		(property "Reference" "J6"
 			(at 386.08 88.138 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13516,7 +13443,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "J5")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -13598,7 +13525,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 227.33 271.78 0)
+		(at 228.6 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13608,7 +13535,7 @@
 		(dnp no)
 		(uuid "171463b5-71a3-5154-b4e0-9b1b4bc39ad9")
 		(property "Reference" "#PWR0640"
-			(at 227.33 269.24 0)
+			(at 228.6 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13619,7 +13546,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 227.33 275.87 0)
+			(at 228.6 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13629,7 +13556,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 227.33 271.78 0)
+			(at 228.6 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13639,7 +13566,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 227.33 271.78 0)
+			(at 228.6 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13649,7 +13576,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 227.33 271.78 0)
+			(at 228.6 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13823,7 +13750,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 114.3 266.7 0)
+		(at 102.87 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13832,8 +13759,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1a22cc7d-88b1-505c-868c-7ea0ef0efe67")
-		(property "Reference" "C5"
-			(at 117.75 265 0)
+		(property "Reference" "C11"
+			(at 106.845 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13843,7 +13770,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 119.325 268.4 0)
+			(at 107.895 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13853,7 +13780,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0603_1608Metric"
-			(at 114.3 266.7 0)
+			(at 102.87 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13864,7 +13791,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 266.7 0)
+			(at 102.87 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13874,7 +13801,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 266.7 0)
+			(at 102.87 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13892,7 +13819,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C5")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -14049,7 +13976,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 80.01 261.62 0)
+		(at 68.58 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14059,7 +13986,7 @@
 		(dnp no)
 		(uuid "1e93e15b-c4af-570b-b943-61832c652d12")
 		(property "Reference" "#PWR0577"
-			(at 80.01 259.08 0)
+			(at 68.58 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14070,7 +13997,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 80.01 257.53 0)
+			(at 68.58 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14080,7 +14007,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 80.01 261.62 0)
+			(at 68.58 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14090,7 +14017,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 261.62 0)
+			(at 68.58 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14100,7 +14027,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 80.01 261.62 0)
+			(at 68.58 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14123,7 +14050,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 193.04 271.78 0)
+		(at 194.31 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14133,7 +14060,7 @@
 		(dnp no)
 		(uuid "20e41471-abea-5d5f-af2b-24cad58dca73")
 		(property "Reference" "#PWR0625"
-			(at 193.04 269.24 0)
+			(at 194.31 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14144,7 +14071,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 193.04 275.87 0)
+			(at 194.31 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14154,7 +14081,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 271.78 0)
+			(at 194.31 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14164,7 +14091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 271.78 0)
+			(at 194.31 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14174,7 +14101,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 271.78 0)
+			(at 194.31 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14348,7 +14275,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 148.59 266.7 0)
+		(at 137.16 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14357,8 +14284,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2413f82f-b2d2-5786-a81e-817dd30359b2")
-		(property "Reference" "C15"
-			(at 152.565 265 0)
+		(property "Reference" "C14"
+			(at 141.135 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14368,7 +14295,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 153.09 268.4 0)
+			(at 141.66 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14378,7 +14305,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0805_2012Metric"
-			(at 148.59 266.7 0)
+			(at 137.16 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14389,7 +14316,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 266.7 0)
+			(at 137.16 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14399,7 +14326,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 148.59 266.7 0)
+			(at 137.16 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14417,7 +14344,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C15")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -15091,7 +15018,8 @@
 				)
 			)
 		)
-	)
+	)
+
 	(symbol
 		(lib_id "Cherry:GND")
 		(at 345.44 88.9 90)
@@ -15168,7 +15096,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 57.15 266.7 0)
+		(at 45.72 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15177,8 +15105,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2db2b584-63f5-5456-a30e-cd1a3a32ab00")
-		(property "Reference" "C8"
-			(at 60.6 265 0)
+		(property "Reference" "C6"
+			(at 49.17 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15188,7 +15116,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 62.175 268.4 0)
+			(at 50.745 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15198,7 +15126,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 57.15 266.7 0)
+			(at 45.72 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15209,7 +15137,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 57.15 266.7 0)
+			(at 45.72 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15219,7 +15147,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 57.15 266.7 0)
+			(at 45.72 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15237,7 +15165,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C8")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -15322,7 +15250,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 204.47 271.78 0)
+		(at 205.74 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15332,7 +15260,7 @@
 		(dnp no)
 		(uuid "320648df-1a49-551b-bc1a-068024e68cf3")
 		(property "Reference" "#PWR0630"
-			(at 204.47 269.24 0)
+			(at 205.74 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15343,7 +15271,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 204.47 275.87 0)
+			(at 205.74 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15353,7 +15281,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 271.78 0)
+			(at 205.74 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15363,7 +15291,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 271.78 0)
+			(at 205.74 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15373,7 +15301,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 204.47 271.78 0)
+			(at 205.74 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15396,7 +15324,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 114.3 271.78 0)
+		(at 102.87 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15406,7 +15334,7 @@
 		(dnp no)
 		(uuid "324ea0cf-dad3-5576-9b67-46b799528c5e")
 		(property "Reference" "#PWR0594"
-			(at 114.3 269.24 0)
+			(at 102.87 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15417,7 +15345,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 114.3 275.87 0)
+			(at 102.87 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15427,7 +15355,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 114.3 271.78 0)
+			(at 102.87 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15437,7 +15365,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 271.78 0)
+			(at 102.87 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15447,7 +15375,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 271.78 0)
+			(at 102.87 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15479,7 +15407,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "32f3e569-50a4-4678-91b1-472341208c35")
-		(property "Reference" "R21"
+		(property "Reference" "R17"
 			(at 124.46 63.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15539,7 +15467,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R21")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -15713,7 +15641,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 68.58 261.62 0)
+		(at 57.15 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15723,7 +15651,7 @@
 		(dnp no)
 		(uuid "382b5a18-0e8f-5a41-b9e1-72aacdfb888a")
 		(property "Reference" "#PWR0572"
-			(at 68.58 259.08 0)
+			(at 57.15 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15734,7 +15662,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 68.58 257.53 0)
+			(at 57.15 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15744,7 +15672,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 261.62 0)
+			(at 57.15 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15754,7 +15682,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 261.62 0)
+			(at 57.15 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15764,7 +15692,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 261.62 0)
+			(at 57.15 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15787,7 +15715,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 273.05 271.78 0)
+		(at 274.32 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15797,7 +15725,7 @@
 		(dnp no)
 		(uuid "3b3ad390-591b-5133-88c9-1b5ee39bca2c")
 		(property "Reference" "#PWR0660"
-			(at 273.05 269.24 0)
+			(at 274.32 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15808,7 +15736,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 273.05 275.87 0)
+			(at 274.32 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15818,7 +15746,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 273.05 271.78 0)
+			(at 274.32 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15828,7 +15756,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 273.05 271.78 0)
+			(at 274.32 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15838,7 +15766,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 273.05 271.78 0)
+			(at 274.32 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15870,7 +15798,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3d2a5ff7-1c88-4ab5-b224-a7e088f06a33")
-		(property "Reference" "J6"
+		(property "Reference" "J3"
 			(at 355.6 43.434 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15998,7 +15926,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "J6")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -16006,7 +15934,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 284.48 271.78 0)
+		(at 285.75 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16016,7 +15944,7 @@
 		(dnp no)
 		(uuid "3f122046-3526-5d9f-a1e5-9a9774dc15f9")
 		(property "Reference" "#PWR0665"
-			(at 284.48 269.24 0)
+			(at 285.75 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16027,7 +15955,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 284.48 275.87 0)
+			(at 285.75 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16037,7 +15965,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 284.48 271.78 0)
+			(at 285.75 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16047,7 +15975,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 284.48 271.78 0)
+			(at 285.75 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16057,7 +15985,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 284.48 271.78 0)
+			(at 285.75 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16080,7 +16008,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 125.73 271.78 0)
+		(at 114.3 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16090,7 +16018,7 @@
 		(dnp no)
 		(uuid "403c4017-a79c-519f-b710-ec9a6045a69d")
 		(property "Reference" "#PWR0599"
-			(at 125.73 269.24 0)
+			(at 114.3 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16101,7 +16029,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 125.73 275.87 0)
+			(at 114.3 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16111,7 +16039,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 125.73 271.78 0)
+			(at 114.3 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16121,7 +16049,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 271.78 0)
+			(at 114.3 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16131,7 +16059,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 125.73 271.78 0)
+			(at 114.3 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16228,7 +16156,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 137.16 266.7 0)
+		(at 125.73 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16237,8 +16165,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "41ddaa07-c438-55b2-bf20-b442d4c2fe3e")
-		(property "Reference" "C14"
-			(at 141.135 265 0)
+		(property "Reference" "C13"
+			(at 129.705 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16248,7 +16176,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 142.185 268.4 0)
+			(at 130.755 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16258,7 +16186,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 137.16 266.7 0)
+			(at 125.73 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16269,7 +16197,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 266.7 0)
+			(at 125.73 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16279,7 +16207,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 137.16 266.7 0)
+			(at 125.73 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16297,7 +16225,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C14")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -16305,7 +16233,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 238.76 271.78 0)
+		(at 240.03 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16315,7 +16243,7 @@
 		(dnp no)
 		(uuid "42f97e4c-82df-5251-ac96-35a1882657ad")
 		(property "Reference" "#PWR0645"
-			(at 238.76 269.24 0)
+			(at 240.03 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16326,7 +16254,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 238.76 275.87 0)
+			(at 240.03 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16336,7 +16264,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 271.78 0)
+			(at 240.03 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16346,7 +16274,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 271.78 0)
+			(at 240.03 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16356,7 +16284,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 238.76 271.78 0)
+			(at 240.03 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16681,7 +16609,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 261.62 266.7 0)
+		(at 262.89 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16690,8 +16618,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "498aad05-dc30-5e6d-a50e-82e8b0c82769")
-		(property "Reference" "C24"
-			(at 265.595 265 0)
+		(property "Reference" "C23"
+			(at 266.865 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16701,7 +16629,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 266.645 268.4 0)
+			(at 267.915 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16711,7 +16639,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 261.62 266.7 0)
+			(at 262.89 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16722,7 +16650,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 261.62 266.7 0)
+			(at 262.89 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16732,7 +16660,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 261.62 266.7 0)
+			(at 262.89 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16750,7 +16678,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C24")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -16758,7 +16686,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 91.44 266.7 0)
+		(at 80.01 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16767,8 +16695,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4b1ac229-017c-5e5e-a60c-0eed1d78b9ca")
-		(property "Reference" "C10"
-			(at 95.415 265 0)
+		(property "Reference" "C9"
+			(at 83.46 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16778,7 +16706,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 96.465 268.4 0)
+			(at 85.035 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16788,7 +16716,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 91.44 266.7 0)
+			(at 80.01 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16799,7 +16727,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 266.7 0)
+			(at 80.01 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16809,7 +16737,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 91.44 266.7 0)
+			(at 80.01 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16827,7 +16755,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C10")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -17217,7 +17145,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4faa35fb-9a3c-5cb1-9c17-79de1389d388")
-		(property "Reference" "R15"
+		(property "Reference" "R20"
 			(at 270.675 209.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17277,7 +17205,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R15")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -17368,7 +17296,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "529dcd7b-d21f-4da6-98bf-e9a2338c679b")
-		(property "Reference" "J4"
+		(property "Reference" "J5"
 			(at 386.08 66.294 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17442,7 +17370,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "J4")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -17527,7 +17455,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 80.01 266.7 0)
+		(at 68.58 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17536,8 +17464,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5379af17-2da2-5770-9c59-028b3361c54b")
-		(property "Reference" "C12"
-			(at 83.985 265 0)
+		(property "Reference" "C8"
+			(at 72.03 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17547,7 +17475,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 85.035 268.4 0)
+			(at 73.605 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17557,7 +17485,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 80.01 266.7 0)
+			(at 68.58 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17568,7 +17496,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 266.7 0)
+			(at 68.58 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17578,7 +17506,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 80.01 266.7 0)
+			(at 68.58 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17596,7 +17524,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C12")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -17758,7 +17686,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+1V2")
-		(at 181.61 261.62 0)
+		(at 182.88 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17768,7 +17696,7 @@
 		(dnp no)
 		(uuid "598581cf-3146-5b44-9df1-090381f26210")
 		(property "Reference" "#PWR0618"
-			(at 181.61 259.08 0)
+			(at 182.88 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17779,7 +17707,7 @@
 			)
 		)
 		(property "Value" "+1V2"
-			(at 181.61 257.53 0)
+			(at 182.88 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17789,7 +17717,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 261.62 0)
+			(at 182.88 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17799,7 +17727,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 261.62 0)
+			(at 182.88 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17809,7 +17737,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 261.62 0)
+			(at 182.88 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18356,7 +18284,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 160.02 261.62 0)
+		(at 148.59 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18366,7 +18294,7 @@
 		(dnp no)
 		(uuid "636312bd-a3c9-5ca3-ae1f-52ca05dc7e61")
 		(property "Reference" "#PWR0612"
-			(at 160.02 259.08 0)
+			(at 148.59 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18377,7 +18305,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 160.02 257.53 0)
+			(at 148.59 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18387,7 +18315,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 261.62 0)
+			(at 148.59 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18397,7 +18325,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 261.62 0)
+			(at 148.59 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18407,7 +18335,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 160.02 261.62 0)
+			(at 148.59 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18430,7 +18358,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 238.76 266.7 0)
+		(at 240.03 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18439,8 +18367,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "650e0f33-168d-5148-adef-c2e92a3d1af1")
-		(property "Reference" "C22"
-			(at 242.735 265 0)
+		(property "Reference" "C21"
+			(at 244.005 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18450,7 +18378,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 243.785 268.4 0)
+			(at 245.055 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18460,7 +18388,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 238.76 266.7 0)
+			(at 240.03 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18471,7 +18399,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 266.7 0)
+			(at 240.03 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18481,7 +18409,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 238.76 266.7 0)
+			(at 240.03 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18499,7 +18427,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C22")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -18516,7 +18444,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6599a29f-5eb0-5d0b-b36d-f20d08cf9ae1")
-		(property "Reference" "C6"
+		(property "Reference" "C5"
 			(at 37.74 265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18576,7 +18504,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C6")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -18766,7 +18694,7 @@
 				)
 			)
 		)
-		(property "Value" "180k"
+		(property "Value" "100k"
 			(at 149.28 223.95 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19023,7 +18951,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 181.61 266.7 0)
+		(at 182.88 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19032,8 +18960,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6c828511-d420-5c7d-9f2e-6bcfd5155dec")
-		(property "Reference" "C17"
-			(at 185.585 265 0)
+		(property "Reference" "C16"
+			(at 186.855 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19043,7 +18971,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 186.635 268.4 0)
+			(at 187.905 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19053,7 +18981,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 181.61 266.7 0)
+			(at 182.88 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19064,7 +18992,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 266.7 0)
+			(at 182.88 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19074,7 +19002,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 266.7 0)
+			(at 182.88 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19092,7 +19020,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C17")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -19100,7 +19028,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 148.59 271.78 0)
+		(at 137.16 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19110,7 +19038,7 @@
 		(dnp no)
 		(uuid "742fd300-7f97-5791-a69a-bffce3ac2141")
 		(property "Reference" "#PWR0609"
-			(at 148.59 269.24 0)
+			(at 137.16 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19121,7 +19049,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 148.59 275.87 0)
+			(at 137.16 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19131,7 +19059,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 148.59 271.78 0)
+			(at 137.16 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19141,7 +19069,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 271.78 0)
+			(at 137.16 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19151,7 +19079,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 148.59 271.78 0)
+			(at 137.16 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19408,7 +19336,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 250.19 266.7 0)
+		(at 251.46 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19417,8 +19345,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "798d7307-a32f-54d4-a0db-93acf281ea27")
-		(property "Reference" "C23"
-			(at 254.165 265 0)
+		(property "Reference" "C22"
+			(at 255.435 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19428,7 +19356,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 255.215 268.4 0)
+			(at 256.485 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19438,7 +19366,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 250.19 266.7 0)
+			(at 251.46 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19449,7 +19377,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.19 266.7 0)
+			(at 251.46 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19459,7 +19387,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 250.19 266.7 0)
+			(at 251.46 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19477,7 +19405,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C23")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -19636,7 +19564,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 227.33 261.62 0)
+		(at 228.6 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19646,7 +19574,7 @@
 		(dnp no)
 		(uuid "7bf1cd79-4ec1-58a3-8dfb-f37ea8c53632")
 		(property "Reference" "#PWR0638"
-			(at 227.33 259.08 0)
+			(at 228.6 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19657,7 +19585,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 227.33 257.53 0)
+			(at 228.6 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19667,7 +19595,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 227.33 261.62 0)
+			(at 228.6 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19677,7 +19605,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 227.33 261.62 0)
+			(at 228.6 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19687,7 +19615,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 227.33 261.62 0)
+			(at 228.6 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19710,7 +19638,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+1V2")
-		(at 193.04 261.62 0)
+		(at 194.31 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19720,7 +19648,7 @@
 		(dnp no)
 		(uuid "803d3184-d353-589a-b3f0-7fdd34a6d2f3")
 		(property "Reference" "#PWR0623"
-			(at 193.04 259.08 0)
+			(at 194.31 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19731,7 +19659,7 @@
 			)
 		)
 		(property "Value" "+1V2"
-			(at 193.04 257.53 0)
+			(at 194.31 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19741,7 +19669,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 261.62 0)
+			(at 194.31 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19751,7 +19679,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 261.62 0)
+			(at 194.31 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19761,7 +19689,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 261.62 0)
+			(at 194.31 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19861,7 +19789,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 102.87 271.78 0)
+		(at 91.44 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19871,7 +19799,7 @@
 		(dnp no)
 		(uuid "81d3277e-36a8-5210-ab54-5071801fca97")
 		(property "Reference" "#PWR0589"
-			(at 102.87 269.24 0)
+			(at 91.44 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19882,7 +19810,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 102.87 275.87 0)
+			(at 91.44 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19892,7 +19820,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 102.87 271.78 0)
+			(at 91.44 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19902,7 +19830,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 102.87 271.78 0)
+			(at 91.44 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19912,7 +19840,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 102.87 271.78 0)
+			(at 91.44 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19935,7 +19863,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 250.19 261.62 0)
+		(at 251.46 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19945,7 +19873,7 @@
 		(dnp no)
 		(uuid "82c92182-50f6-583e-b6ef-8573c682632b")
 		(property "Reference" "#PWR0648"
-			(at 250.19 259.08 0)
+			(at 251.46 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19956,7 +19884,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 250.19 257.53 0)
+			(at 251.46 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19966,7 +19894,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 250.19 261.62 0)
+			(at 251.46 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19976,7 +19904,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.19 261.62 0)
+			(at 251.46 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19986,7 +19914,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 250.19 261.62 0)
+			(at 251.46 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20009,7 +19937,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 80.01 271.78 0)
+		(at 68.58 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20019,7 +19947,7 @@
 		(dnp no)
 		(uuid "8305ac82-3d50-58a1-94bf-6a25c1e550b2")
 		(property "Reference" "#PWR0579"
-			(at 80.01 269.24 0)
+			(at 68.58 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20030,7 +19958,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 80.01 275.87 0)
+			(at 68.58 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20040,7 +19968,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 80.01 271.78 0)
+			(at 68.58 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20050,7 +19978,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 271.78 0)
+			(at 68.58 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20060,7 +19988,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 80.01 271.78 0)
+			(at 68.58 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20160,7 +20088,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 68.58 271.78 0)
+		(at 57.15 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20170,80 +20098,6 @@
 		(dnp no)
 		(uuid "860835d7-9f0b-52be-8f4e-cffaceaeb39a")
 		(property "Reference" "#PWR0574"
-			(at 68.58 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 68.58 275.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 68.58 271.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 68.58 271.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 68.58 271.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f29ee625-fcf6-497b-a58c-6ee0582aec73")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "#PWR0574")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Cherry:GND")
-		(at 57.15 271.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "873552e3-2f7f-54af-b68d-a6ca9219978f")
-		(property "Reference" "#PWR0569"
 			(at 57.15 269.24 0)
 			(hide yes)
 			(show_name no)
@@ -20295,6 +20149,80 @@
 			)
 		)
 		(pin "1"
+			(uuid "f29ee625-fcf6-497b-a58c-6ee0582aec73")
+		)
+		(instances
+			(project "cherry"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "#PWR0574")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Cherry:GND")
+		(at 45.72 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "873552e3-2f7f-54af-b68d-a6ca9219978f")
+		(property "Reference" "#PWR0569"
+			(at 45.72 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 275.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
 			(uuid "f838cdbb-0525-4f73-95e4-1f0ed5daf3b9")
 		)
 		(instances
@@ -20317,7 +20245,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8740620f-969b-50e5-8a5e-1f3bf0bb6c5a")
-		(property "Reference" "R17"
+		(property "Reference" "R22"
 			(at 296.075 209.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20377,7 +20305,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R17")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -20385,7 +20313,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 261.62 271.78 0)
+		(at 262.89 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20395,7 +20323,7 @@
 		(dnp no)
 		(uuid "8adc3fb2-c44f-5947-af61-27b5186a0ddd")
 		(property "Reference" "#PWR0655"
-			(at 261.62 269.24 0)
+			(at 262.89 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20406,7 +20334,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 261.62 275.87 0)
+			(at 262.89 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20416,7 +20344,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 261.62 271.78 0)
+			(at 262.89 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20426,7 +20354,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 261.62 271.78 0)
+			(at 262.89 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20436,7 +20364,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 261.62 271.78 0)
+			(at 262.89 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20775,7 +20703,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 215.9 266.7 0)
+		(at 217.17 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20784,8 +20712,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "93a7fe19-f774-54a6-8d78-4927a00dd68a")
-		(property "Reference" "C20"
-			(at 219.875 265 0)
+		(property "Reference" "C19"
+			(at 221.145 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20795,7 +20723,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 220.925 268.4 0)
+			(at 222.195 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20805,7 +20733,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 215.9 266.7 0)
+			(at 217.17 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20816,7 +20744,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 266.7 0)
+			(at 217.17 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20826,7 +20754,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 266.7 0)
+			(at 217.17 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20844,7 +20772,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C20")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -20852,7 +20780,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 215.9 261.62 0)
+		(at 217.17 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20862,7 +20790,7 @@
 		(dnp no)
 		(uuid "95f00cfc-d603-5caa-b68a-c8cc64dec805")
 		(property "Reference" "#PWR0633"
-			(at 215.9 259.08 0)
+			(at 217.17 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20873,7 +20801,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 215.9 257.53 0)
+			(at 217.17 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20883,7 +20811,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 261.62 0)
+			(at 217.17 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20893,7 +20821,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 261.62 0)
+			(at 217.17 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20903,7 +20831,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 261.62 0)
+			(at 217.17 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20926,7 +20854,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+1V2")
-		(at 204.47 261.62 0)
+		(at 205.74 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20936,7 +20864,7 @@
 		(dnp no)
 		(uuid "974b4267-b689-5ae9-9137-1e20fb6e39ce")
 		(property "Reference" "#PWR0628"
-			(at 204.47 259.08 0)
+			(at 205.74 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20947,7 +20875,7 @@
 			)
 		)
 		(property "Value" "+1V2"
-			(at 204.47 257.53 0)
+			(at 205.74 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20957,7 +20885,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 261.62 0)
+			(at 205.74 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20967,7 +20895,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 261.62 0)
+			(at 205.74 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20977,7 +20905,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 204.47 261.62 0)
+			(at 205.74 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21000,7 +20928,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 273.05 261.62 0)
+		(at 274.32 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21010,7 +20938,7 @@
 		(dnp no)
 		(uuid "97eec328-a608-5898-b3a9-6391e3277e0c")
 		(property "Reference" "#PWR0658"
-			(at 273.05 259.08 0)
+			(at 274.32 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21021,7 +20949,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 273.05 257.53 0)
+			(at 274.32 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21031,7 +20959,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 273.05 261.62 0)
+			(at 274.32 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21041,7 +20969,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 273.05 261.62 0)
+			(at 274.32 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21051,7 +20979,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 273.05 261.62 0)
+			(at 274.32 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21371,7 +21299,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 238.76 261.62 0)
+		(at 240.03 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21381,7 +21309,7 @@
 		(dnp no)
 		(uuid "9d926cb1-2134-5f14-a3af-f070b7581988")
 		(property "Reference" "#PWR0643"
-			(at 238.76 259.08 0)
+			(at 240.03 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21392,7 +21320,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 238.76 257.53 0)
+			(at 240.03 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21402,7 +21330,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 261.62 0)
+			(at 240.03 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21412,7 +21340,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 261.62 0)
+			(at 240.03 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21422,7 +21350,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 238.76 261.62 0)
+			(at 240.03 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21593,7 +21521,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 181.61 271.78 0)
+		(at 182.88 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21603,7 +21531,7 @@
 		(dnp no)
 		(uuid "a14a80f3-0b9c-50a4-9b7d-d83eb0b595fa")
 		(property "Reference" "#PWR0620"
-			(at 181.61 269.24 0)
+			(at 182.88 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21614,7 +21542,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 275.87 0)
+			(at 182.88 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21624,7 +21552,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 271.78 0)
+			(at 182.88 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21634,7 +21562,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 271.78 0)
+			(at 182.88 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21644,7 +21572,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 271.78 0)
+			(at 182.88 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21741,7 +21669,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 273.05 266.7 0)
+		(at 274.32 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21750,8 +21678,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a33c29e7-8c57-5b39-82e7-2b86bb66883b")
-		(property "Reference" "C25"
-			(at 277.025 265 0)
+		(property "Reference" "C24"
+			(at 278.295 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21761,7 +21689,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 277.55 268.4 0)
+			(at 278.82 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21771,7 +21699,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0805_2012Metric"
-			(at 273.05 266.7 0)
+			(at 274.32 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21782,7 +21710,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 273.05 266.7 0)
+			(at 274.32 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21792,7 +21720,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 273.05 266.7 0)
+			(at 274.32 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21810,7 +21738,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C25")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -21969,7 +21897,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 261.62 261.62 0)
+		(at 262.89 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21979,7 +21907,7 @@
 		(dnp no)
 		(uuid "a7094a22-d1a4-550f-a125-191297a987ae")
 		(property "Reference" "#PWR0653"
-			(at 261.62 259.08 0)
+			(at 262.89 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21990,7 +21918,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 261.62 257.53 0)
+			(at 262.89 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22000,7 +21928,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 261.62 261.62 0)
+			(at 262.89 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22010,7 +21938,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 261.62 261.62 0)
+			(at 262.89 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22020,7 +21948,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 261.62 261.62 0)
+			(at 262.89 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22052,7 +21980,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a7130e04-a20c-5aa2-a6a2-cc2405d2cd29")
-		(property "Reference" "R14"
+		(property "Reference" "R19"
 			(at 257.975 209.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22112,7 +22040,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R14")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -22203,7 +22131,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa30eb57-8acd-467f-8085-bca55c75a571")
-		(property "Reference" "R18"
+		(property "Reference" "R14"
 			(at 124.46 53.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22263,7 +22191,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R18")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -22345,7 +22273,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 91.44 271.78 0)
+		(at 80.01 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22355,7 +22283,7 @@
 		(dnp no)
 		(uuid "afb87ad4-6c4c-5a16-8106-877400307644")
 		(property "Reference" "#PWR0584"
-			(at 91.44 269.24 0)
+			(at 80.01 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22366,7 +22294,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 91.44 275.87 0)
+			(at 80.01 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22376,7 +22304,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 271.78 0)
+			(at 80.01 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22386,7 +22314,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 271.78 0)
+			(at 80.01 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22396,7 +22324,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 91.44 271.78 0)
+			(at 80.01 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22786,7 +22714,8 @@
 				)
 			)
 		)
-	)
+	)
+
 	(symbol
 		(lib_id "Cherry:+3V3")
 		(at 34.29 87.63 0)
@@ -22872,7 +22801,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be2a8be5-3ef5-5ff4-b76b-2f3ff6d01a46")
-		(property "Reference" "U2"
+		(property "Reference" "U3"
 			(at 237.49 43.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23169,7 +23098,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "U2")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -23250,7 +23179,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Cherry:W25Q32JVSSIQ")
+		(lib_id "Cherry:W25Q32JVSSIM")
 		(at 123.19 90.17 0)
 		(unit 1)
 		(body_style 1)
@@ -23260,7 +23189,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "befc54e8-811e-5e4e-b65a-d32ea4e6da76")
-		(property "Reference" "U3"
+		(property "Reference" "U2"
 			(at 122.936 83.058 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23270,7 +23199,7 @@
 				)
 			)
 		)
-		(property "Value" "W25Q32JVSSIQ"
+		(property "Value" "W25Q32JVSSIM"
 			(at 123.19 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23338,7 +23267,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "U3")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -23346,7 +23275,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 204.47 266.7 0)
+		(at 205.74 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23355,8 +23284,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c470bbfe-0daf-5482-a423-2c4e97387d07")
-		(property "Reference" "C19"
-			(at 208.445 265 0)
+		(property "Reference" "C18"
+			(at 209.715 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23366,7 +23295,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 208.97 268.4 0)
+			(at 210.24 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23376,7 +23305,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0805_2012Metric"
-			(at 204.47 266.7 0)
+			(at 205.74 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23387,7 +23316,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 266.7 0)
+			(at 205.74 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23397,7 +23326,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 204.47 266.7 0)
+			(at 205.74 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23415,7 +23344,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C19")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -23423,7 +23352,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 250.19 271.78 0)
+		(at 251.46 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23433,7 +23362,7 @@
 		(dnp no)
 		(uuid "c719b0f3-194b-5521-bad2-b97f0c82247c")
 		(property "Reference" "#PWR0650"
-			(at 250.19 269.24 0)
+			(at 251.46 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23444,7 +23373,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 250.19 275.87 0)
+			(at 251.46 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23454,7 +23383,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 250.19 271.78 0)
+			(at 251.46 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23464,7 +23393,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.19 271.78 0)
+			(at 251.46 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23474,7 +23403,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 250.19 271.78 0)
+			(at 251.46 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23497,7 +23426,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 284.48 261.62 0)
+		(at 285.75 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23507,7 +23436,7 @@
 		(dnp no)
 		(uuid "c72367e9-5763-5ce9-a354-a131aea609d9")
 		(property "Reference" "#PWR0663"
-			(at 284.48 259.08 0)
+			(at 285.75 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23518,7 +23447,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 284.48 257.53 0)
+			(at 285.75 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23528,7 +23457,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 284.48 261.62 0)
+			(at 285.75 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23538,7 +23467,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 284.48 261.62 0)
+			(at 285.75 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23548,7 +23477,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 284.48 261.62 0)
+			(at 285.75 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23648,7 +23577,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:+3V3")
-		(at 57.15 261.62 0)
+		(at 45.72 261.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23658,7 +23587,7 @@
 		(dnp no)
 		(uuid "c906a955-15b4-5e88-852d-cb7ae8d03e49")
 		(property "Reference" "#PWR0567"
-			(at 57.15 259.08 0)
+			(at 45.72 259.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23669,7 +23598,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 57.15 257.53 0)
+			(at 45.72 257.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23679,7 +23608,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 57.15 261.62 0)
+			(at 45.72 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23689,7 +23618,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 57.15 261.62 0)
+			(at 45.72 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23699,7 +23628,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 57.15 261.62 0)
+			(at 45.72 261.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23719,10 +23648,11 @@
 				)
 			)
 		)
-	)
+	)
+
 	(symbol
 		(lib_id "Cherry:C")
-		(at 227.33 266.7 0)
+		(at 228.6 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23731,8 +23661,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cec89328-fa9b-588c-9753-b0663968f1f4")
-		(property "Reference" "C21"
-			(at 231.305 265 0)
+		(property "Reference" "C20"
+			(at 232.575 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23742,7 +23672,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 232.355 268.4 0)
+			(at 233.625 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23752,7 +23682,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 227.33 266.7 0)
+			(at 228.6 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23763,7 +23693,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 227.33 266.7 0)
+			(at 228.6 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23773,7 +23703,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 227.33 266.7 0)
+			(at 228.6 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23791,7 +23721,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C21")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -23799,7 +23729,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 160.02 271.78 0)
+		(at 148.59 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23809,7 +23739,7 @@
 		(dnp no)
 		(uuid "d04d3285-eb46-562e-9e48-a035c8efa488")
 		(property "Reference" "#PWR0614"
-			(at 160.02 269.24 0)
+			(at 148.59 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23820,7 +23750,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 160.02 275.87 0)
+			(at 148.59 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23830,7 +23760,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 271.78 0)
+			(at 148.59 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23840,7 +23770,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 271.78 0)
+			(at 148.59 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23850,7 +23780,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 160.02 271.78 0)
+			(at 148.59 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24033,7 +23963,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d25ed608-0901-4fc2-9dde-a63548fe15cd")
-		(property "Reference" "R20"
+		(property "Reference" "R16"
 			(at 104.14 58.09 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24093,7 +24023,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R20")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -24401,7 +24331,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 137.16 271.78 0)
+		(at 125.73 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24411,7 +24341,7 @@
 		(dnp no)
 		(uuid "da76f12c-bd1d-5020-a528-c0f28ca2d915")
 		(property "Reference" "#PWR0604"
-			(at 137.16 269.24 0)
+			(at 125.73 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24422,7 +24352,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 137.16 275.87 0)
+			(at 125.73 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24432,7 +24362,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 271.78 0)
+			(at 125.73 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24442,7 +24372,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 271.78 0)
+			(at 125.73 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24452,7 +24382,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 137.16 271.78 0)
+			(at 125.73 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24568,7 +24498,7 @@
 				)
 			)
 		)
-		(property "Value" "39.2k"
+		(property "Value" "22k"
 			(at 149.805 234.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24635,7 +24565,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dd0ca40e-fb6f-4574-b2eb-bbbd7c506556")
-		(property "Reference" "J3"
+		(property "Reference" "J4"
 			(at 386.08 43.434 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24709,7 +24639,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "J3")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -24717,7 +24647,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 193.04 266.7 0)
+		(at 194.31 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24726,8 +24656,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "deb3f5ce-d718-5edb-8478-4f71da457b81")
-		(property "Reference" "C18"
-			(at 197.015 265 0)
+		(property "Reference" "C17"
+			(at 198.285 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24737,7 +24667,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 198.065 268.4 0)
+			(at 199.335 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24747,7 +24677,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 193.04 266.7 0)
+			(at 194.31 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24758,7 +24688,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 266.7 0)
+			(at 194.31 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24768,7 +24698,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 266.7 0)
+			(at 194.31 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24786,7 +24716,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C18")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -24794,7 +24724,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 102.87 266.7 0)
+		(at 91.44 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24803,8 +24733,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e005aaf0-fef2-5861-9f45-7a37cb986861")
-		(property "Reference" "C11"
-			(at 106.845 265 0)
+		(property "Reference" "C10"
+			(at 95.415 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24814,7 +24744,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 107.895 268.4 0)
+			(at 96.465 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24824,7 +24754,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 102.87 266.7 0)
+			(at 91.44 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24835,7 +24765,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 102.87 266.7 0)
+			(at 91.44 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24845,7 +24775,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 102.87 266.7 0)
+			(at 91.44 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24863,7 +24793,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C11")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -25096,7 +25026,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:GND")
-		(at 215.9 271.78 0)
+		(at 217.17 271.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25106,7 +25036,7 @@
 		(dnp no)
 		(uuid "e795cabd-eac4-5880-9e62-543e9f1ee966")
 		(property "Reference" "#PWR0635"
-			(at 215.9 269.24 0)
+			(at 217.17 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25117,7 +25047,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 215.9 275.87 0)
+			(at 217.17 275.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25127,7 +25057,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 271.78 0)
+			(at 217.17 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25137,7 +25067,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 271.78 0)
+			(at 217.17 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25147,7 +25077,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 271.78 0)
+			(at 217.17 271.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25245,7 +25175,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 284.48 266.7 0)
+		(at 285.75 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25254,8 +25184,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e91c4b1c-e822-5458-aae9-36cc74b8b046")
-		(property "Reference" "C28"
-			(at 288.455 265 0)
+		(property "Reference" "C25"
+			(at 289.725 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25265,7 +25195,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 289.505 268.4 0)
+			(at 290.775 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25275,7 +25205,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 284.48 266.7 0)
+			(at 285.75 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25286,7 +25216,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 284.48 266.7 0)
+			(at 285.75 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25296,7 +25226,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 284.48 266.7 0)
+			(at 285.75 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25314,7 +25244,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C28")
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -25696,7 +25626,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 125.73 266.7 0)
+		(at 114.3 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25705,8 +25635,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f2f18d12-c742-5d36-b19a-4af0adb81576")
-		(property "Reference" "C13"
-			(at 129.705 265 0)
+		(property "Reference" "C12"
+			(at 118.275 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25716,7 +25646,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 130.755 268.4 0)
+			(at 119.325 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25726,7 +25656,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 125.73 266.7 0)
+			(at 114.3 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25737,7 +25667,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 266.7 0)
+			(at 114.3 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25747,7 +25677,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 125.73 266.7 0)
+			(at 114.3 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25765,7 +25695,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C13")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -26004,7 +25934,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f90c9606-3c60-4448-9b9f-b8464ba61148")
-		(property "Reference" "R19"
+		(property "Reference" "R15"
 			(at 114.3 55.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26064,7 +25994,7 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R19")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -26220,7 +26150,7 @@
 	)
 	(symbol
 		(lib_id "Cherry:C")
-		(at 68.58 266.7 0)
+		(at 57.15 266.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -26229,8 +26159,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fc227c74-8106-5500-bd8c-28d27a4d76cc")
-		(property "Reference" "C9"
-			(at 72.03 265 0)
+		(property "Reference" "C7"
+			(at 60.6 265 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26240,7 +26170,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 73.605 268.4 0)
+			(at 62.175 268.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26250,7 +26180,7 @@
 			)
 		)
 		(property "Footprint" "Cherry:C_0402_1005Metric"
-			(at 68.58 266.7 0)
+			(at 57.15 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26261,7 +26191,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 266.7 0)
+			(at 57.15 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26271,7 +26201,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 266.7 0)
+			(at 57.15 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26289,11 +26219,293 @@
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "C9")
+					(reference "C7")
 					(unit 1)
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 57.15 200.66) (xy 74.93 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d677aaa-e956-499c-aef2-234a89123218")
+	)
+	(wire
+		(pts
+			(xy 52.07 92.71) (xy 45.72 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0c1ab2e-706a-49c1-9158-ddafeb71e994")
+	)
+	(wire
+		(pts
+			(xy 45.72 92.71) (xy 45.72 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "152d516e-e708-4380-ab0f-82b39ce7784e")
+	)
+	(wire
+		(pts
+			(xy 45.72 182.88) (xy 91.44 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51deb267-5ae5-4d16-9811-b6e437d1fdc5")
+	)
+	(wire
+		(pts
+			(xy 91.44 182.88) (xy 91.44 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd5f1f65-71e5-40f3-9c2b-a6f68c03ac5f")
+	)
+	(wire
+		(pts
+			(xy 91.44 200.66) (xy 90.17 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c197dd50-2781-4664-9bdf-a42a1e3cc1b4")
+	)
+	(wire
+		(pts
+			(xy 57.15 203.2) (xy 64.77 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5365db67-3570-4a73-b4da-dd680dd54f67")
+	)
+	(wire
+		(pts
+			(xy 64.77 203.2) (xy 64.77 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "121b2c92-ee5f-4706-a319-8dae6f706e08")
+	)
+	(wire
+		(pts
+			(xy 64.77 198.12) (xy 74.93 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb693baa-0a97-49b8-98d5-3fba9972aa1a")
+	)
+	(wire
+		(pts
+			(xy 52.07 95.25) (xy 46.99 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5e100b6-b66c-48e2-ab24-050a424cd6ee")
+	)
+	(wire
+		(pts
+			(xy 46.99 95.25) (xy 46.99 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09bee862-7d92-44ab-a1b9-3627d42eab89")
+	)
+	(wire
+		(pts
+			(xy 46.99 184.15) (xy 90.17 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78a8d9a3-df6d-43f9-86ec-600a677f7e01")
+	)
+	(wire
+		(pts
+			(xy 90.17 184.15) (xy 90.17 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d93d7a79-b741-49fe-8f6f-4360013a3f5c")
+	)
+	(wire
+		(pts
+			(xy 92.71 100.33) (xy 93.98 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c8e0e51-4349-4eff-becd-986d27aaaccc")
+	)
+	(wire
+		(pts
+			(xy 93.98 100.33) (xy 93.98 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37e962a5-406b-4c4a-b09a-69114e8500b4")
+	)
+	(wire
+		(pts
+			(xy 93.98 163.83) (xy 274.32 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7b765af-1006-444c-bbd6-7678e00f78b4")
+	)
+	(wire
+		(pts
+			(xy 274.32 163.83) (xy 274.32 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51a7bc1a-b1bc-4f10-950a-d06f001d7fae")
+	)
+	(wire
+		(pts
+			(xy 274.32 124.46) (xy 261.62 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adf0b7a9-558c-4f0c-b4d5-e7c94a364d6e")
+	)
+	(wire
+		(pts
+			(xy 92.71 102.87) (xy 95.25 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f464e27e-9a85-46ce-9540-72432ef1e2e6")
+	)
+	(wire
+		(pts
+			(xy 95.25 102.87) (xy 95.25 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb34499e-51cb-4a8d-b30c-79a17c7c813b")
+	)
+	(wire
+		(pts
+			(xy 95.25 162.56) (xy 273.05 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ce63cbe-8d37-4618-9f35-320bb7da0787")
+	)
+	(wire
+		(pts
+			(xy 273.05 162.56) (xy 273.05 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1311cf96-dadb-411b-96d6-af0f96acf089")
+	)
+	(wire
+		(pts
+			(xy 273.05 121.92) (xy 261.62 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f782300-c4c3-4aa3-a58d-9c5d2eb11658")
+	)
+	(junction
+		(at 57.15 200.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec7b4eed-1ca1-4ab4-8df9-74c52b65969b")
+	)
+	(junction
+		(at 57.15 203.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "833c74b8-7bab-45cc-8395-e263a1b79e5f")
+	)
+	(label "USB_DP"
+		(at 45.72 146.05 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a041085d-6d36-4347-95a3-9ad05d22b770")
+	)
+	(label "USB_DM"
+		(at 46.99 133.35 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "25e75cd0-3733-4423-9176-cd259ae0d775")
+	)
+	(label "UART_TX"
+		(at 106.68 163.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fe88bd17-5a0b-4f97-b979-a8ac2349317c")
+	)
+	(label "UART_RX"
+		(at 127 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f40716f-e319-4588-8229-dd456a675dd3")
 	)
 	(sheet_instances
 		(path "/"
