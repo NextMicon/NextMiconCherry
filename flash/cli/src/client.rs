@@ -74,21 +74,15 @@ impl<T: FrameTransport> DeviceClient<T> {
         self.check_boot_status(response[0])
     }
 
-    /// Erases, writes, manifests, and reads back one user image slot.
+    /// Erases, writes, manifests, and reads back the single user image.
     ///
-    /// Image 0 is intentionally inaccessible through this API. Factory image
+    /// The boot image is intentionally inaccessible through this API. Factory
     /// recovery uses the external SPI header rather than normal USB flashing.
-    pub fn program_image(
-        &mut self,
-        image: Image,
-        data: &[u8],
-    ) -> Result<ImageManifest, ClientError> {
-        if image.is_bootloader() {
-            return Err(ClientError::ProtectedImage);
-        }
-        let manifest = ImageManifest::for_data(image, data)?;
+    pub fn program_user_image(&mut self, data: &[u8]) -> Result<ImageManifest, ClientError> {
+        let image = Image::User;
+        let manifest = ImageManifest::for_data(data)?;
 
-        self.erase_slot(image)?;
+        self.erase_user_image()?;
         self.write_at(image.flash_base(), data)?;
         self.write_at(manifest.address(), &manifest.encode())?;
         self.verify_at(image.flash_base(), data)?;
@@ -96,11 +90,8 @@ impl<T: FrameTransport> DeviceClient<T> {
         Ok(manifest)
     }
 
-    fn erase_slot(&mut self, image: Image) -> Result<(), ClientError> {
-        if image.is_bootloader() {
-            return Err(ClientError::ProtectedImage);
-        }
-        self.flash_command(FlashCommand::EraseSlot, encode_erase_slot(image).to_vec())
+    fn erase_user_image(&mut self) -> Result<(), ClientError> {
+        self.flash_command(FlashCommand::EraseSlot, encode_erase_slot().to_vec())
     }
 
     fn write_at(&mut self, mut address: u32, mut data: &[u8]) -> Result<(), ClientError> {
@@ -214,8 +205,6 @@ pub enum ClientError {
     FlashRejected(FlashStatus),
     #[error("device reported invalid capabilities 0x{0:02x}")]
     InvalidCapabilities(u8),
-    #[error("image 0 is protected; use the external SPI recovery procedure")]
-    ProtectedImage,
     #[error(
         "flash verification failed at 0x{address:06x}: expected 0x{expected:02x}, got 0x{actual:02x}"
     )]
@@ -280,7 +269,7 @@ mod tests {
             match (request.channel, request.opcode) {
                 (Channel::Boot, value) if value == BootCommand::GetInfo as u8 => {
                     let capabilities = CAPABILITY_BOOT
-                        | if self.active_image.is_bootloader() {
+                        | if self.active_image.is_boot() {
                             CAPABILITY_FLASH
                         } else {
                             CAPABILITY_UART
@@ -330,40 +319,31 @@ mod tests {
 
     #[test]
     fn reads_device_info_and_boots() {
-        let mut client = DeviceClient::new(FakeDevice::new(Image::Image1), Duration::from_secs(1));
+        let mut client = DeviceClient::new(FakeDevice::new(Image::User), Duration::from_secs(1));
         assert_eq!(
             client.info().unwrap(),
             DeviceInfo {
-                active_image: Image::Image1,
+                active_image: Image::User,
                 capabilities: CAPABILITY_BOOT | CAPABILITY_UART,
             }
         );
-        assert!(client.boot(Image::Image3).is_ok());
-        assert_eq!(client.transport.active_image, Image::Image3);
+        assert!(client.boot(Image::Boot).is_ok());
+        assert_eq!(client.transport.active_image, Image::Boot);
         assert_eq!(client.transport.last_request.as_ref().unwrap().sequence, 1);
     }
 
     #[test]
     fn programs_and_verifies_user_image() {
         let data: Vec<u8> = (0..=255).cycle().take(600).collect();
-        let mut client = DeviceClient::new(FakeDevice::new(Image::Image0), Duration::from_secs(1));
-        let manifest = client.program_image(Image::Image2, &data).unwrap();
+        let mut client = DeviceClient::new(FakeDevice::new(Image::Boot), Duration::from_secs(1));
+        let manifest = client.program_user_image(&data).unwrap();
 
-        assert_eq!(manifest.image, Image::Image2);
+        assert_eq!(manifest.image, Image::User);
         assert_eq!(manifest.image_length, 600);
         assert_eq!(manifest.crc32, crc32fast::hash(&data));
         assert_eq!(
             manifest.address(),
-            Image::Image2.flash_end() - MANIFEST_SIZE as u32
+            Image::User.flash_end() - MANIFEST_SIZE as u32
         );
-    }
-
-    #[test]
-    fn never_programs_image_zero() {
-        let mut client = DeviceClient::new(FakeDevice::new(Image::Image0), Duration::from_secs(1));
-        assert!(matches!(
-            client.program_image(Image::Image0, b"factory"),
-            Err(ClientError::ProtectedImage)
-        ));
     }
 }

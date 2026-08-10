@@ -5,7 +5,7 @@ and pnpm. The Rust library behind the `nmb` CLI is compiled to WebAssembly, so
 the browser and CLI share the same COBS framing and CRC32 implementation.
 JavaScript handles Web Serial, flash operations, reconnect state, and the UI.
 
-The app erases a user slot, writes the bitstream and `NMF1` manifest, reads
+The app erases the user image, writes the bitstream and `NMF1` manifest, reads
 both back, and optionally warm-boots the new image. Files remain in the browser
 and are not uploaded.
 
@@ -33,8 +33,8 @@ pnpm dev
 ```
 
 Open the localhost URL printed by Vite, choose the NextMicon serial device,
-select a `.bin` bitstream and image 1-3, and start flashing. Image 0 remains
-protected. The `dev`, `test`, and `build` scripts rebuild the Rust WASM package
+select a `.bin` bitstream, and start flashing. The destination is always
+`user`, while `boot` remains protected. The `dev`, `test`, and `build` scripts rebuild the Rust WASM package
 before running their main command.
 
 Warm boot temporarily removes the serial port. The app waits up to 15 seconds

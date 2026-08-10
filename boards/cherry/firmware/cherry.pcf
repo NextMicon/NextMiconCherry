@@ -65,7 +65,7 @@ set_io gpio_36  J1
 # set_io flash_sck  L10
 # set_io flash_miso J9
 # QSPI_IO2 uses K6 and QSPI_IO3 uses J8 in user mode.
-# CBSEL0 uses L8 and CBSEL1 uses H9.
+# CBSEL0 uses L8 for the boot/user selector. CBSEL1 uses H9 and is held low.
 
 # Dedicated configuration pins (CRESET_B L9 and CDONE K8) are not user I/O.
 # clk_48m/E10 is driven by X1 and must only be declared as an FPGA input.

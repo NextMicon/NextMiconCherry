@@ -10,7 +10,8 @@ import {
   IMAGE_SLOT_SIZE,
   MANIFEST_SIZE,
   NextMiconClient,
-  createManifest,
+  USER_IMAGE,
+  createUserManifest,
 } from "./client.js";
 
 class FakeTransport {
@@ -57,10 +58,10 @@ class FakeTransport {
 
 test("manifest has the NMF1 layout and erased reserved bytes", () => {
   const data = new TextEncoder().encode("fpga bitstream");
-  const manifest = createManifest(2, data);
+  const manifest = createUserManifest(data);
   assert.equal(new TextDecoder().decode(manifest.bytes.subarray(0, 4)), "NMF1");
   assert.equal(manifest.bytes[4], 1);
-  assert.equal(manifest.bytes[5], 2);
+  assert.equal(manifest.bytes[5], USER_IMAGE);
   assert.equal(new DataView(manifest.bytes.buffer).getUint32(8, true), data.length);
   assert.ok(manifest.bytes.subarray(16).every((value) => value === 0xff));
 });
@@ -70,10 +71,10 @@ test("client programs the bitstream and manifest, then verifies both", async () 
   const client = new NextMiconClient(transport, { timeoutMs: 100 });
   const data = Uint8Array.from({ length: 600 }, (_, index) => index);
   const updates = [];
-  const manifest = await client.programImage(2, data, (progress) => updates.push(progress));
+  const manifest = await client.programUserImage(data, (progress) => updates.push(progress));
 
-  const base = 2 * IMAGE_SLOT_SIZE;
-  const manifestAddress = 3 * IMAGE_SLOT_SIZE - MANIFEST_SIZE;
+  const base = USER_IMAGE * IMAGE_SLOT_SIZE;
+  const manifestAddress = (USER_IMAGE + 1) * IMAGE_SLOT_SIZE - MANIFEST_SIZE;
   assert.deepEqual(transport.memory.slice(base, base + data.length), data);
   assert.deepEqual(
     transport.memory.slice(manifestAddress, manifestAddress + MANIFEST_SIZE),
@@ -83,9 +84,13 @@ test("client programs the bitstream and manifest, then verifies both", async () 
   assert.deepEqual(transport.sequences.slice(0, 4), [0, 1, 2, 3]);
 });
 
-test("image zero and invalid image sizes are rejected", () => {
-  assert.throws(() => createManifest(0, Uint8Array.of(1)), /protected/);
-  assert.throws(() => createManifest(1, new Uint8Array()), /empty/);
+test("only boot and user roles are accepted", async () => {
+  const client = new NextMiconClient(new FakeTransport(), { timeoutMs: 100 });
+  await assert.rejects(() => client.selectImage(2), /invalid image/);
+});
+
+test("invalid user image sizes are rejected", () => {
+  assert.throws(() => createUserManifest(new Uint8Array()), /empty/);
 });
 
 function decodeAddress(payload) {

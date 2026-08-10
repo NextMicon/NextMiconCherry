@@ -12,7 +12,7 @@ pub module BootController (
     rst: input reset,
 
     request_valid: input  logic,
-    request_image: input  logic<2>,
+    request_user : input  logic,
     request_ready: output logic,
 
     quiesce : output logic,
@@ -22,25 +22,25 @@ pub module BootController (
     warmboot_s0  : output logic,
     warmboot_boot: output logic,
 ) {
-    var pending     : logic;
-    var target_image: logic<2>;
-    var boot         : logic;
+    var pending    : logic;
+    var target_user: logic;
+    var boot       : logic;
 
     assign request_ready = ~pending;
     assign quiesce       = pending;
-    assign warmboot_s1   = target_image[1];
-    assign warmboot_s0   = target_image[0];
+    assign warmboot_s1   = 1'b0;
+    assign warmboot_s0   = target_user;
     assign warmboot_boot = boot;
 
     always_ff {
         if_reset {
-            pending      = 1'b0;
-            target_image = 2'b00;
-            boot         = 1'b0;
+            pending     = 1'b0;
+            target_user = 1'b0;
+            boot        = 1'b0;
         } else {
             if request_valid && request_ready {
-                pending      = 1'b1;
-                target_image = request_image;
+                pending     = 1'b1;
+                target_user = request_user;
             }
 
             // `pending` was already high for at least one clock here, so the

@@ -1,10 +1,9 @@
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
-use std::str::FromStr;
 use std::thread;
 use std::time::{Duration, Instant};
 
-use clap::{Parser, Subcommand};
+use clap::{Parser, Subcommand, ValueEnum};
 use nextmicon_flash::client::{ClientError, DeviceClient};
 use nextmicon_flash::protocol::Image;
 use nextmicon_flash::serial::{BoardInfo, DeviceManager, SerialError, UsbId};
@@ -31,7 +30,7 @@ struct Cli {
     )]
     timeout_ms: u64,
 
-    /// Time to wait for image 0 to re-enumerate before flashing.
+    /// Time to wait for the boot image to re-enumerate before flashing.
     #[arg(
         long,
         value_name = "SECONDS",
@@ -53,16 +52,19 @@ enum Command {
         #[arg(short, long)]
         verbose: bool,
     },
-    /// Warm-boot one of the four FPGA images.
+    /// Warm-boot the protected boot image or the user image.
     Boot {
-        /// Board and image in the form BOARD/0-3.
-        target: BoardImageTarget,
+        /// Board name reported by `nmb ls`.
+        board: String,
+        /// Image role to start.
+        image: ImageRole,
     },
-    /// Erase, program, manifest, and verify a user image slot.
+    /// Erase, program, manifest, and verify the user image.
     Flash {
-        /// Board and destination in the form BOARD/1-3.
-        target: BoardImageTarget,
+        /// Board name reported by `nmb ls`.
+        board: String,
         /// Raw iCE40 bitstream to program.
+        #[arg(value_name = "BITSTREAM")]
         image: PathBuf,
         /// Boot the newly programmed image after verification.
         #[arg(long)]
@@ -70,31 +72,25 @@ enum Command {
     },
 }
 
-#[derive(Clone, Debug, Eq, PartialEq)]
-struct BoardImageTarget {
-    board: String,
-    image: Image,
+#[derive(Clone, Copy, Debug, Eq, PartialEq, ValueEnum)]
+enum ImageRole {
+    Boot,
+    User,
 }
 
-impl FromStr for BoardImageTarget {
-    type Err = TargetError;
-
-    fn from_str(value: &str) -> Result<Self, Self::Err> {
-        let Some((board, image)) = value.rsplit_once('/') else {
-            return Err(TargetError(value.to_owned()));
-        };
-        if board.is_empty() {
-            return Err(TargetError(value.to_owned()));
+impl ImageRole {
+    const fn image(self) -> Image {
+        match self {
+            Self::Boot => Image::Boot,
+            Self::User => Image::User,
         }
-        let image = image
-            .parse::<u8>()
-            .ok()
-            .and_then(|image| Image::try_from(image).ok())
-            .ok_or_else(|| TargetError(value.to_owned()))?;
-        Ok(Self {
-            board: board.to_owned(),
-            image,
-        })
+    }
+
+    const fn label(self) -> &'static str {
+        match self {
+            Self::Boot => "boot",
+            Self::User => "user",
+        }
     }
 }
 
@@ -114,67 +110,53 @@ fn run(cli: Cli) -> Result<(), AppError> {
 
     match cli.command {
         Command::Ls { verbose } => list_boards(&manager, verbose),
-        Command::Boot { target } => {
-            let board = manager.find(&target.board)?;
+        Command::Boot { board, image } => {
+            let board = manager.find(&board)?;
             let transport = manager.open(&board, timeout)?;
             let mut client = DeviceClient::new(transport, timeout);
-            client.boot(target.image)?;
-            println!(
-                "{} accepted boot to image {}",
-                board.name, target.image as u8
-            );
+            client.boot(image.image())?;
+            println!("{} accepted boot to {}", board.name, image.label());
             Ok(())
         }
-        Command::Flash {
-            target,
-            image,
-            boot,
-        } => {
-            if target.image.is_bootloader() {
-                return Err(AppError::ProtectedImage);
-            }
+        Command::Flash { board, image, boot } => {
             let data = read_image(&image)?;
-            let mut board = manager.find(&target.board)?;
+            let mut board = manager.find(&board)?;
 
             let active_image = {
                 let transport = manager.open(&board, timeout)?;
                 let mut client = DeviceClient::new(transport, timeout);
                 client.info()?.active_image
             };
-            if !active_image.is_bootloader() {
-                eprintln!("Switching {} to image 0...", board.name);
+            if !active_image.is_boot() {
+                eprintln!("Switching {} to the boot image...", board.name);
                 {
                     let transport = manager.open(&board, timeout)?;
                     let mut client = DeviceClient::new(transport, timeout);
-                    client.boot(Image::Image0)?;
+                    client.boot(Image::Boot)?;
                 }
                 board = wait_for_image(
                     &manager,
                     &board,
-                    Image::Image0,
+                    Image::Boot,
                     Duration::from_secs(cli.reenumeration_timeout),
                 )?;
             }
 
             eprintln!(
-                "Programming {} bytes into {}/{} and verifying readback...",
+                "Programming {} bytes into {} user image and verifying readback...",
                 data.len(),
-                board.name,
-                target.image as u8
+                board.name
             );
             let transport = manager.open(&board, timeout)?;
             let mut client = DeviceClient::new(transport, timeout);
-            let manifest = client.program_image(target.image, &data)?;
+            let manifest = client.program_user_image(&data)?;
             println!(
-                "Programmed {}/{}: {} bytes, CRC32 {:08x}, verified",
-                board.name, target.image as u8, manifest.image_length, manifest.crc32
+                "Programmed {}/user: {} bytes, CRC32 {:08x}, verified",
+                board.name, manifest.image_length, manifest.crc32
             );
             if boot {
-                client.boot(target.image)?;
-                println!(
-                    "{} accepted boot to image {}",
-                    board.name, target.image as u8
-                );
+                client.boot(Image::User)?;
+                println!("{} accepted boot to user", board.name);
             }
             Ok(())
         }
@@ -193,8 +175,11 @@ fn list_boards(manager: &DeviceManager, verbose: bool) -> Result<(), AppError> {
                         .info()
                         .ok()
                 })
-                .map(|info| format!("image {}", info.active_image as u8))
-                .unwrap_or_else(|| "image unknown".to_owned());
+                .map(|info| match info.active_image {
+                    Image::Boot => "boot".to_owned(),
+                    Image::User => "user".to_owned(),
+                })
+                .unwrap_or_else(|| "unknown".to_owned());
             println!(
                 "{}\t{}\t{}\t{}\t{}",
                 board.name, active_image, board.usb_id, board.port_name, product
@@ -252,10 +237,6 @@ fn wait_for_image(
     }
 }
 
-#[derive(Clone, Debug, Error, Eq, PartialEq)]
-#[error("target must be BOARD/0-3, got {0:?}")]
-struct TargetError(String);
-
 #[derive(Debug, Error)]
 enum AppError {
     #[error(transparent)]
@@ -267,11 +248,7 @@ enum AppError {
         path: PathBuf,
         source: std::io::Error,
     },
-    #[error(
-        "image 0 is protected and cannot be written over USB; use the external SPI recovery procedure"
-    )]
-    ProtectedImage,
-    #[error("timed out after {timeout:?} waiting for {board:?} to re-enumerate as image 0")]
+    #[error("timed out after {timeout:?} waiting for {board:?} to re-enumerate as boot")]
     ReenumerationTimeout { board: String, timeout: Duration },
 }
 
@@ -280,16 +257,22 @@ mod tests {
     use super::*;
 
     #[test]
-    fn parses_board_image_targets() {
-        assert_eq!(
-            "cherry-0123/2".parse(),
-            Ok(BoardImageTarget {
-                board: "cherry-0123".to_owned(),
-                image: Image::Image2,
-            })
-        );
-        assert!("cherry-0123".parse::<BoardImageTarget>().is_err());
-        assert!("cherry-0123/4".parse::<BoardImageTarget>().is_err());
-        assert!("/1".parse::<BoardImageTarget>().is_err());
+    fn parses_named_boot_roles_and_unique_flash_target() {
+        let cli = Cli::try_parse_from(["nmb", "boot", "cherry-0123", "user"]).unwrap();
+        assert!(matches!(
+            cli.command,
+            Command::Boot {
+                board,
+                image: ImageRole::User
+            } if board == "cherry-0123"
+        ));
+
+        let cli = Cli::try_parse_from(["nmb", "flash", "cherry-0123", "user.bin"]).unwrap();
+        assert!(matches!(
+            cli.command,
+            Command::Flash { board, image, .. }
+                if board == "cherry-0123" && image == PathBuf::from("user.bin")
+        ));
+        assert!(Cli::try_parse_from(["nmb", "boot", "cherry-0123", "2"]).is_err());
     }
 }

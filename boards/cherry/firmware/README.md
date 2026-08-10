@@ -15,8 +15,8 @@ layout:
 
 The CDC byte stream carries COBS-delimited frames. A channel byte inside each
 frame selects BOOT, FLASH, or UART, so arbitrary UART data is never scanned for
-a reboot escape sequence. Image 0 reports BOOT and FLASH capabilities; images
-1-3 report BOOT and UART capabilities.
+a reboot escape sequence. The protected `boot` image reports BOOT and FLASH
+capabilities; the writable `user` image reports BOOT and UART capabilities.
 
 The protocol constants are in `src/protocol.veryl` and the complete wire
 format is documented in [`doc/flash.md`](../../../doc/flash.md).

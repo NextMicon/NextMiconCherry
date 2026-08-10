@@ -19,11 +19,11 @@ FPGA Board for Beginners
 - FPGA: Lattice iCE40HX8K-BG121 (7680 LUTs, 9x9mm, 0.8mm pitch)
 - GPIO: 36 pins (3.3V logic), 2x24 PinHeader x2 (paired contacts)
 - Clock: 48MHz
-- Flash: 32Mbit SPI Flash (30MB user area)
+- Flash: 32Mbit SPI Flash (3.5 MiB user-data area)
 - Power: USB 5V → 3.3V → 1.2V
 - Signal: 3.3V
 - USB ESD Protection
-- Switch: RESET / USER buttons, 2-bit solder-jumper Bitstream selector
+- Switch: RESET / USER buttons, boot/user solder-jumper selector
 - LED: PWR / USER0 / USER1 / PROG
 - Board: 61mm x 31mm, 4-layer FR4
 
@@ -74,7 +74,7 @@ J2 and J3 have two contacts for every pin number; the inner and outer contacts a
 | R19,R21-R22,R29 | 1k | 0402 | 4 | LED current limiting                       |
 | D1,D3-D4,D6 | LED | 0603 | 4 | PWR / USER0 / USER1 / PROG                 |
 | SW1,SW3 | Tact  | SMD  | 2   | RESET / USER button                        |
-| JP1-JP2 | Open solder jumper | 1.3mm pitch | 2 | IMAGE selector; open = 0, bridged = 1  |
+| JP1 | Open solder jumper | 1.3mm pitch | 1 | Boot selector; open = boot, bridged = user |
 
 ## Build
 

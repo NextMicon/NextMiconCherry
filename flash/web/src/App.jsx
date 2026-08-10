@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import {
+  BOOT_IMAGE,
   CAPABILITY_FLASH,
   MAX_IMAGE_SIZE,
   NextMiconClient,
-  createManifest,
+  USER_IMAGE,
+  createUserManifest,
 } from "./lib/client.js";
 import { WebSerialTransport } from "./lib/webserial.js";
 
@@ -28,7 +30,6 @@ export default function App() {
   const [connection, setConnection] = useState({ label: "未接続", state: "disconnected" });
   const [device, setDevice] = useState(null);
   const [file, setFile] = useState(null);
-  const [slot, setSlot] = useState("1");
   const [bootAfter, setBootAfter] = useState(true);
   const [bootSlot, setBootSlot] = useState("0");
   const [progress, setProgress] = useState({ value: 0, label: "待機中" });
@@ -110,7 +111,7 @@ export default function App() {
       const identity = usbIdentity(previousPort);
       await clearConnection();
       setConnection({
-        label: `image ${expectedImage}の再列挙を待機中`,
+        label: `${imageRole(expectedImage)}の再列挙を待機中`,
         state: "waiting",
       });
 
@@ -136,7 +137,7 @@ export default function App() {
             const candidateClient = new NextMiconClient(candidate);
             const info = await candidateClient.getInfo();
             if (info.activeImage !== expectedImage) {
-              lastError = new Error(`image ${info.activeImage}が応答しました`);
+              lastError = new Error(`${imageRole(info.activeImage)}が応答しました`);
               await candidate.close();
               continue;
             }
@@ -153,7 +154,7 @@ export default function App() {
       setConnection({ label: "再接続が必要", state: "disconnected" });
       const detail = lastError ? `（最後のエラー: ${errorMessage(lastError)}）` : "";
       throw new Error(
-        `15秒以内にimage ${expectedImage}へ再接続できませんでした${detail}。「デバイスを選択」で再接続してください`,
+        `15秒以内に${imageRole(expectedImage)}へ再接続できませんでした${detail}。「デバイスを選択」で再接続してください`,
       );
     },
     [clearConnection, installConnection, makeTransport],
@@ -220,18 +221,17 @@ export default function App() {
       if (!file) {
         throw new Error("書き込むbitstreamを選択してください");
       }
-      const image = Number(slot);
       const bytes = new Uint8Array(await file.arrayBuffer());
-      const expectedManifest = createManifest(image, bytes);
+      const expectedManifest = createUserManifest(bytes);
 
-      addLog(`image ${image}へ${formatBytes(bytes.length)}を書き込みます。`);
+      addLog(`userへ${formatBytes(bytes.length)}を書き込みます。`);
       const initialInfo = await activeClient.getInfo();
-      if (initialInfo.activeImage !== 0) {
+      if (initialInfo.activeImage !== BOOT_IMAGE) {
         addLog(
-          `FLASH機能を使うためimage ${initialInfo.activeImage}からimage 0へ切り替えます。`,
+          `FLASH機能を使うため${imageRole(initialInfo.activeImage)}からbootへ切り替えます。`,
         );
-        await activeClient.selectImage(0);
-        await reconnectToImage(0);
+        await activeClient.selectImage(BOOT_IMAGE);
+        await reconnectToImage(BOOT_IMAGE);
         activeClient = requireClient(clientRef.current);
       }
 
@@ -241,9 +241,8 @@ export default function App() {
         throw new Error("接続中のイメージはFLASH機能を提供していません");
       }
 
-      setProgress({ value: 0, label: "スロットを消去しています…" });
-      const manifest = await activeClient.programImage(
-        image,
+      setProgress({ value: 0, label: "user領域を消去しています…" });
+      const manifest = await activeClient.programUserImage(
         bytes,
         ({ phase, completed, total }) => {
           const labels = { erase: "消去中", write: "書き込み中", verify: "検証中" };
@@ -258,16 +257,16 @@ export default function App() {
         throw new Error("内部マニフェスト検証に失敗しました");
       }
       addLog(
-        `image ${image}を書き込み、検証しました（CRC32 ${hex32(manifest.crc32)}）。`,
+        `userを書き込み、検証しました（CRC32 ${hex32(manifest.crc32)}）。`,
         "success",
       );
 
       if (bootAfter) {
-        addLog(`image ${image}を起動します。`);
-        await activeClient.selectImage(image);
+        addLog("userを起動します。");
+        await activeClient.selectImage(USER_IMAGE);
         try {
-          await reconnectToImage(image);
-          addLog(`image ${image}で再接続しました。`, "success");
+          await reconnectToImage(USER_IMAGE);
+          addLog("userで再接続しました。", "success");
         } catch (error) {
           addLog(
             `書き込みは完了しましたが、自動再接続できませんでした: ${errorMessage(error)}`,
@@ -281,10 +280,10 @@ export default function App() {
     runExclusive(async () => {
       const activeClient = requireClient(clientRef.current);
       const image = Number(bootSlot);
-      addLog(`image ${image}への切り替えを要求します。`);
+      addLog(`${imageRole(image)}への切り替えを要求します。`);
       await activeClient.selectImage(image);
       await reconnectToImage(image);
-      addLog(`image ${image}で再接続しました。`, "success");
+      addLog(`${imageRole(image)}で再接続しました。`, "success");
     });
 
   const connected = device !== null;
@@ -358,7 +357,7 @@ export default function App() {
 
             <Card>
               <StepHeader number="02" title="書き込み" />
-              <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_9rem]">
+              <div>
                 <label className="block text-sm font-semibold text-ink-700 dark:text-white/65">
                   Bitstream
                   <input
@@ -373,19 +372,6 @@ export default function App() {
                   >
                     {fileDescription(file)}
                   </span>
-                </label>
-                <label className="block text-sm font-semibold text-ink-700 dark:text-white/65">
-                  書き込み先
-                  <select
-                    className={`${fieldClass} mt-2`}
-                    value={slot}
-                    disabled={busy}
-                    onChange={(event) => setSlot(event.target.value)}
-                  >
-                    <option value="1">image 1</option>
-                    <option value="2">image 2</option>
-                    <option value="3">image 3</option>
-                  </select>
                 </label>
               </div>
 
@@ -433,10 +419,8 @@ export default function App() {
                   disabled={busy}
                   onChange={(event) => setBootSlot(event.target.value)}
                 >
-                  <option value="0">image 0 — recovery</option>
-                  <option value="1">image 1</option>
-                  <option value="2">image 2</option>
-                  <option value="3">image 3</option>
+                  <option value={BOOT_IMAGE}>boot — recovery</option>
+                  <option value={USER_IMAGE}>user</option>
                 </select>
               </label>
               <button
@@ -487,7 +471,7 @@ export default function App() {
         </div>
 
         <footer className="mt-8 flex flex-col gap-2 px-1 text-xs leading-5 text-ink-700/60 sm:flex-row sm:items-center sm:justify-between dark:text-white/35">
-          <p>image 0はUSB経由で書き換えできません。復旧には外部SPIヘッダーを使用します。</p>
+          <p>bootはUSB経由で書き換えできません。復旧には外部SPIヘッダーを使用します。</p>
           <p className="font-mono">NMF1 · protocol v1</p>
         </footer>
       </main>
@@ -580,7 +564,11 @@ function deviceDescription(device) {
     usbVendorId === undefined || usbProductId === undefined
       ? "USB ID 不明"
       : `${hex16(usbVendorId)}:${hex16(usbProductId)}`;
-  return `${usb} · image ${device.info.activeImage} · caps 0x${device.info.capabilities.toString(16).padStart(2, "0")}`;
+  return `${usb} · ${imageRole(device.info.activeImage)} · caps 0x${device.info.capabilities.toString(16).padStart(2, "0")}`;
+}
+
+function imageRole(image) {
+  return image === BOOT_IMAGE ? "boot" : image === USER_IMAGE ? "user" : `invalid image ${image}`;
 }
 
 function fileDescription(file) {

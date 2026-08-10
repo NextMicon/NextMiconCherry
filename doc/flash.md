@@ -50,7 +50,7 @@ image or erase flash.
 
 ### Stable device identity
 
-Images 0 through 3 use the same VID, PID, manufacturer, product, and serial
+The `boot` and `user` images use the same VID, PID, manufacturer, product, and serial
 number. Active image and capabilities are obtained with the framed GET_INFO
 command. Keeping one USB identity simplifies OS and Web Serial permission
 handling across FPGA reconfiguration.
@@ -110,7 +110,7 @@ at the next delimiter.
 
 ### Channels, opcodes, and sequencing
 
-| Channel | Value | Image 0 | Images 1-3 |
+| Channel | Value | `boot` | `user` |
 | --- | ---: | --- | --- |
 | BOOT | `0x01` | Available | Available |
 | FLASH | `0x02` | Available | Unavailable |
@@ -136,16 +136,17 @@ Request payload is empty. Response opcode is `0x80` and its payload is:
 | Offset | Size | Field |
 | ---: | ---: | --- |
 | 0 | 1 | BOOT status; `0x00` on success |
-| 1 | 1 | Active image, `0` through `3` |
+| 1 | 1 | Active image: `0` (`boot`) or `1` (`user`) |
 | 2 | 1 | Capability bitmap |
 
-Capability bits are `0x01` BOOT, `0x02` FLASH, and `0x04` UART. Image 0 reports
-`0x03`; images 1 through 3 report `0x05`. Reserved bits are zero.
+Capability bits are `0x01` BOOT, `0x02` FLASH, and `0x04` UART. `boot` reports
+`0x03`; `user` reports `0x05`. Reserved bits are zero.
 
 ### SELECT_IMAGE `0x01`
 
-Request payload is one target-image byte (`0` through `3`). Response opcode is
-`0x81`; response payload is one BOOT status byte.
+Request payload is one target-image byte: `0` for `boot` or `1` for `user`.
+Values 2 through 255 are invalid. Response opcode is `0x81`; response payload
+is one BOOT status byte.
 
 | Status | Meaning |
 | ---: | --- |
@@ -174,9 +175,9 @@ Every FLASH response payload starts with one status byte.
 
 ### ERASE_SLOT `0x01`
 
-Request payload is one slot byte (`1`, `2`, or `3`). Response opcode is `0x81`
-with one status byte. On success, the complete 256 KiB slot is erased and WIP
-is clear before the response is sent. Image 0 is always protected.
+Request payload is the fixed user-slot byte `1`. Response opcode is `0x81` with
+one status byte. On success, the complete 256 KiB user slot is erased and WIP
+is clear before the response is sent. The boot region is always protected.
 
 ### WRITE `0x02`
 
@@ -187,8 +188,8 @@ is clear before the response is sent. Image 0 is always protected.
 
 Response opcode is `0x82` with one status byte. On success, all data is
 programmed and WIP is clear before the response. The FPGA splits a frame at SPI
-page boundaries when necessary. USB writes are restricted to image slots 1-3
-(`0x040000-0x0fffff`). Image 0 is protected in hardware.
+page boundaries when necessary. USB writes are restricted to the user image
+(`0x040000-0x07ffff`). The boot region is protected in hardware.
 
 ### READ `0x03`
 
@@ -205,14 +206,14 @@ User-data erase/write commands are reserved for a future protocol revision.
 
 ## Image manifest
 
-The final 32 bytes of each 256 KiB user slot contain a manifest. Raw
+The final 32 bytes of the 256 KiB user image contain a manifest. Raw
 bitstreams may be at most 262,112 bytes. The manifest is programmed last.
 
 | Offset | Size | Field |
 | ---: | ---: | --- |
 | 0 | 4 | ASCII `NMF1` |
 | 4 | 1 | Manifest version `1` |
-| 5 | 1 | Image number `1`, `2`, or `3` |
+| 5 | 1 | User image number, always `1` |
 | 6 | 2 | Flags, zero |
 | 8 | 4 | Bitstream length, little-endian |
 | 12 | 4 | CRC-32/ISO-HDLC, little-endian |
@@ -240,13 +241,14 @@ uses the stable serial number as `cherry-<serial>`.
 
 ```sh
 nmb ls
-nmb boot cherry-0123/1
-nmb flash cherry-0123/1 image.bin --boot
+nmb boot cherry-0123 user
+nmb flash cherry-0123 image.bin --boot
 ```
 
-Before flashing, `nmb` sends GET_INFO. If a user image is active, it requests
-image 0, waits for the same serial number to re-enumerate, confirms image 0
-with GET_INFO, then erases, writes, manifests, and reads back the slot.
+Before flashing, `nmb` sends GET_INFO. If `user` is active, it requests `boot`,
+waits for the same serial number to re-enumerate, confirms `boot` with GET_INFO,
+then erases, writes, manifests, and reads back the user image. There is no
+destination argument because only one user image exists.
 
 ## Web Serial flashing
 
@@ -311,7 +313,7 @@ USB VID/PID and confirms the active image using GET_INFO. If multiple boards
 with the same USB identity are authorized, attach only the board being flashed
 during automatic re-enumeration.
 
-The web page cannot bypass device-side protection: image 0 remains unwritable,
+The web page cannot bypass device-side protection: `boot` remains unwritable,
 addresses are checked by the FPGA, and every written byte is read back. The
 bitstream can remain entirely local to the browser; uploading it to a server is
 not required.

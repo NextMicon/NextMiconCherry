@@ -39,7 +39,7 @@ test("stream decoder accepts partial and multiple frames and recovers from garba
   const errors = [];
   const decoder = new FrameDecoder({ onError: (error) => errors.push(error) });
   const first = encodeFrame({ channel: Channel.BOOT, opcode: 0, sequence: 1 });
-  const second = encodeFrame({ channel: Channel.BOOT, opcode: 1, sequence: 2, payload: [3] });
+  const second = encodeFrame({ channel: Channel.BOOT, opcode: 1, sequence: 2, payload: [1] });
 
   assert.deepEqual(decoder.push(first.subarray(0, 3)), []);
   const combined = new Uint8Array(first.length - 3 + 3 + second.length);

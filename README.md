@@ -8,7 +8,7 @@ NextMicon is a family of open-source FPGA development boards. Choose the compact
 
 ## 🍒 NextMicon Cherry
 
-**A compact board for learning and small projects.** Cherry is built around the Lattice iCE40HX8K-BG121, with 7,680 LUTs, 36 GPIO pins, native USB Full-Speed, and four selectable flash images. The repository includes its KiCad PCB design, fabrication outputs, bootloader HDL, and host application.
+**A compact board for learning and small projects.** Cherry is built around the Lattice iCE40HX8K-BG121, with 7,680 LUTs, 36 GPIO pins, native USB Full-Speed, and protected `boot` plus writable `user` FPGA images. The repository includes its KiCad PCB design, fabrication outputs, bootloader HDL, and host application.
 
 [Explore Cherry →](boards/cherry/)
 

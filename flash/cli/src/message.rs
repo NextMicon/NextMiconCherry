@@ -75,7 +75,7 @@ mod tests {
             channel: Channel::Boot as u8,
             opcode: BootCommand::SelectImage as u8,
             sequence: 17,
-            payload: vec![3],
+            payload: vec![1],
         };
         let json = serde_json::to_string(&message).unwrap();
         let wire = encode_message_json(&json).unwrap();

@@ -8,6 +8,8 @@ import {
 
 export const CAPABILITY_BOOT = 1 << 0;
 export const CAPABILITY_FLASH = 1 << 1;
+export const BOOT_IMAGE = 0;
+export const USER_IMAGE = 1;
 
 export const IMAGE_SLOT_SIZE = 0x04_0000;
 export const FLASH_END = 0x40_0000;
@@ -40,7 +42,7 @@ export class NextMiconClient {
     const payload = await this.#request(Channel.BOOT, BootCommand.GET_INFO);
     requireLength(payload, 3, "BOOT GET_INFO");
     checkStatus(payload[0], BOOT_STATUS, "BOOT");
-    if (payload[1] > 3) {
+    if (payload[1] > USER_IMAGE) {
       throw new Error(`device reported invalid image ${payload[1]}`);
     }
     if ((payload[2] & CAPABILITY_BOOT) === 0) {
@@ -60,12 +62,11 @@ export class NextMiconClient {
     checkStatus(payload[0], BOOT_STATUS, "BOOT");
   }
 
-  async eraseSlot(image) {
-    requireUserImage(image);
+  async eraseUserImage() {
     const payload = await this.#request(
       Channel.FLASH,
       FlashCommand.ERASE_SLOT,
-      Uint8Array.of(image),
+      Uint8Array.of(USER_IMAGE),
     );
     requireLength(payload, 1, "FLASH ERASE_SLOT");
     checkStatus(payload[0], FLASH_STATUS, "FLASH");
@@ -126,11 +127,10 @@ export class NextMiconClient {
     }
   }
 
-  async programImage(image, data, onProgress = () => {}) {
-    requireUserImage(image);
+  async programUserImage(data, onProgress = () => {}) {
     const bytes = toBytes(data);
-    const manifest = createManifest(image, bytes);
-    const manifestAddress = (image + 1) * IMAGE_SLOT_SIZE - MANIFEST_SIZE;
+    const manifest = createUserManifest(bytes);
+    const manifestAddress = (USER_IMAGE + 1) * IMAGE_SLOT_SIZE - MANIFEST_SIZE;
     const total = bytes.length * 2 + MANIFEST_SIZE * 2;
     let completed = 0;
     const advance = (phase) => (length) => {
@@ -139,12 +139,12 @@ export class NextMiconClient {
     };
 
     onProgress({ phase: "erase", completed, total });
-    await this.eraseSlot(image);
+    await this.eraseUserImage();
     onProgress({ phase: "write", completed, total });
-    await this.writeAt(image * IMAGE_SLOT_SIZE, bytes, advance("write"));
+    await this.writeAt(USER_IMAGE * IMAGE_SLOT_SIZE, bytes, advance("write"));
     await this.writeAt(manifestAddress, manifest.bytes, advance("write"));
     onProgress({ phase: "verify", completed, total });
-    await this.verifyAt(image * IMAGE_SLOT_SIZE, bytes, advance("verify"));
+    await this.verifyAt(USER_IMAGE * IMAGE_SLOT_SIZE, bytes, advance("verify"));
     await this.verifyAt(manifestAddress, manifest.bytes, advance("verify"));
 
     return manifest;
@@ -161,8 +161,7 @@ export class NextMiconClient {
   }
 }
 
-export function createManifest(image, data) {
-  requireUserImage(image);
+export function createUserManifest(data) {
   const bytes = toBytes(data);
   if (bytes.length === 0) {
     throw new Error("image is empty");
@@ -174,14 +173,14 @@ export function createManifest(image, data) {
   const output = new Uint8Array(MANIFEST_SIZE).fill(0xff);
   output.set([0x4e, 0x4d, 0x46, 0x31], 0);
   output[4] = 1;
-  output[5] = image;
+  output[5] = USER_IMAGE;
   output[6] = 0;
   output[7] = 0;
   const view = new DataView(output.buffer);
   view.setUint32(8, bytes.length, true);
   const checksum = crc32(bytes);
   view.setUint32(12, checksum, true);
-  return { image, imageLength: bytes.length, crc32: checksum, bytes: output };
+  return { image: USER_IMAGE, imageLength: bytes.length, crc32: checksum, bytes: output };
 }
 
 function encodeAddress(address) {
@@ -204,15 +203,8 @@ function requireFlashRange(address, length) {
 }
 
 function requireImage(image) {
-  if (!Number.isInteger(image) || image < 0 || image > 3) {
+  if (!Number.isInteger(image) || image < BOOT_IMAGE || image > USER_IMAGE) {
     throw new Error(`invalid image number ${image}`);
-  }
-}
-
-function requireUserImage(image) {
-  requireImage(image);
-  if (image === 0) {
-    throw new Error("image 0 is protected; use the external SPI recovery procedure");
   }
 }
 

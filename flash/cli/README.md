@@ -1,6 +1,6 @@
 # NextMicon Flash CLI
 
-`nmb` is the host-side programmer and image manager for NextMicon Cherry. All
+`nmb` is the host-side programmer and image manager for NextMicon Cherry. Both
 FPGA images enumerate as the same CDC ACM serial device. COBS-delimited frames
 inside that serial stream provide independent BOOT, FLASH, and UART channels.
 
@@ -39,7 +39,7 @@ $ nmb ls
 cherry-0123
 
 $ nmb ls --verbose
-cherry-0123    image 0    1234:0001    /dev/ttyACM0    NextMicon Cherry
+cherry-0123    boot    1234:0001    /dev/ttyACM0    NextMicon Cherry
 ```
 
 Production VID/PID values are not allocated yet. By default `nmb` recognizes
@@ -50,28 +50,28 @@ can be restricted explicitly:
 nmb --usb-id 1234:0001 ls
 ```
 
-Warm boot any valid image:
+Warm boot either role:
 
 ```sh
-nmb boot <board>/<0-3>
+nmb boot <board> <boot|user>
 ```
 
-Erase, program, manifest, and read back a user slot:
+Erase, program, manifest, and read back the user image:
 
 ```sh
-nmb flash <board>/<1-3> <bitstream.bin>
+nmb flash <board> <bitstream.bin>
 ```
 
 Start the image after successful verification:
 
 ```sh
-nmb flash <board>/<1-3> <bitstream.bin> --boot
+nmb flash <board> <bitstream.bin> --boot
 ```
 
-Before programming, `nmb` queries GET_INFO. If image 1-3 is active, it requests
-image 0, waits for the same USB serial number to re-enumerate, verifies GET_INFO,
-and then programs. Image 0 is always protected; factory/recovery updates use
-the external SPI header.
+Before programming, `nmb` queries GET_INFO. If `user` is active, it requests
+`boot`, waits for the same USB serial number to re-enumerate, verifies GET_INFO,
+and then programs the single user image. `boot` is always protected;
+factory/recovery updates use the external SPI header.
 
 Use `nmb --help` or `nmb <command> --help` for all options. One framed request
 defaults to a 30-second timeout and re-enumeration defaults to 15 seconds.

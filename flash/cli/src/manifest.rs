@@ -14,7 +14,7 @@ pub struct ImageManifest {
 }
 
 impl ImageManifest {
-    pub fn for_data(image: Image, data: &[u8]) -> Result<Self, ManifestError> {
+    pub fn for_data(data: &[u8]) -> Result<Self, ManifestError> {
         if data.is_empty() {
             return Err(ManifestError::EmptyImage);
         }
@@ -25,7 +25,7 @@ impl ImageManifest {
             });
         }
         Ok(Self {
-            image,
+            image: Image::User,
             image_length: data.len() as u32,
             crc32: crc32(data),
         })
@@ -57,6 +57,9 @@ impl ImageManifest {
             return Err(ManifestError::UnsupportedVersion(bytes[4]));
         }
         let image = Image::try_from(bytes[5]).map_err(|_| ManifestError::InvalidImage(bytes[5]))?;
+        if image != Image::User {
+            return Err(ManifestError::InvalidImage(bytes[5]));
+        }
         let image_length = u32::from_le_bytes(bytes[8..12].try_into().unwrap());
         if image_length == 0 || image_length as usize > MAX_IMAGE_SIZE {
             return Err(ManifestError::InvalidImageLength(image_length));
@@ -95,21 +98,18 @@ mod tests {
     #[test]
     fn manifest_round_trip() {
         let data = b"fpga bitstream";
-        let manifest = ImageManifest::for_data(Image::Image2, data).unwrap();
+        let manifest = ImageManifest::for_data(data).unwrap();
         assert_eq!(manifest.image_length, data.len() as u32);
-        assert_eq!(manifest.address(), Image::Image2.flash_end() - 32);
+        assert_eq!(manifest.address(), Image::User.flash_end() - 32);
         assert_eq!(ImageManifest::decode(&manifest.encode()), Ok(manifest));
     }
 
     #[test]
     fn invalid_image_sizes_are_rejected() {
-        assert_eq!(
-            ImageManifest::for_data(Image::Image1, &[]),
-            Err(ManifestError::EmptyImage)
-        );
+        assert_eq!(ImageManifest::for_data(&[]), Err(ManifestError::EmptyImage));
         let oversized = vec![0; MAX_IMAGE_SIZE + 1];
         assert!(matches!(
-            ImageManifest::for_data(Image::Image1, &oversized),
+            ImageManifest::for_data(&oversized),
             Err(ManifestError::ImageTooLarge { .. })
         ));
     }

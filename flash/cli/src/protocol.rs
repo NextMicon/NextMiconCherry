@@ -5,7 +5,7 @@ use thiserror::Error;
 pub const CDC_BAUD_RATE: u32 = 115_200;
 
 pub const IMAGE_SLOT_SIZE: u32 = 0x04_0000;
-pub const USER_DATA_BASE: u32 = 0x10_0000;
+pub const USER_DATA_BASE: u32 = 0x08_0000;
 pub const FLASH_END: u32 = 0x40_0000;
 
 pub const FRAME_VERSION: u8 = 1;
@@ -169,17 +169,15 @@ impl Frame {
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
 #[repr(u8)]
 pub enum Image {
-    Image0 = 0,
-    Image1 = 1,
-    Image2 = 2,
-    Image3 = 3,
+    Boot = 0,
+    User = 1,
 }
 
 impl Image {
-    pub const ALL: [Self; 4] = [Self::Image0, Self::Image1, Self::Image2, Self::Image3];
+    pub const ALL: [Self; 2] = [Self::Boot, Self::User];
 
-    pub const fn is_bootloader(self) -> bool {
-        matches!(self, Self::Image0)
+    pub const fn is_boot(self) -> bool {
+        matches!(self, Self::Boot)
     }
 
     pub const fn flash_base(self) -> u32 {
@@ -196,10 +194,8 @@ impl TryFrom<u8> for Image {
 
     fn try_from(value: u8) -> Result<Self, Self::Error> {
         match value {
-            0 => Ok(Self::Image0),
-            1 => Ok(Self::Image1),
-            2 => Ok(Self::Image2),
-            3 => Ok(Self::Image3),
+            0 => Ok(Self::Boot),
+            1 => Ok(Self::User),
             _ => Err(InvalidImage(value)),
         }
     }
@@ -275,8 +271,8 @@ pub enum FlashRequestError {
     InvalidAddress(u32),
 }
 
-pub fn encode_erase_slot(image: Image) -> [u8; 1] {
-    [image as u8]
+pub fn encode_erase_slot() -> [u8; 1] {
+    [Image::User as u8]
 }
 
 pub fn encode_flash_write(address: u32, data: &[u8]) -> Result<Vec<u8>, FlashRequestError> {
@@ -360,7 +356,7 @@ mod tests {
 
     #[test]
     fn frame_rejects_corruption_and_wrong_lengths() {
-        let frame = Frame::new(Channel::Boot, BootCommand::SelectImage as u8, 7, vec![2]).unwrap();
+        let frame = Frame::new(Channel::Boot, BootCommand::SelectImage as u8, 7, vec![1]).unwrap();
         let mut wire = frame.encode();
         wire[3] ^= 0x40;
         assert!(Frame::decode(&wire).is_err());
@@ -384,16 +380,16 @@ mod tests {
             assert_eq!(image.flash_base(), index as u32 * IMAGE_SLOT_SIZE);
             assert_eq!(image.flash_end(), (index as u32 + 1) * IMAGE_SLOT_SIZE);
         }
-        assert_eq!(Image::Image3.flash_end(), USER_DATA_BASE);
+        assert_eq!(Image::User.flash_end(), USER_DATA_BASE);
         const { assert!(USER_DATA_BASE < FLASH_END) };
     }
 
     #[test]
     fn flash_payload_limits_match_the_frame_limit() {
         let data = [0xa5; FLASH_WRITE_DATA_SIZE];
-        let write = encode_flash_write(Image::Image3.flash_base(), &data).unwrap();
+        let write = encode_flash_write(Image::User.flash_base(), &data).unwrap();
         assert_eq!(write.len(), FRAME_MAX_PAYLOAD_SIZE);
-        assert_eq!(decode_address([write[0], write[1], write[2]]), 0x0c_0000);
+        assert_eq!(decode_address([write[0], write[1], write[2]]), 0x04_0000);
         assert_eq!(&write[3..], data);
 
         let read = encode_flash_read(FLASH_END - FLASH_READ_DATA_SIZE as u32, 255).unwrap();
