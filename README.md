@@ -1,9 +1,9 @@
-# NextMicon FPGA Boards
+# NextMicon FPGA
 
-NextMicon is a family of open-source FPGA development boards with native USB and multi-image QSPI boot. Choose the compact Cherry to get started, or Grape for a larger FPGA and more I/O.
+NextMicon is a family of open-source FPGA development boards. Choose the compact Cherry to get started, or Grape for a larger FPGA and more I/O.
 
-| [🍒 NextMicon Cherry](boards/cherry/)      | [🍇 NextMicon Grape](boards/grape/)      |
-| ---------------------------------- | -------------------------------- |
+| [🍒 NextMicon Cherry](boards/cherry/)            | [🍇 NextMicon Grape](boards/grape/)           |
+| ----------------------------------------------- | -------------------------------------------- |
 | [![](boards/cherry/cherry.png)](boards/cherry/) | [![](boards/grape/grape.png)](boards/grape/) |
 
 ## 🍒 NextMicon Cherry
