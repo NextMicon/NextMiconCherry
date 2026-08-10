@@ -2012,7 +2012,7 @@
 	(footprint "Cherry:SOIC-8_5.3x5.3mm_P1.27mm"
 		(layer "F.Cu")
 		(uuid "267e496a-9fb1-4df2-984e-34b8addffd3b")
-		(at 139.7 90.17 90)
+		(at 141.2 90.17 90)
 		(descr "SOIC, 8 Pin (JEITA/EIAJ ED-7311-19 variation 08-001-BBA and Atmel/Microchip, 208 mils width, https://www.jeita.or.jp/japanese/standard/book/ED-7311-19/#target/page_no=21, https://ww1.microchip.com/downloads/en/DeviceDoc/20005045C.pdf#page=23, https://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf#page=162)")
 		(tags "SOIC SO P-SOP SOP SOP-8 SO SO-8 8S2 S2AE/F K04-056 CASE-751BE SO8W 8-Pin-SOIC PSA W8-2 W8-4 W8MS-1 FPT-8P-M08")
 		(property "Reference" "U2"
@@ -3219,7 +3219,7 @@
 	(footprint "Cherry:R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "437f472d-5699-4d97-aec7-c5bd0542ee4e")
-		(at 144.145 89.59 90)
+		(at 144.145 83.82 90)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R25"
@@ -10458,7 +10458,7 @@
 	(footprint "Cherry:C_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "b9485ff9-8f50-45a6-a07c-f18856e0a5f8")
-		(at 135 83.82)
+		(at 137.65 86.1025 90)
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C9"
