@@ -1,0 +1,71 @@
+# NextMicon Cherry / iCE40HX8K-BG121 pin constraints
+#
+# Yosys generates the JSON netlist; nextpnr-ice40 consumes this PCF.
+# Port names are from the FPGA point of view.  GPIO names match the
+# one-based labels printed on the board schematic.
+
+# Fixed board resources
+set_io clk_48m E10
+set_io btn      C4
+set_io led0     J4
+set_io led1     J3
+
+# Optional runtime aliases.  These pins are shared with QSPI_IO3 and PROG_LED.
+set_io uart_rx  J8
+set_io uart_tx  J10
+
+# Logical GPIO numbering. GPIO_27, GPIO_28 and GPIO_31 are shared with the
+# native USB D-, D+ and pull-up-control nets on this board revision.
+set_io gpio_1   C2
+set_io gpio_2   B2
+set_io gpio_3   B1
+set_io gpio_4   C1
+set_io gpio_5   D2
+set_io gpio_6   C3
+set_io gpio_7   D1
+set_io gpio_8   E1
+set_io gpio_9   E2
+set_io gpio_10  D3
+set_io gpio_11  E3
+set_io gpio_12  A5
+set_io gpio_13  F1
+set_io gpio_14  F3
+set_io gpio_15  G3
+set_io gpio_16  G1
+set_io gpio_17  G2
+set_io gpio_18  H2
+
+set_io gpio_19  B8
+set_io gpio_20  A8
+set_io gpio_21  A7
+set_io gpio_22  B7
+set_io gpio_23  B6
+set_io gpio_24  A6
+set_io gpio_25  B5
+set_io gpio_26  C7
+set_io gpio_27  A4
+set_io gpio_28  B4
+set_io gpio_29  D5
+set_io gpio_30  C8
+set_io gpio_31  A3
+set_io gpio_32  B3
+set_io gpio_33  A2
+set_io gpio_34  A1
+set_io gpio_35  H1
+set_io gpio_36  J1
+
+# GPIO_37 through GPIO_53 are not exposed on this PCB revision.  The redundant
+# six-pin J4/J6 headers were removed, and J5 is reserved for external SPI flash
+# programming.
+
+# Reserved configuration bus.  These balls are shared by the W25Q32 and FPGA.
+# Do not expose them as ordinary user outputs.
+# set_io flash_cs_n K10
+# set_io flash_mosi K9
+# set_io flash_sck  L10
+# set_io flash_miso J9
+# QSPI_IO2 uses K6 and QSPI_IO3 uses J8 in user mode.
+# CBSEL0 uses L8 and CBSEL1 uses H9.
+
+# Dedicated configuration pins (CRESET_B L9 and CDONE K8) are not user I/O.
+# clk_48m/E10 is driven by X1 and must only be declared as an FPGA input.

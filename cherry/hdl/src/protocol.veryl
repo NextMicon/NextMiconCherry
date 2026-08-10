@@ -1,0 +1,42 @@
+/// Constants shared by the native USB services and the multiboot images.
+pub package protocol {
+    const USB_MAX_PACKET_SIZE: u32 = 64;
+
+    // Logical endpoint numbers. IN addresses set bit 7; OUT addresses do not.
+    const USB_EP_BOOT : logic<4> = 4'd1;
+    const USB_EP_FLASH: logic<4> = 4'd2;
+    const USB_EP_UART : logic<4> = 4'd3;
+
+    const USB_EP_BOOT_OUT : logic<8> = 8'h01;
+    const USB_EP_BOOT_IN  : logic<8> = 8'h81;
+    const USB_EP_FLASH_OUT: logic<8> = 8'h02;
+    const USB_EP_FLASH_IN : logic<8> = 8'h82;
+    const USB_EP_UART_OUT : logic<8> = 8'h03;
+    const USB_EP_UART_IN  : logic<8> = 8'h83;
+
+    // EP1 packets. The endpoint already identifies the BOOT service, so the
+    // request contains only the target image number.
+    const BOOT_REQUEST_SIZE : u32 = 1;
+    const BOOT_RESPONSE_SIZE: u32 = 1;
+
+    enum BootStatus: logic<8> {
+        BOOT_ACCEPTED         = 8'h00,
+        BOOT_INVALID_IMAGE    = 8'h01,
+        BOOT_INVALID_MANIFEST = 8'h02,
+        BOOT_BUSY             = 8'h03,
+    }
+
+    const IMAGE_SLOT_SIZE: logic<24> = 24'h040000;
+    const IMAGE0_BASE    : logic<24> = 24'h000000;
+    const IMAGE1_BASE    : logic<24> = 24'h040000;
+    const IMAGE2_BASE    : logic<24> = 24'h080000;
+    const IMAGE3_BASE    : logic<24> = 24'h0C0000;
+    const USER_DATA_BASE : logic<24> = 24'h100000;
+
+    enum Image: logic<2> {
+        IMAGE0 = 2'd0,
+        IMAGE1 = 2'd1,
+        IMAGE2 = 2'd2,
+        IMAGE3 = 2'd3,
+    }
+}

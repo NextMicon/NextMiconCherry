@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Grape")(type "KiCad")(uri "${KIPRJMOD}/grape.kicad_sym")(options "")(descr "NextMiconGrape project symbols"))
+)

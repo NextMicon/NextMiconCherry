@@ -33,7 +33,7 @@ $ kicad src/cherry.kicad_pro
 ## 4. Render board image
 
 ```bash
-$ kicad-cli pcb render -o doc/img/board.png \
+$ kicad-cli pcb render -o doc/img/cherry.png \
     --side top --width 1440 --height 720 --zoom 1.8 --quality high \
     src/cherry.kicad_pcb
 ```
