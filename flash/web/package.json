@@ -1,0 +1,30 @@
+{
+  "name": "nextmicon-web-flasher",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.1.1",
+  "scripts": {
+    "wasm": "wasm-pack build ../cli --target web --out-dir ../web/src/wasm/pkg --release",
+    "dev": "pnpm wasm && vite",
+    "build": "pnpm wasm && vite build",
+    "preview": "vite preview",
+    "test": "pnpm wasm && node --test",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.0.5",
+    "eslint": "^10.8.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.9.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.1"
+  }
+}

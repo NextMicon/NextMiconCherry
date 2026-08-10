@@ -5421,7 +5421,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://docs.amd.com/v/u/en-US/ds180_7Series_Overview"
+		(property "Datasheet" "https://docs.amd.com/v/u/en-US/ds181_Artix_7_Data_Sheet"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16797,7 +16797,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.winbond.com/resource-files/w25q128jv%20revf%2003272018%20plus.pdf"
+		(property "Datasheet" "https://www.winbond.com/resource-files/W25Q128JV%20RevM%2012242024%20Plus.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)

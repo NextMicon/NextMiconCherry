@@ -35,9 +35,9 @@ J2 and J3 have two contacts for every pin number; the inner and outer contacts a
 
 | Ref     | Part                              | Package       | Description            | Cost   | Buy                                                                                            |
 | ------- | --------------------------------- | ------------- | ---------------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| U2      | [W25Q32JVSSIM](data/W25Q32JV.pdf) | SOIC-8 208mil | 32Mbit SPI Flash       | -      | [digikey](https://www.digikey.com/en/products/result?keywords=W25Q32JVSSIM)                    |
-| U3      | [iCE40HX8K-BG121](../parts/iCE40.pdf) | caBGA-121 0.8mm | FPGA 7680 LUTs      | -      | [digikey](https://www.digikey.com/en/products/result?keywords=ICE40HX8K-BG121)                  |
-| U4-U5   | [TPS62A02](data/TPS62A02.pdf)     | SOT-23-6      | 2A DC-DC Converter     | $0.25  | [digikey](https://www.digikey.jp/ja/products/detail/texas-instruments/TPS62A02PDDCR/22147220)  |
+| U2      | [W25Q32JVSSIM](../../parts/W25Q32JV.pdf) | SOIC-8 208mil | 32Mbit SPI Flash       | -      | [digikey](https://www.digikey.com/en/products/result?keywords=W25Q32JVSSIM)                    |
+| U3      | [iCE40HX8K-BG121](../../parts/iCE40.pdf) | caBGA-121 0.8mm | FPGA 7680 LUTs      | -      | [digikey](https://www.digikey.com/en/products/result?keywords=ICE40HX8K-BG121)                  |
+| U4-U5   | [TPS62A02](../../parts/TPS62A02.pdf) | SOT-23-6      | 2A DC-DC Converter     | $0.25  | [digikey](https://www.digikey.jp/ja/products/detail/texas-instruments/TPS62A02PDDCR/22147220)  |
 | D5      | USBLC6-2SC6                       | SOT-23-6      | USB ESD protection     | -      | [digikey](https://www.digikey.jp/ja/products/result?keywords=USBLC6-2SC6)                      |
 | X1      | OXETDLJANF-48.000000MHz           | 3.2x2.5mm     | 48MHz XO               | -      | generic                                                                                        |
 | FB1     | BLM21AG601SH1D                    | 0805          | Ferrite bead (USB VBUS)| $0.19  | [digikey](https://www.digikey.jp/ja/products/detail/murata-electronics/BLM21AG601SH1D/2588067) |

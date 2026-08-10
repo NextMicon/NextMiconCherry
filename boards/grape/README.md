@@ -78,10 +78,11 @@ expected unconnected-pad items until routing begins.
 
 ## Primary references
 
+- [AMD DS181: Artix-7 FPGA Data Sheet](../../parts/Artix-7.pdf) ([official source](https://docs.amd.com/v/u/en-US/ds181_Artix_7_Data_Sheet))
 - [AMD UG470: 7 Series FPGAs Configuration User Guide](https://docs.amd.com/v/u/en-US/ug470_7Series_Config)
 - [AMD UG475: 7 Series FPGAs Packaging and Pinout](https://docs.amd.com/v/u/en-US/ug475_7Series_Pkg_Pinout)
 - [AMD UG480: 7 Series XADC User Guide](https://docs.amd.com/r/en-US/ug480_7Series_XADC)
 - [AMD UG483: 7 Series FPGAs PCB Design Guide](https://docs.amd.com/v/u/en-US/ug483_7Series_PCB)
-- [TI TPS62A02 data sheet](https://www.ti.com/lit/ds/symlink/tps62a02.pdf)
-- [TI TPS22917 data sheet](https://www.ti.com/lit/ds/symlink/tps22917.pdf)
-- [Winbond W25Q128JV data sheet](https://www.winbond.com/resource-files/w25q128jv%20revf%2003272018%20plus.pdf)
+- [TI TPS62A02 data sheet](../../parts/TPS62A02.pdf) ([official source](https://www.ti.com/lit/ds/symlink/tps62a02.pdf))
+- [TI TPS22917 data sheet](../../parts/TPS22917.pdf) ([official source](https://www.ti.com/lit/ds/symlink/tps22917.pdf))
+- [Winbond W25Q128JV data sheet](../../parts/W25Q128JV.pdf) ([official source](https://www.winbond.com/resource-files/W25Q128JV%20RevM%2012242024%20Plus.pdf))

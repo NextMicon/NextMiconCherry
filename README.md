@@ -12,6 +12,9 @@ NextMicon is a family of open-source FPGA development boards with native USB and
 
 [Explore Cherry →](cherry/)
 
+Cherry firmware can be managed with the [`nmb` CLI](flash/cli/README.md) or the
+[Web Serial flasher](flash/web/README.md).
+
 ## 🍇 NextMicon Grape
 
 **A larger board for more ambitious designs.** Grape brings the same native-USB and multi-image concepts to the AMD Artix-7 XC7A35T, with 56 GPIO signals and a 128-Mbit QSPI flash. Its schematic is available now; PCB layout is still in progress.
