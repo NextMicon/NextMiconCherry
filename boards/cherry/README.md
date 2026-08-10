@@ -2,11 +2,17 @@
 
 FPGA Board for Beginners
 
+## Repository layout
+
+- [`board`](board/): KiCad design and fabrication outputs
+- [`breakout`](breakout/): pogo-pin breakout and factory-test fixture
+- [`firmware`](firmware/): FPGA HDL and constraints
+
 ## Schematic
 
-![](doc/img/board.png)
+![](cherry.png)
 
-![](doc/img/diagram.dio.svg)
+![](../../doc/img/diagram.dio.svg)
 
 ## Specs
 
@@ -74,15 +80,16 @@ J2 and J3 have two contacts for every pin number; the inner and outer contacts a
 
 Toolchain: [Yosys](https://github.com/YosysHQ/yosys) + [nextpnr-ice40](https://github.com/YosysHQ/nextpnr) + [icestorm](https://github.com/YosysHQ/icestorm)
 
-The pin and timing constraint files are [`src/cherry.pcf`](src/cherry.pcf) and
-[`src/cherry.sdc`](src/cherry.sdc). Yosys produces the JSON netlist and nextpnr
-consumes the PCF/SDC:
+The pin and timing constraint files are
+[`firmware/cherry.pcf`](firmware/cherry.pcf) and
+[`firmware/cherry.sdc`](firmware/cherry.sdc). Yosys produces the JSON netlist
+and nextpnr consumes the PCF/SDC:
 
 ```bash
 mkdir -p build
 yosys -p 'synth_ice40 -top top -json build/top.json' rtl/top.v
 nextpnr-ice40 --hx8k --package bg121 --freq 48 \
-  --json build/top.json --pcf src/cherry.pcf --sdc src/cherry.sdc \
+  --json build/top.json --pcf firmware/cherry.pcf --sdc firmware/cherry.sdc \
   --asc build/top.asc
 icepack build/top.asc build/top.bin
 ```

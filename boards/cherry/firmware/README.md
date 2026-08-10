@@ -1,6 +1,6 @@
-# NextMicon Cherry HDL
+# NextMicon Cherry firmware
 
-Native USB management and runtime blocks for the iCE40HX8K-BG121.
+Native USB management, boot, flash, and runtime HDL for the iCE40HX8K-BG121.
 
 ## USB transport
 

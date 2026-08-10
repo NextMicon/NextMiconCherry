@@ -1,4 +1,4 @@
-pcb/out/*
+board/out/*
 **/.history/
 *.lck
 *.kicad_prl

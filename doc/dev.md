@@ -3,10 +3,10 @@
 KiCad Version = 10.0.3
 
 ```
-cherry/
-├── doc/   # Documents
-├── lib/   # Custom Footprints
-├── src/   # KiCad Projects
+boards/cherry/
+├── board/      # KiCad project, libraries, and fabrication outputs
+├── breakout/   # Breakout and factory-test fixture
+├── firmware/   # FPGA HDL and constraints
 └── README.md
 ```
 
@@ -27,13 +27,13 @@ TBD
 ## 3. Open KiCad project
 
 ```
-$ kicad src/cherry.kicad_pro
+$ kicad boards/cherry/board/src/cherry.kicad_pro
 ```
 
 ## 4. Render board image
 
 ```bash
-$ kicad-cli pcb render -o doc/img/cherry.png \
+$ kicad-cli pcb render -o boards/cherry/cherry.png \
     --side top --width 1440 --height 720 --zoom 1.8 --quality high \
-    src/cherry.kicad_pcb
+    boards/cherry/board/src/cherry.kicad_pcb
 ```

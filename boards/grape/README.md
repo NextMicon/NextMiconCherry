@@ -3,6 +3,12 @@
 NextMicon Grape is a FPGA Board for cyuukyusya.
 Xilinx Artix-7 has more LUT cores and more fast signal processing units.
 
+## Repository layout
+
+- [`board`](board/): KiCad design, placement generator, and exported PDFs
+- [`breakout`](breakout/): breakout and test-fixture designs
+- [`firmware`](firmware/): FPGA firmware and constraints
+
 ## Current design
 
 - FPGA: AMD Artix-7 `XC7A35T-1FTG256C`
@@ -15,12 +21,12 @@ Xilinx Artix-7 has more LUT cores and more fast signal processing units.
 - Recovery: external six-pin JTAG header, `PROGRAM_B`, and true cold-reset
 - FPGA package and decoupling: FTG256, based on AMD UG475/UG483
 
-The KiCad project is in [`pcb/src`](pcb/src).  The 84 mm x 64 mm, four-layer
+The KiCad project is in [`board/src`](board/src). The 84 mm x 64 mm, four-layer
 PCB currently contains a complete component placement and board outline only;
 routing, vias and copper zones have deliberately not been started yet.
 
-- [Front placement PDF](pcb/board.pdf)
-- [Back placement PDF](pcb/board-back.pdf)
+- [Front placement PDF](board/board.pdf)
+- [Back placement PDF](board/board-back.pdf)
 
 ## Important design choices
 
@@ -51,13 +57,12 @@ reference, with `VREFP`/`VREFN` returned locally to filtered analog ground.
 Requires KiCad 10.0.x and Python 3.  The generated schematic embeds its symbols.
 
 ```bash
-python3 grape/pcb/tools/generate_schematic.py
-kicad-cli sch upgrade --force grape/pcb/src/grape.kicad_sch
+kicad-cli sch upgrade --force boards/grape/board/src/grape.kicad_sch
 kicad-cli sch erc --severity-all \
-  -o grape/pcb/erc.rpt grape/pcb/src/grape.kicad_sch
+  -o boards/grape/board/erc.rpt boards/grape/board/src/grape.kicad_sch
 kicad-cli sch export pdf \
-  -o grape/pcb/schematic.pdf grape/pcb/src/grape.kicad_sch
-python3 grape/pcb/tools/generate_board.py
+  -o boards/grape/board/schematic.pdf boards/grape/board/src/grape.kicad_sch
+python3 boards/grape/board/tools/generate_board.py
 ```
 
 The board generator synchronizes all 136 schematic footprints and their nets,
