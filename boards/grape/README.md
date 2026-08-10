@@ -15,8 +15,12 @@ Xilinx Artix-7 has more LUT cores and more fast signal processing units.
 - Recovery: external six-pin JTAG header, `PROGRAM_B`, and true cold-reset
 - FPGA package and decoupling: FTG256, based on AMD UG475/UG483
 
-The KiCad project is in [`pcb/src`](pcb/src).  No PCB layout has been created
-yet.
+The KiCad project is in [`pcb/src`](pcb/src).  The 84 mm x 64 mm, four-layer
+PCB currently contains a complete component placement and board outline only;
+routing, vias and copper zones have deliberately not been started yet.
+
+- [Front placement PDF](pcb/board.pdf)
+- [Back placement PDF](pcb/board-back.pdf)
 
 ## Important design choices
 
@@ -53,7 +57,13 @@ kicad-cli sch erc --severity-all \
   -o grape/pcb/erc.rpt grape/pcb/src/grape.kicad_sch
 kicad-cli sch export pdf \
   -o grape/pcb/schematic.pdf grape/pcb/src/grape.kicad_sch
+python3 grape/pcb/tools/generate_board.py
 ```
+
+The board generator synchronizes all 136 schematic footprints and their nets,
+places 112 footprints on the front and 24 FPGA power-decoupling footprints on
+the back, and leaves every net unrouted.  PCB DRC therefore reports the
+expected unconnected-pad items until routing begins.
 
 ## Before PCB fabrication
 

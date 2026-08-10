@@ -15,8 +15,8 @@ selectable FPGA images:
 
 - Image 0 is the protected USB bootloader and SPI flash programmer.
 - Images 1, 2, and 3 are replaceable user designs.
-- A two-bit slide/DIP switch drives `CBSEL[1:0]` and selects the image used for
-  a cold boot.
+- Two normally-open solder jumpers drive `CBSEL[1:0]` and select the image used
+  for a cold boot. An open jumper is `0`; a solder bridge is `1`.
 - Warm boot commands select images under host control without changing the
   physical switch.
 
@@ -72,11 +72,11 @@ will be fitted.
 
 ## User-visible state machine
 
-The mode switch drives the iCE40 cold-boot selection pin and is sampled by the
-hard configuration controller after every cold start. Changing the switch does
+The mode jumpers drive the iCE40 cold-boot selection pins and are sampled by the
+hard configuration controller after every cold start. Changing a jumper does
 not alter the running configuration until `RESET` is pressed.
 
-| Slide-switch value | Cold-boot image | Intended use                           | USB presented to the host                |
+| Jumper value       | Cold-boot image | Intended use                           | USB presented to the host                |
 | ------------------ | --------------- | -------------------------------------- | ---------------------------------------- |
 | `00`               | Image 0         | Development, programming, recovery     | Bootloader CDC/programming protocol      |
 | `01`               | Image 1         | Default production application         | Common BOOT service plus USB UART stream |
@@ -99,9 +99,9 @@ Boot sequence:
 
 USB disconnect/re-enumeration across a mode transition is intentional. There
 is no continuously resident USB block shared between the four images.
-The normal development workflow leaves the switch at `00`. Host commands write
+The normal development workflow leaves both jumpers open at `00`. Host commands write
 images 1-3 and select which one to run using `SB_WARMBOOT`. Production hardware
-normally leaves the switch at `01`, so image 1 starts autonomously without a
+normally bridges bit 0 for `01`, so image 1 starts autonomously without a
 USB host.
 
 ### Common BOOT service
@@ -124,7 +124,7 @@ asserted until reconfiguration clears the current logic.
 
 ## Host-controlled development workflow
 
-1. Leave the two-bit slide switch at `00` and press RESET once. Image 0 starts,
+1. Leave both solder jumpers open (`00`) and press RESET once. Image 0 starts,
    enumerates as the bootloader, and remains available indefinitely. The USB
    host may also be connected later; image 0 never times out automatically.
 2. The host selects destination image 1, 2, or 3, erases only that slot, writes
@@ -176,21 +176,21 @@ protection after factory programming, provided recovery tooling can explicitly
 unlock it.
 
 The factory image must contain a valid image 1, such as a USB CDC hello-world or
-LED example, so a new board gives a useful result with the switch at `01`.
+LED example, so a new board gives a useful result with the jumpers at `01`.
 Unused image 2 and 3 slots receive a small safe placeholder image with the USB
 manager, rather than erased or malformed configuration data.
 
 ## Mode controls and indicators
 
-### Two-bit cold-boot switch
+### Two-bit cold-boot solder jumpers
 
-- Retain a separate momentary `USER` button and add a two-section slide/DIP
-  switch labelled `IMAGE`, with visible bit labels `1` and `0`.
-- Connect bit 0 to dedicated cold-boot pin `CBSEL0`, FPGA ball G5.
-- Connect bit 1 to dedicated cold-boot pin `CBSEL1`, FPGA ball H5.
-- Give both pins 10 kOhm pull-downs so both switches open defaults safely to
-  image 0. Each closed switch connects its bit to 3.3 V through a small series
-  resistor, making the marked ON state equal to binary 1 while limiting current
+- Retain a separate momentary `USER` button and add two normally-open solder
+  jumpers labelled `IMAGE`, with visible bit labels `1` and `0`.
+- Connect bit 0 to dedicated cold-boot pin `CBSEL0`, FPGA ball L8.
+- Connect bit 1 to dedicated cold-boot pin `CBSEL1`, FPGA ball H9.
+- Give both pins 10 kOhm pull-downs so both jumpers open defaults safely to
+  image 0. Each bridged jumper connects its bit to 3.3 V through a small series
+  resistor, making the bridged state equal to binary 1 while limiting current
   if a future bitstream accidentally configures a CBSEL pin as an output.
 - Generate the combined flash image with cold boot enabled (`icemulti -c`).
 - After configuration, G5 and H5 become ordinary PIO, but both remain reserved
@@ -205,7 +205,7 @@ manager, rather than erased or malformed configuration data.
 - While the button is held, both 3.3 V and 1.2 V are disabled. The regulators'
   active output discharge removes the residual rail charge.
 - Releasing the button restarts both rails. The iCE40 configuration controller
-  samples both slide switches through `CBSEL[1:0]` and directly loads the
+  samples both solder jumpers through `CBSEL[1:0]` and directly loads the
   selected image.
 - Add an RC delay/debounce footprint on `PWR_EN`; choose final values after
   measuring the rail discharge and startup waveforms.
@@ -222,15 +222,15 @@ Add a dedicated amber LED labelled `PROG`:
 
 - Use FPGA ball J10, released by the package migration, as
   `prog_active`.
-- Drive the LED from the bootloader, rather than directly from the mode switch,
+- Drive the LED from the bootloader, rather than directly from the mode jumpers,
   so it reports the configuration that is actually active rather than the
   selection for the next reset.
 - `PROG` is on continuously while image 0 is accepting programmer commands.
 - It is off during reset and in the user image. The standard user wrapper drives
   the pin low; an arbitrary image that leaves the pin unused also leaves the
   LED off.
-- Retain the existing `PWR` and `CFG/CDONE` indicators. `PWR + CFG` on and
-  `PROG` off means one of images 1-3 is active.
+- Retain the `PWR` indicator and remove the `CFG/CDONE` LED circuit. Keep
+  `CDONE` itself pulled up as a configuration-status signal without an LED load.
 - Start with a 1 kOhm series resistor and verify brightness/current before BOM
   release.
 
@@ -240,9 +240,9 @@ Follow the TinyFPGA BX full-speed USB connection closely:
 
 | Function            | FPGA ball | Current Cherry use | Planned connection                           |
 | ------------------- | --------- | ------------------ | -------------------------------------------- |
-| USB D+              | B4        | `GPIO_28`          | Connector/ESD through 68 Ohm series resistor |
-| USB D-              | A4        | `GPIO_27`          | Connector/ESD through 68 Ohm series resistor |
-| USB pull-up control | A3        | `GPIO_31`          | 1.5 kOhm to D+                               |
+| USB D+              | B4        | `USB_DP_FPGA`      | Connector/ESD through 68 Ohm series resistor |
+| USB D-              | A4        | `USB_DM_FPGA`      | Connector/ESD through 68 Ohm series resistor |
+| USB pull-up control | A3        | `USB_PULLUP`       | 1.5 kOhm to D+                               |
 | Clock               | E10       | 48 MHz oscillator  | Direct global-clock input                     |
 
 - Retain the USB-C connector, both 5.1 kOhm CC pull-downs, and the low-capacitance
@@ -342,12 +342,13 @@ path for a damaged bootloader.
 
 - Remove the FT2232H and all dedicated FTDI power, reset, reference, USB,
   MPSSE, UART, and contention-guard parts after tracing every shared net.
-- Reconnect the USB pair, pull-up control, CBSEL mode switch, USER button, PROG
+- Reconnect the USB pair, pull-up control, CBSEL jumpers, USER button, PROG
   LED, QSPI IO2/IO3, regulator enables, and programming header as described
   above.
-- Reassign or remove expansion-header labels for B4/A4/A3/G5/H5/H4. J8 and H9
-  were previously internal UART connections and are repurposed. Only GPIO 1-36
-  remain published on J2/J3; GPIO 37-53 are not fitted on expansion headers.
+- Keep B4/A4/A3 dedicated to USB and assign GPIO 27/28/31 to the free HX8K
+  balls A9/B9/C9. J8 and H9 were previously internal UART connections and are
+  repurposed. Only GPIO 1-36 remain published on J2/J3; GPIO 37-53 are not
+  fitted on expansion headers.
 - Place USB resistors near the FPGA, ESD protection near the connector, and QSPI
   pull-ups near the flash. Reuse the right-edge six-pin header for GND,
   `CRESET_B`, and four-wire SPI programming; remove the redundant J4, J6, and
@@ -379,7 +380,7 @@ path for a damaged bootloader.
 - Continuous EP3 UART traffic cannot starve an EP1 BOOT request, and sustained
   EP2 flash transfers in image 0 still leave EP1 responsive.
 - A deliberately invalid user image remains recoverable with `00` plus RESET.
-- With the switch at production value `01`, power-up starts image 1 without a
+- With the jumpers at production value `01`, power-up starts image 1 without a
   USB host or any bootloader timeout.
 - Runtime single, dual, and quad flash reads pass across voltage and temperature
   targets; a subsequent RESET still cold-boots successfully.

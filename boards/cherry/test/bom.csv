@@ -1,0 +1,6 @@
+References,Quantity,Description,Manufacturer,Manufacturer Part,Populate,Notes
+P1-P54,54,100 mil spring probe 1.3 mm four-point crown FEINMETALL,FEINMETALL,F10014S130L100,Yes,100 cN nominal spring force
+P1-P54,54,Solder receptacle for F100 probe FEINMETALL,FEINMETALL,H100LA-7.6,Yes,Insert from top and solder on bottom
+J1,1,2x5 2.54 mm right-angle pin header,Generic,2x5 right-angle male,Yes,Fixture-specific pinout
+MH1-MH4,4,M3 mounting hardware,Generic,M3,Mechanical,For guide plate or clamp
+

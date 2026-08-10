@@ -23,6 +23,74 @@ BOARD_TOP = 20.0
 BOARD_RIGHT = 104.0
 BOARD_BOTTOM = 84.0
 
+GRAPE_STACKUP = """\
+\t\t(stackup
+\t\t\t(layer "F.SilkS"
+\t\t\t\t(type "Top Silk Screen")
+\t\t\t\t(color "White")
+\t\t\t)
+\t\t\t(layer "F.Paste"
+\t\t\t\t(type "Top Solder Paste")
+\t\t\t)
+\t\t\t(layer "F.Mask"
+\t\t\t\t(type "Top Solder Mask")
+\t\t\t\t(color "Purple")
+\t\t\t\t(thickness 0.01)
+\t\t\t)
+\t\t\t(layer "F.Cu"
+\t\t\t\t(type "copper")
+\t\t\t\t(thickness 0.035)
+\t\t\t)
+\t\t\t(layer "dielectric 1"
+\t\t\t\t(type "prepreg")
+\t\t\t\t(thickness 0.2104)
+\t\t\t\t(material "FR4")
+\t\t\t\t(epsilon_r 4.4)
+\t\t\t\t(loss_tangent 0.02)
+\t\t\t)
+\t\t\t(layer "In1.Cu"
+\t\t\t\t(type "copper")
+\t\t\t\t(thickness 0.0152)
+\t\t\t)
+\t\t\t(layer "dielectric 2"
+\t\t\t\t(type "core")
+\t\t\t\t(thickness 1.065)
+\t\t\t\t(material "FR4")
+\t\t\t\t(epsilon_r 4.6)
+\t\t\t\t(loss_tangent 0.02)
+\t\t\t)
+\t\t\t(layer "In2.Cu"
+\t\t\t\t(type "copper")
+\t\t\t\t(thickness 0.0152)
+\t\t\t)
+\t\t\t(layer "dielectric 3"
+\t\t\t\t(type "prepreg")
+\t\t\t\t(thickness 0.2104)
+\t\t\t\t(material "FR4")
+\t\t\t\t(epsilon_r 4.4)
+\t\t\t\t(loss_tangent 0.02)
+\t\t\t)
+\t\t\t(layer "B.Cu"
+\t\t\t\t(type "copper")
+\t\t\t\t(thickness 0.035)
+\t\t\t)
+\t\t\t(layer "B.Mask"
+\t\t\t\t(type "Bottom Solder Mask")
+\t\t\t\t(color "Purple")
+\t\t\t\t(thickness 0.01)
+\t\t\t)
+\t\t\t(layer "B.Paste"
+\t\t\t\t(type "Bottom Solder Paste")
+\t\t\t)
+\t\t\t(layer "B.SilkS"
+\t\t\t\t(type "Bottom Silk Screen")
+\t\t\t\t(color "White")
+\t\t\t)
+\t\t\t(copper_finish "HASL with lead")
+\t\t\t(dielectric_constraints no)
+\t\t)
+"""
+
 
 def at(x: float, y: float) -> pcbnew.VECTOR2I:
     return pcbnew.VECTOR2I_MM(x, y)
@@ -101,15 +169,15 @@ def component_placements() -> dict[str, tuple[float, float, float, str]]:
         "C19": (47.5, 63.0, 0.0, "F"),
         "C20": (47.5, 66.0, 0.0, "F"),
         # FPGA bulk and medium-frequency decoupling.
-        "C21": (49.0, 52.5, 90.0, "F"),
-        "C22": (49.0, 57.5, 90.0, "F"),
+        "C21": (50.0, 53.5, 90.0, "F"),
+        "C22": (50.0, 58.0, 90.0, "B"),
         "C23": (55.0, 40.0, 0.0, "F"),
         "C24": (58.0, 40.0, 0.0, "F"),
         "C29": (39.5, 61.0, 0.0, "F"),
         "C30": (61.5, 40.0, 0.0, "F"),
         "C31": (64.5, 40.0, 0.0, "F"),
         "C35": (68.5, 40.0, 0.0, "F"),
-        "C36": (72.8, 39.5, 0.0, "F"),
+        "C36": (73.2, 39.0, 0.0, "F"),
         "C37": (75.0, 44.0, 90.0, "F"),
         "C38": (91.5, 57.5, 90.0, "F"),
         "C39": (70.5, 64.0, 0.0, "F"),
@@ -143,12 +211,12 @@ def component_placements() -> dict[str, tuple[float, float, float, str]]:
         "R26": (60.0, 32.5, 0.0, "F"),
         "R27": (77.5, 29.5, 0.0, "F"),
         # QSPI series row and flash pull resistors.
-        "R40": (76.5, 47.5, 0.0, "F"),
-        "R41": (76.5, 50.0, 0.0, "F"),
-        "R42": (76.5, 52.5, 0.0, "F"),
-        "R43": (76.5, 55.0, 0.0, "F"),
-        "R44": (76.5, 57.5, 0.0, "F"),
-        "R45": (76.5, 60.0, 0.0, "F"),
+        "R40": (76.5, 48.0, 0.0, "F"),
+        "R41": (76.5, 50.5, 0.0, "F"),
+        "R42": (76.5, 53.0, 0.0, "F"),
+        "R43": (76.5, 55.5, 0.0, "F"),
+        "R44": (76.5, 58.0, 0.0, "F"),
+        "R45": (76.5, 60.5, 0.0, "F"),
         "R46": (91.0, 47.5, 0.0, "F"),
         "R47": (91.0, 50.0, 0.0, "F"),
         "R48": (91.0, 52.5, 0.0, "F"),
@@ -287,7 +355,7 @@ def add_text(
 
 def add_silkscreen(board: pcbnew.BOARD) -> None:
     add_text(board, "NEXTMICON GRAPE", 34.0, 23.5, size=1.2)
-    add_text(board, "GPIO 0-27", 24.0, 23.0, size=0.8)
+    add_text(board, "GPIO 0-27", 24.5, 81.0, size=0.8)
     add_text(board, "GPIO 28-55", 98.5, 23.0, size=0.8)
     add_text(board, "USB", 58.5, 29.5, size=0.8)
     add_text(board, "POWER", 35.0, 58.0, size=0.9)
@@ -395,10 +463,24 @@ def create_board(netlist: ET.Element) -> pcbnew.BOARD:
     return board
 
 
+def add_grape_stackup(board_path: Path) -> None:
+    text = board_path.read_text(encoding="utf-8")
+    setup_marker = "\t(setup\n"
+    if "\t\t(stackup\n" in text:
+        raise ValueError("generated board already contains a stackup")
+    if setup_marker not in text:
+        raise ValueError("generated board contains no setup section")
+    board_path.write_text(
+        text.replace(setup_marker, setup_marker + GRAPE_STACKUP, 1),
+        encoding="utf-8",
+    )
+
+
 def main() -> None:
     netlist = export_netlist()
     board = create_board(netlist)
     pcbnew.SaveBoard(str(BOARD), board)
+    add_grape_stackup(BOARD)
     print(f"wrote {BOARD}")
 
 

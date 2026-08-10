@@ -14,8 +14,8 @@ set_io led1     J3
 set_io uart_rx  J8
 set_io uart_tx  J10
 
-# Logical GPIO numbering. GPIO_27, GPIO_28 and GPIO_31 are shared with the
-# native USB D-, D+ and pull-up-control nets on this board revision.
+# Logical GPIO numbering. All 36 header GPIOs have independent HX8K balls;
+# the native USB D-, D+ and pull-up-control nets remain dedicated.
 set_io gpio_1   C2
 set_io gpio_2   B2
 set_io gpio_3   B1
@@ -43,11 +43,11 @@ set_io gpio_23  B6
 set_io gpio_24  A6
 set_io gpio_25  B5
 set_io gpio_26  C7
-set_io gpio_27  A4
-set_io gpio_28  B4
+set_io gpio_27  A9
+set_io gpio_28  B9
 set_io gpio_29  D5
 set_io gpio_30  C8
-set_io gpio_31  A3
+set_io gpio_31  C9
 set_io gpio_32  B3
 set_io gpio_33  A2
 set_io gpio_34  A1

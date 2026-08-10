@@ -17,8 +17,8 @@ FPGA Board for Beginners
 - Power: USB 5V → 3.3V → 1.2V
 - Signal: 3.3V
 - USB ESD Protection
-- Switch: RESET / USER buttons, 2-bit Bitstream selector
-- LED: PWR / CFG / USER0 / USER1 / PROG
+- Switch: RESET / USER buttons, 2-bit solder-jumper Bitstream selector
+- LED: PWR / USER0 / USER1 / PROG
 - Board: 61mm x 31mm, 4-layer FR4
 
 ## Pinout
@@ -38,7 +38,6 @@ J2 and J3 have two contacts for every pin number; the inner and outer contacts a
 | U2      | [W25Q32JVSSIM](data/W25Q32JV.pdf) | SOIC-8 208mil | 32Mbit SPI Flash       | -      | [digikey](https://www.digikey.com/en/products/result?keywords=W25Q32JVSSIM)                    |
 | U3      | [iCE40HX8K-BG121](../parts/iCE40.pdf) | caBGA-121 0.8mm | FPGA 7680 LUTs      | -      | [digikey](https://www.digikey.com/en/products/result?keywords=ICE40HX8K-BG121)                  |
 | U4-U5   | [TPS62A02](data/TPS62A02.pdf)     | SOT-23-6      | 2A DC-DC Converter     | $0.25  | [digikey](https://www.digikey.jp/ja/products/detail/texas-instruments/TPS62A02PDDCR/22147220)  |
-| Q1      | BSS138                            | SOT-23        | CDONE LED buffer       | -      | generic                                                                                        |
 | D5      | USBLC6-2SC6                       | SOT-23-6      | USB ESD protection     | -      | [digikey](https://www.digikey.jp/ja/products/result?keywords=USBLC6-2SC6)                      |
 | X1      | OXETDLJANF-48.000000MHz           | 3.2x2.5mm     | 48MHz XO               | -      | generic                                                                                        |
 | FB1     | BLM21AG601SH1D                    | 0805          | Ferrite bead (USB VBUS)| $0.19  | [digikey](https://www.digikey.jp/ja/products/detail/murata-electronics/BLM21AG601SH1D/2588067) |
@@ -66,10 +65,10 @@ J2 and J3 have two contacts for every pin number; the inner and outer contacts a
 | R14-R15 | 68    | 0402 | 2   | USB D+/D- series termination               |
 | R16     | 1.5k  | 0402 | 1   | Software-controlled USB D+ pull-up         |
 | R17     | 10k   | 0402 | 1   | CRESET_B pull-up                           |
-| R19-R22 | 1k    | 0402 | 4   | LED current limiting                       |
-| D1-D4   | LED   | 0603 | 4   | PWR / CFG / USER0 / USER1                  |
+| R19,R21-R22,R29 | 1k | 0402 | 4 | LED current limiting                       |
+| D1,D3-D4,D6 | LED | 0603 | 4 | PWR / USER0 / USER1 / PROG                 |
 | SW1,SW3 | Tact  | SMD  | 2   | RESET / USER button                        |
-| SW2     | DIP x2| SMD  | 1   | IMAGE cold-boot selector                   |
+| JP1-JP2 | Open solder jumper | 1.3mm pitch | 2 | IMAGE selector; open = 0, bridged = 1  |
 
 ## Build
 

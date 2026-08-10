@@ -7,8 +7,7 @@
 3. With `CRESET_B` high, the iCE40 reads the W25Q32 over `QSPI_CS_B`,
    `QSPI_SCK`, `QSPI_IO0` and `QSPI_IO1`.
 4. After a valid image is loaded, the open-drain `CDONE` pin releases high via
-   R12. Q1 senses that node and sinks the CFG LED current; the LED no longer
-   loads the CDONE pull-up directly.
+   R12. `CDONE` remains available as a status signal but has no indicator LED.
 
 ## Programming through the external SPI header
 

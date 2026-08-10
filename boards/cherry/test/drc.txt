@@ -1,0 +1,499 @@
+** Drc report for fixture.kicad_pcb **
+** Created on 2026-08-10T19:08:31 **
+** Report includes: Errors, Warnings **
+
+** Found 133 DRC violations **
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(28.9100 mm, 47.0100 mm): Track [DUT_3V3] on F.Cu, length 10.9100 mm
+    @(26.3700 mm, 47.0100 mm): PTH pad 1 [DUT_5V] of J2_1
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(90.0000 mm, 41.9300 mm): Track [GND] on B.Cu, length 20.9300 mm
+    @(84.7900 mm, 39.3900 mm): Track [CRESET_B] on B.Cu, length 6.2100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(91.0000 mm, 39.3900 mm): Track [CRESET_B] on B.Cu, length 6.3900 mm
+    @(84.7900 mm, 36.8500 mm): Track [QSPI_CS_B] on B.Cu, length 7.2100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(91.0000 mm, 33.0000 mm): Track [CRESET_B] on B.Cu, length 12.0791 mm
+    @(94.0000 mm, 31.7700 mm): Track [QSPI_MOSI] on B.Cu, length 9.2300 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(90.0000 mm, 41.9300 mm): Track [GND] on B.Cu, length 20.9300 mm
+    @(84.7900 mm, 36.8500 mm): Track [QSPI_CS_B] on B.Cu, length 7.2100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(93.0000 mm, 38.5000 mm): Track [QSPI_SCK] on B.Cu, length 10.1607 mm
+    @(94.0000 mm, 31.7700 mm): Track [QSPI_MOSI] on B.Cu, length 9.2300 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(90.0000 mm, 41.9300 mm): Track [GND] on B.Cu, length 20.9300 mm
+    @(84.7900 mm, 31.7700 mm): Track [QSPI_MOSI] on B.Cu, length 9.2100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(92.0000 mm, 36.0000 mm): Track [QSPI_CS_B] on B.Cu, length 11.1528 mm
+    @(94.0000 mm, 31.7700 mm): Track [QSPI_MOSI] on B.Cu, length 9.2300 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(18.0000 mm, 59.0000 mm): Track [DUT_3V3] on F.Cu, length 80.0000 mm
+    @(41.6100 mm, 47.0100 mm): Track [GPIO1] on F.Cu, length 13.9900 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(20.0000 mm, 57.0000 mm): Track [DUT_5V] on F.Cu, length 77.0000 mm
+    @(41.6100 mm, 47.0100 mm): Track [GPIO1] on F.Cu, length 13.9900 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(94.0000 mm, 41.0000 mm): Track [QSPI_MOSI] on B.Cu, length 9.1705 mm
+    @(95.0000 mm, 29.2300 mm): Track [QSPI_MISO] on B.Cu, length 14.2700 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(41.6100 mm, 61.0000 mm): Track [GPIO1] on F.Cu, length 57.3900 mm
+    @(44.1500 mm, 47.0100 mm): Track [GPIO2] on F.Cu, length 15.9900 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(92.0000 mm, 36.0000 mm): Track [QSPI_CS_B] on B.Cu, length 11.1528 mm
+    @(93.0000 mm, 34.3100 mm): Track [QSPI_SCK] on B.Cu, length 4.1900 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(26.3700 mm, 47.0100 mm): Track [DUT_5V] on F.Cu, length 6.3700 mm
+    @(28.9100 mm, 47.0100 mm): Track [DUT_3V3] on F.Cu, length 10.9100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(90.0000 mm, 41.9300 mm): Track [GND] on B.Cu, length 20.9300 mm
+    @(84.7900 mm, 29.2300 mm): Track [QSPI_MISO] on B.Cu, length 10.2100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(91.0000 mm, 33.0000 mm): Track [CRESET_B] on B.Cu, length 12.0791 mm
+    @(95.0000 mm, 29.2300 mm): Track [QSPI_MISO] on B.Cu, length 14.2700 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(90.0000 mm, 41.9300 mm): Track [GND] on B.Cu, length 20.9300 mm
+    @(84.7900 mm, 34.3100 mm): Track [QSPI_SCK] on B.Cu, length 8.2100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(20.0000 mm, 47.0100 mm): Track [DUT_5V] on F.Cu, length 9.9900 mm
+    @(28.9100 mm, 47.0100 mm): Track [DUT_3V3] on F.Cu, length 10.9100 mm
+[shorting_items]: Items shorting two nets (nets DUT_5V and DUT_3V3)
+    Local override; error
+    @(26.3700 mm, 47.0100 mm): PTH pad 1 [DUT_5V] of J2_1
+    @(28.9100 mm, 47.0100 mm): Track [DUT_3V3] on F.Cu, length 10.9100 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(18.0000 mm, 59.0000 mm): Track [DUT_3V3] on F.Cu, length 80.0000 mm
+    @(44.1500 mm, 47.0100 mm): Track [GPIO2] on F.Cu, length 15.9900 mm
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(61.9300 mm, 47.0100 mm): Circle of J2_15 on F.Silkscreen
+    @(61.9300 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_15
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(64.4700 mm, 47.0100 mm): Circle of J2_16 on F.Silkscreen
+    @(64.4700 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_16
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(36.5300 mm, 24.1500 mm): Circle of J3_20 on F.Silkscreen
+    @(36.5300 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_20
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(26.3700 mm, 47.0100 mm): Circle of J2_1 on F.Silkscreen
+    @(26.3700 mm, 47.0100 mm): PTH pad 1 [DUT_5V] of J2_1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(28.9100 mm, 47.0100 mm): Circle of J2_2 on F.Silkscreen
+    @(28.9100 mm, 47.0100 mm): PTH pad 1 [DUT_3V3] of J2_2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(31.4500 mm, 47.0100 mm): Circle of J2_3 on F.Silkscreen
+    @(31.4500 mm, 47.0100 mm): PTH pad 1 [GND] of J2_3
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(33.9900 mm, 47.0100 mm): Circle of J2_4 on F.Silkscreen
+    @(33.9900 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(36.5300 mm, 47.0100 mm): Circle of J2_5 on F.Silkscreen
+    @(36.5300 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.0700 mm, 47.0100 mm): Circle of J2_6 on F.Silkscreen
+    @(39.0700 mm, 47.0100 mm): PTH pad 1 [CRESET_B] of J2_6
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.6100 mm, 47.0100 mm): Circle of J2_7 on F.Silkscreen
+    @(41.6100 mm, 47.0100 mm): PTH pad 1 [GPIO1] of J2_7
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(44.1500 mm, 47.0100 mm): Circle of J2_8 on F.Silkscreen
+    @(44.1500 mm, 47.0100 mm): PTH pad 1 [GPIO2] of J2_8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(46.6900 mm, 47.0100 mm): Circle of J2_9 on F.Silkscreen
+    @(46.6900 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_9
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(46.6900 mm, 24.1500 mm): Circle of J3_16 on F.Silkscreen
+    @(46.6900 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_16
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(44.1500 mm, 24.1500 mm): Circle of J3_17 on F.Silkscreen
+    @(44.1500 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_17
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(41.6100 mm, 24.1500 mm): Circle of J3_18 on F.Silkscreen
+    @(41.6100 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_18
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.0700 mm, 24.1500 mm): Circle of J3_19 on F.Silkscreen
+    @(39.0700 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_19
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(33.9900 mm, 24.1500 mm): Circle of J3_21 on F.Silkscreen
+    @(33.9900 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_21
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(31.4500 mm, 24.1500 mm): Circle of J3_22 on F.Silkscreen
+    @(31.4500 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_22
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(28.9100 mm, 24.1500 mm): Circle of J3_23 on F.Silkscreen
+    @(28.9100 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_23
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(26.3700 mm, 24.1500 mm): Circle of J3_24 on F.Silkscreen
+    @(26.3700 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_24
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(67.0100 mm, 47.0100 mm): Circle of J2_17 on F.Silkscreen
+    @(67.0100 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_17
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(69.5500 mm, 47.0100 mm): Circle of J2_18 on F.Silkscreen
+    @(69.5500 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_18
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(72.0900 mm, 47.0100 mm): Circle of J2_19 on F.Silkscreen
+    @(72.0900 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_19
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(74.6300 mm, 47.0100 mm): Circle of J2_20 on F.Silkscreen
+    @(74.6300 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_20
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(77.1700 mm, 47.0100 mm): Circle of J2_21 on F.Silkscreen
+    @(77.1700 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_21
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(79.7100 mm, 47.0100 mm): Circle of J2_22 on F.Silkscreen
+    @(79.7100 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_22
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.2500 mm, 47.0100 mm): Circle of J2_23 on F.Silkscreen
+    @(82.2500 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_23
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 47.0100 mm): Circle of J2_24 on F.Silkscreen
+    @(84.7900 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_24
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 41.9300 mm): Circle of J5_1 on F.Silkscreen
+    @(84.7900 mm, 41.9300 mm): PTH pad 1 [GND] of J5_1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(74.6300 mm, 24.1500 mm): Circle of J3_5 on F.Silkscreen
+    @(74.6300 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(72.0900 mm, 24.1500 mm): Circle of J3_6 on F.Silkscreen
+    @(72.0900 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_6
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(69.5500 mm, 24.1500 mm): Circle of J3_7 on F.Silkscreen
+    @(69.5500 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_7
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(67.0100 mm, 24.1500 mm): Circle of J3_8 on F.Silkscreen
+    @(67.0100 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 39.3900 mm): Circle of J5_2 on F.Silkscreen
+    @(84.7900 mm, 39.3900 mm): PTH pad 1 [CRESET_B] of J5_2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 36.8500 mm): Circle of J5_3 on F.Silkscreen
+    @(84.7900 mm, 36.8500 mm): PTH pad 1 [QSPI_CS_B] of J5_3
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 34.3100 mm): Circle of J5_4 on F.Silkscreen
+    @(84.7900 mm, 34.3100 mm): PTH pad 1 [QSPI_SCK] of J5_4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 31.7700 mm): Circle of J5_5 on F.Silkscreen
+    @(84.7900 mm, 31.7700 mm): PTH pad 1 [QSPI_MOSI] of J5_5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 24.1500 mm): Circle of J3_1 on F.Silkscreen
+    @(84.7900 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.2500 mm, 24.1500 mm): Circle of J3_2 on F.Silkscreen
+    @(82.2500 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(79.7100 mm, 24.1500 mm): Circle of J3_3 on F.Silkscreen
+    @(79.7100 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_3
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(77.1700 mm, 24.1500 mm): Circle of J3_4 on F.Silkscreen
+    @(77.1700 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.7900 mm, 29.2300 mm): Circle of J5_6 on F.Silkscreen
+    @(84.7900 mm, 29.2300 mm): PTH pad 1 [QSPI_MISO] of J5_6
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.2300 mm, 47.0100 mm): Circle of J2_10 on F.Silkscreen
+    @(49.2300 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_10
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.7700 mm, 47.0100 mm): Circle of J2_11 on F.Silkscreen
+    @(51.7700 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_11
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(54.3100 mm, 47.0100 mm): Circle of J2_12 on F.Silkscreen
+    @(54.3100 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_12
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(56.8500 mm, 47.0100 mm): Circle of J2_13 on F.Silkscreen
+    @(56.8500 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_13
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(59.3900 mm, 47.0100 mm): Circle of J2_14 on F.Silkscreen
+    @(59.3900 mm, 47.0100 mm): PTH pad 1 [<no net>] of J2_14
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(64.4700 mm, 24.1500 mm): Circle of J3_9 on F.Silkscreen
+    @(64.4700 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_9
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(61.9300 mm, 24.1500 mm): Circle of J3_10 on F.Silkscreen
+    @(61.9300 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_10
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(59.3900 mm, 24.1500 mm): Circle of J3_11 on F.Silkscreen
+    @(59.3900 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_11
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(56.8500 mm, 24.1500 mm): Circle of J3_12 on F.Silkscreen
+    @(56.8500 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_12
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(54.3100 mm, 24.1500 mm): Circle of J3_13 on F.Silkscreen
+    @(54.3100 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_13
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.7700 mm, 24.1500 mm): Circle of J3_14 on F.Silkscreen
+    @(51.7700 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_14
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.2300 mm, 24.1500 mm): Circle of J3_15 on F.Silkscreen
+    @(49.2300 mm, 24.1500 mm): PTH pad 1 [<no net>] of J3_15
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(26.3700 mm, 47.0100 mm): Footprint J2_1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(28.9100 mm, 47.0100 mm): Footprint J2_2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(31.4500 mm, 47.0100 mm): Footprint J2_3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(33.9900 mm, 47.0100 mm): Footprint J2_4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(36.5300 mm, 47.0100 mm): Footprint J2_5
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(39.0700 mm, 47.0100 mm): Footprint J2_6
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(41.6100 mm, 47.0100 mm): Footprint J2_7
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(44.1500 mm, 47.0100 mm): Footprint J2_8
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(46.6900 mm, 47.0100 mm): Footprint J2_9
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(49.2300 mm, 47.0100 mm): Footprint J2_10
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(51.7700 mm, 47.0100 mm): Footprint J2_11
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(54.3100 mm, 47.0100 mm): Footprint J2_12
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(56.8500 mm, 47.0100 mm): Footprint J2_13
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(59.3900 mm, 47.0100 mm): Footprint J2_14
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(61.9300 mm, 47.0100 mm): Footprint J2_15
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(64.4700 mm, 47.0100 mm): Footprint J2_16
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(67.0100 mm, 47.0100 mm): Footprint J2_17
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(69.5500 mm, 47.0100 mm): Footprint J2_18
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(72.0900 mm, 47.0100 mm): Footprint J2_19
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(74.6300 mm, 47.0100 mm): Footprint J2_20
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(77.1700 mm, 47.0100 mm): Footprint J2_21
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(79.7100 mm, 47.0100 mm): Footprint J2_22
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(82.2500 mm, 47.0100 mm): Footprint J2_23
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 47.0100 mm): Footprint J2_24
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 24.1500 mm): Footprint J3_1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(82.2500 mm, 24.1500 mm): Footprint J3_2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(79.7100 mm, 24.1500 mm): Footprint J3_3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(77.1700 mm, 24.1500 mm): Footprint J3_4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(74.6300 mm, 24.1500 mm): Footprint J3_5
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(72.0900 mm, 24.1500 mm): Footprint J3_6
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(69.5500 mm, 24.1500 mm): Footprint J3_7
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(67.0100 mm, 24.1500 mm): Footprint J3_8
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(64.4700 mm, 24.1500 mm): Footprint J3_9
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(61.9300 mm, 24.1500 mm): Footprint J3_10
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(59.3900 mm, 24.1500 mm): Footprint J3_11
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(56.8500 mm, 24.1500 mm): Footprint J3_12
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(54.3100 mm, 24.1500 mm): Footprint J3_13
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(51.7700 mm, 24.1500 mm): Footprint J3_14
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(49.2300 mm, 24.1500 mm): Footprint J3_15
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(46.6900 mm, 24.1500 mm): Footprint J3_16
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(44.1500 mm, 24.1500 mm): Footprint J3_17
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(41.6100 mm, 24.1500 mm): Footprint J3_18
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(39.0700 mm, 24.1500 mm): Footprint J3_19
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(36.5300 mm, 24.1500 mm): Footprint J3_20
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(33.9900 mm, 24.1500 mm): Footprint J3_21
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(31.4500 mm, 24.1500 mm): Footprint J3_22
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(28.9100 mm, 24.1500 mm): Footprint J3_23
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(26.3700 mm, 24.1500 mm): Footprint J3_24
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 41.9300 mm): Footprint J5_1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 39.3900 mm): Footprint J5_2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 36.8500 mm): Footprint J5_3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 34.3100 mm): Footprint J5_4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 31.7700 mm): Footprint J5_5
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(84.7900 mm, 29.2300 mm): Footprint J5_6
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(103.0000 mm, 24.0000 mm): Footprint J1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(12.0000 mm, 12.0000 mm): Footprint MH1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(103.0000 mm, 12.0000 mm): Footprint MH2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(12.0000 mm, 63.0000 mm): Footprint MH3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Fixture'
+    Local override; warning
+    @(103.0000 mm, 63.0000 mm): Footprint MH4
+
+** Found 2 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(31.4500 mm, 47.0100 mm): PTH pad 1 [GND] of J2_3
+    @(84.7900 mm, 41.9300 mm): Track [GND] on B.Cu, length 5.2100 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(39.0700 mm, 47.0100 mm): PTH pad 1 [CRESET_B] of J2_6
+    @(84.7900 mm, 39.3900 mm): PTH pad 1 [CRESET_B] of J5_2
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

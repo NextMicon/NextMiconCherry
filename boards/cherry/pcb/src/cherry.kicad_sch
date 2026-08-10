@@ -7224,6 +7224,184 @@
 			(embedded_fonts no)
 		)
 
+	(symbol "Jumper:SolderJumper_2_Open"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "JP"
+			(at 0 2.032 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_2_Open"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "solder jumper SPST"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SolderJumper*Open*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SolderJumper_2_Open_0_1"
+			(polyline
+				(pts
+					(xy -0.254 1.016) (xy -0.254 -1.016)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -0.254 -1.016)
+				(mid -1.2656 0)
+				(end -0.254 1.016)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start 0.254 1.016)
+				(mid 1.2656 0)
+				(end 0.254 -1.016)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 1.016) (xy 0.254 -1.016)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "SolderJumper_2_Open_1_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 3.81)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "Switch:SW_DIP_x02"
 			(pin_names
 				(offset 0)
@@ -9530,16 +9708,6 @@
 
 	(wire
 		(pts
-			(xy 266.7 203.2) (xy 266.7 207.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "961536e7-3791-42ea-923c-de331e855fd7")
-	)
-	(wire
-		(pts
 			(xy 318.77 60.96) (xy 321.31 60.96)
 		)
 		(stroke
@@ -10073,16 +10241,6 @@
 			(type default)
 		)
 		(uuid "c8a98af8-3606-4658-9759-25dccc7591a6")
-	)
-	(wire
-		(pts
-			(xy 266.7 214.63) (xy 266.7 224.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8d3fb3f-ad49-4e0c-8edd-083fa687e72f")
 	)
 	(wire
 		(pts
@@ -10761,36 +10919,6 @@
 		(uuid "3859dbae-ac54-47b5-9b3a-a5718858ea1a")
 	)
 
-	(label "CDONE"
-		(at 302.26 228.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3c51bfdf-8b32-4e26-821d-73a7df5a807d")
-	)
-	(label "CFG_LED_K"
-		(at 266.7 232.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a7a71b91-f64d-4112-be49-cb28c7fa287c")
-	)
-	(label "CFG_LED_K"
-		(at 309.88 223.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b8b9a93f-39d2-47cd-86cd-c24ebc626c36")
-	)
 	(label "USB_DP"
 		(at 57.15 198.12 0)
 		(effects
@@ -15134,249 +15262,6 @@
 	)
 
 	(symbol
-		(lib_id "Cherry:+3V3")
-		(at 266.7 203.2 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dfb043da-8a6b-4365-8e7e-54896e1a6cb8")
-		(property "Reference" "#PWR0682"
-			(at 266.7 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 266.7 199.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 266.7 203.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.7 203.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 266.7 203.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d0035bc0-755a-4f82-a578-bf3d856b846f")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "#PWR0682")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_GSD")
-		(at 307.34 228.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2d390e7c-1a44-4434-ac63-70b495dc5ce9")
-		(property "Reference" "Q1"
-			(at 312.42 226.695 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BSS138"
-			(at 312.42 228.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 312.42 226.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/BSS138.pdf"
-			(at 307.34 228.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "50V N-channel MOSFET, SOT-23; CDONE LED buffer"
-			(at 307.34 228.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C7420339"
-			(at 307.34 228.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b7203e20-d5b1-4bcb-97de-eeb60a2ef29e")
-		)
-		(pin "2"
-			(uuid "7bcf335b-2369-4e2d-ad3f-b6a6190b5198")
-		)
-		(pin "3"
-			(uuid "a39ad2a5-c5bd-4084-8995-19e56ea214e9")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Cherry:GND")
-		(at 309.88 233.68 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8e07c5d1-7547-4072-91bc-792c1575e92a")
-		(property "Reference" "#PWR0683"
-			(at 309.88 231.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 309.88 237.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 309.88 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 309.88 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 309.88 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ef9e45dc-d33b-4de8-b0ac-1195282e651c")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "#PWR0683")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Cherry:GND")
 		(at 109.22 226.06 0)
 		(unit 1)
@@ -15681,94 +15566,6 @@
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
 					(reference "#PWR0012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Cherry:R")
-		(at 266.7 210.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4faa35fb-9a3c-5cb1-9c17-79de1389d388")
-		(property "Reference" "R20"
-			(at 270.675 209.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 270.15 212.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Cherry:R_0402_1005Metric"
-			(at 309.88 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 309.88 180.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 309.88 180.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C11702"
-			(at 266.7 210.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6368c121-6246-49c7-83e9-b5f1ffbf5e74")
-		)
-		(pin "1"
-			(uuid "146f79cf-0ffb-4752-a28d-2f4e48556d32")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -23531,95 +23328,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Cherry:LED")
-		(at 266.7 228.6 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ec6e81d4-76fb-54bb-850c-b6e914afc00b")
-		(property "Reference" "D2"
-			(at 270.15 226.9 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "KT-0603R"
-			(at 270.675 230.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Cherry:LED_0603_1608Metric"
-			(at 321.31 187.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 321.31 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 321.31 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2286"
-			(at 266.7 228.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7a604a59-9c74-40ca-85f8-7c2137ce6eb5")
-		)
-		(pin "2"
-			(uuid "75d0ed1d-e222-4b9c-8eea-c3a6764994b0")
-		)
-		(instances
-			(project "cherry"
-				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-
-	(symbol
 		(lib_id "Cherry:GND")
 		(at 20.32 34.29 0)
 		(unit 1)
@@ -25991,7 +25699,7 @@
 			)
 		)
 	)
-	(text "IMAGE 1:0 (ON = 1)"
+	(text "IMAGE 1:0 (BRIDGE = 1)"
 		(exclude_from_sim no)
 		(at 177.8 106.68 0)
 		(effects
@@ -26004,81 +25712,131 @@
 		(uuid "b285a093-c73e-4ae6-ab2f-85398382a1c2")
 	)
 	(symbol
-		(lib_id "Switch:SW_DIP_x02")
-		(at 190.5 123.19 0)
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 190.5 120.65 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5268989a-3940-4340-9450-2369605fc8d7")
-		(property "Reference" "SW2"
-			(at 190.5 110.49 0)
+		(uuid "29ef283e-e67d-4ee8-a8ed-b78ef731548e")
+		(property "Reference" "JP1"
+			(at 190.5 117.602 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Value" "IMAGE SELECT"
-			(at 190.5 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects (font (size 1.27 1.27)))
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx02_Slide_Copal_CHS-02A_W5.08mm_P1.27mm_JPin"
+		(property "Value" "IMAGE0"
 			(at 190.5 123.19 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Datasheet" ""
-			(at 190.5 123.19 0)
-			(hide yes)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 190.5 120.65 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects (font (size 1.27 1.27)))
 		)
-		(property "Description" "Two-bit cold-boot image selector; ON connects CBSEL bit to 3.3 V"
-			(at 190.5 123.19 0)
-			(hide yes)
+		(property "Datasheet" "~"
+			(at 190.5 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects (font (size 1.27 1.27)))
 		)
-		(pin "1"
-			(uuid "2189f4f7-a9bd-4513-b53a-fd61a2fb4d3b")
+		(property "Description" "CBSEL0 solder jumper; open=0, bridged=1"
+			(at 190.5 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
 		)
-		(pin "2"
-			(uuid "4909ba96-c75d-4ab2-82ae-16e1d6927428")
-		)
-		(pin "3"
-			(uuid "82c7e70b-65a4-469f-ad50-8141605b835e")
-		)
-		(pin "4"
-			(uuid "2c4bbf67-5208-41ec-84e3-5310851a23e7")
-		)
+		(pin "1" (uuid "6f097e21-c8f9-43c3-83ea-dcdc7ca2df7f"))
+		(pin "2" (uuid "a94c896e-b313-4191-8c4d-9a75b1c7edd9"))
 		(instances
 			(project "cherry"
 				(path "/00000000-0000-0000-0000-000000000001"
-					(reference "SW2")
+					(reference "JP1")
 					(unit 1)
 				)
 			)
 		)
 	)
-
-
-
-
-
-
-
-
-
-
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 190.5 123.19 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d7e0eac5-ac7f-487a-8f75-07d0896daf89")
+		(property "Reference" "JP2"
+			(at 190.5 126.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "IMAGE1"
+			(at 190.5 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 190.5 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" "~"
+			(at 190.5 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "CBSEL1 solder jumper; open=0, bridged=1"
+			(at 190.5 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "6942aaa1-660d-4e28-926b-a6377b63beb5"))
+		(pin "2" (uuid "98cb2a41-12a2-4f28-a2af-879575cf3bee"))
+		(instances
+			(project "cherry"
+				(path "/00000000-0000-0000-0000-000000000001"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 195.58 120.65) (xy 198.12 120.65)
+		)
+		(stroke (width 0) (type default))
+		(uuid "5c97df51-b4c9-4dfc-8909-cdb20cbf4269")
+	)
+	(wire
+		(pts
+			(xy 195.58 123.19) (xy 198.12 123.19)
+		)
+		(stroke (width 0) (type default))
+		(uuid "4565c9fa-6fec-4109-9154-13b5f399dd41")
+	)
 	(wire
 		(pts
 			(xy 259.08 78.74) (xy 261.62 78.74)
@@ -26099,17 +25857,65 @@
 		)
 		(uuid "3a376ca4-f4d2-4d26-b71e-31756bc3dcd7")
 	)
-	(no_connect
-		(at 259.08 91.44)
-		(uuid "651a4e9c-5260-4b03-be74-8e901df0e9bb")
+	(wire
+		(pts
+			(xy 259.08 91.44) (xy 261.62 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3e1f696-4081-49ac-ab36-a2a0bbccca28")
 	)
-	(no_connect
-		(at 259.08 93.98)
-		(uuid "29e5ea2b-e84b-4bc4-b901-4c418e38ace9")
+	(label "GPIO_27"
+		(at 261.62 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a61bdcb-7245-4879-bc39-a63a8ded6a43")
 	)
-	(no_connect
-		(at 259.08 96.52)
-		(uuid "313e87b6-ea83-493e-8539-2b6c52fb0f52")
+	(wire
+		(pts
+			(xy 259.08 93.98) (xy 261.62 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37381388-ef1a-494e-8a3d-4f0cc50f3d22")
+	)
+	(label "GPIO_28"
+		(at 261.62 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "723ff5d6-93f5-41d2-bcac-ae4f338a59a2")
+	)
+	(wire
+		(pts
+			(xy 259.08 96.52) (xy 261.62 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfa2e2cd-d4fb-4877-bff9-efaf4be99185")
+	)
+	(label "GPIO_31"
+		(at 261.62 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a2e81864-dcbe-41f8-8c2b-189aa6a529a6")
 	)
 	(no_connect
 		(at 259.08 99.06)
@@ -26713,7 +26519,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 120.65) (xy 182.88 120.65)
+			(xy 180.34 120.65) (xy 185.42 120.65)
 		)
 		(stroke
 			(width 0)
@@ -26723,7 +26529,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 123.19) (xy 182.88 123.19)
+			(xy 180.34 123.19) (xy 185.42 123.19)
 		)
 		(stroke
 			(width 0)
@@ -26921,20 +26727,65 @@
 
 
 
-	(no_connect
-		(at 350.52 73.66)
-		(uuid "d2f2e2ae-9b34-55b3-b7be-bd908c0af20c")
+	(wire
+		(pts
+			(xy 347.98 73.66) (xy 350.52 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "434da80f-ed67-4e23-8185-3529ad825da2")
 	)
-	(no_connect
-		(at 350.52 63.5)
-		(uuid "885e0fe5-b083-5a2d-81ea-833a7b3a1635")
+	(label "GPIO_31"
+		(at 347.98 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f4934486-7294-4861-8194-0d2532f8f0c6")
 	)
-
-
-
-	(no_connect
-		(at 350.52 66.04)
-		(uuid "d2bb5a50-2b5e-5c4d-9da6-2bc54a1d4998")
+	(wire
+		(pts
+			(xy 347.98 63.5) (xy 350.52 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50fc9c33-5c50-4a2a-bbe7-429c26c0018d")
+	)
+	(label "GPIO_27"
+		(at 347.98 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "92885bfb-f012-4ba3-951c-527362db11af")
+	)
+	(wire
+		(pts
+			(xy 347.98 66.04) (xy 350.52 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a16ec8b5-420f-4f50-94f0-b138984eb687")
+	)
+	(label "GPIO_28"
+		(at 347.98 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "710dafc7-3d75-4ec4-8d4f-5435622f410c")
 	)
 
 
