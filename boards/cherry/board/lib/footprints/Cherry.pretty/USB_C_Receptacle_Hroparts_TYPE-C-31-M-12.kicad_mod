@@ -90,9 +90,4 @@
 		(drill 0.6) (layers "*.Cu" "*.Mask"))
 	(pad "" np_thru_hole circle (at 2.9 -1.206) (size 0.6 0.6)
 		(drill 0.6) (layers "*.Cu" "*.Mask"))
-	(model "${KIPRJMOD}/../lib/3dmodels/Cherry.3dshapes/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"
-		(offset (xyz 0 0 0))
-		(scale (xyz 1 1 1))
-		(rotate (xyz 0 0 0))
-	)
 )

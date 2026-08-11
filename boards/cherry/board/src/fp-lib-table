@@ -1,4 +1,6 @@
 (fp_lib_table
   (version 7)
   (lib (name "Cherry")(type "KiCad")(uri "${KIPRJMOD}/../lib/footprints/Cherry.pretty")(options "")(descr "Cherry project local footprints"))
+  (lib (name "Connector_PinHeader_2.54mm")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Connector_PinHeader_2.54mm.pretty")(options "")(descr "KiCad standard 2.54 mm pin headers"))
+  (lib (name "Jumper")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Jumper.pretty")(options "")(descr "KiCad standard solder jumpers"))
 )
