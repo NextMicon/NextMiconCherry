@@ -9669,7 +9669,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "W25Q32JVSSIM"
+	(symbol "W25Q32JVSSIQ"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -9685,7 +9685,7 @@
 				)
 			)
 		)
-		(property "Value" "W25Q32JVSSIM"
+		(property "Value" "W25Q32JVSSIQ"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9728,7 +9728,7 @@
 				)
 			)
 		)
-		(symbol "W25Q32JVSSIM_0_1"
+		(symbol "W25Q32JVSSIQ_0_1"
 			(rectangle
 				(start -10.16 8.89)
 				(end 10.16 -8.89)
@@ -9741,7 +9741,7 @@
 				)
 			)
 		)
-		(symbol "W25Q32JVSSIM_1_1"
+		(symbol "W25Q32JVSSIQ_1_1"
 			(pin input line
 				(at 12.7 6.35 180)
 				(length 2.54)

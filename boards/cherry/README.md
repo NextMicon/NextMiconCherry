@@ -18,12 +18,13 @@ FPGA Board for Beginners
 
 - FPGA: Lattice iCE40HX8K-BG121 (7680 LUTs, 9x9mm, 0.8mm pitch)
 - GPIO: 64 pins (3.3V logic)
+- PLL: 2x sysCLOCK PLL, external reference inputs broken out on J3 position 22 (PLL0_IN/PLL1_IN)
 - Clock: 48MHz
 - Flash: 32Mbit SPI Flash (3.5 MiB user-data area)
 - Power: USB 5V → 3.3V → 1.2V
 - Signal: 3.3V
 - USB ESD Protection
-- Switch: PWR (power-cycle reset) / USER buttons
+- Switch: CRESET_B reset / USER buttons
 - LED: PWR / PROG / USER0-USER3
 - Board: 61mm x 31mm, 4-layer FR4
 
@@ -67,7 +68,8 @@ J3 (top edge, position 24 = USB side):
 | 12-15    | GPIO_49..52          | GPIO_53..56           |
 | 16       | GND                  | 3V3                   |
 | 17-20    | GPIO_57..60          | GPIO_61..64           |
-| 21-22    | GND                  | 3V3                   |
+| 21       | GND                  | 3V3                   |
+| 22       | PLL0_IN              | PLL1_IN               |
 | 23       | 3V3                  | 3V3                   |
 | 24       | 5V                   | 5V                    |
 
@@ -84,7 +86,7 @@ utility header.
 
 | Ref   | Part                                     | Package         | Description              | Cost  | Buy                                                                                           |
 | ----- | ---------------------------------------- | --------------- | ------------------------ | ----- | --------------------------------------------------------------------------------------------- |
-| U1    | [W25Q32JVSSIM](../../parts/W25Q32JV.pdf) | SOIC-8 208mil   | 32Mbit SPI Flash         | -     | [digikey](https://www.digikey.com/en/products/result?keywords=W25Q32JVSSIM)                   |
+| U1    | [W25Q32JVSSIQ](../../parts/W25Q32JV.pdf) | SOIC-8 208mil   | 32Mbit SPI Flash         | -     | [digikey](https://www.digikey.com/en/products/result?keywords=W25Q32JVSSIQ)                   |
 | U2    | [iCE40HX8K-BG121](../../parts/iCE40.pdf) | caBGA-121 0.8mm | FPGA 7680 LUTs           | -     | [digikey](https://www.digikey.com/en/products/result?keywords=ICE40HX8K-BG121)                |
 | U3-U4 | [TPS62A02](../../parts/TPS62A02.pdf)     | SOT-23-6        | 2A DC-DC Converter       | $0.25 | [digikey](https://www.digikey.jp/ja/products/detail/texas-instruments/TPS62A02PDDCR/22147220) |
 | D1    | USBLC6-2SC6                              | SOT-23-6        | USB ESD protection       | -     | [digikey](https://www.digikey.jp/ja/products/result?keywords=USBLC6-2SC6)                     |
