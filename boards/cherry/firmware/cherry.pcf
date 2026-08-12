@@ -9,54 +9,91 @@ set_io clk_48m E10
 set_io btn      C4
 set_io led0     J4
 set_io led1     J3
+set_io led2     J5
+set_io led3     K5
 
 # Optional runtime aliases.  These pins are shared with QSPI_IO3 and PROG_LED.
 set_io uart_rx  J8
 set_io uart_tx  J10
 
-# Logical GPIO numbering. All 36 header GPIOs have independent HX8K balls;
+# Logical GPIO numbering. All 64 header GPIOs have independent HX8K balls;
 # the native USB D-, D+ and pull-up-control nets remain dedicated.
-set_io gpio_1   C2
-set_io gpio_2   B2
-set_io gpio_3   B1
-set_io gpio_4   C1
-set_io gpio_5   D2
-set_io gpio_6   C3
-set_io gpio_7   D1
-set_io gpio_8   E1
-set_io gpio_9   E2
-set_io gpio_10  D3
-set_io gpio_11  E3
-set_io gpio_12  A5
-set_io gpio_13  F1
-set_io gpio_14  F3
-set_io gpio_15  G3
-set_io gpio_16  G1
-set_io gpio_17  G2
-set_io gpio_18  H2
+# GPIO_1..32 are on J2 and GPIO_33..64 on J3. Each block of eight occupies
+# one 2x4 window: D0-D3 on the inner (odd) row and D4-D7 directly opposite
+# on the outer (even) row of the same connector positions.
+set_io gpio_1  C2
+set_io gpio_2  B2
+set_io gpio_3  B1
+set_io gpio_4  C1
+set_io gpio_5  A2
+set_io gpio_6  A1
+set_io gpio_7  H1
+set_io gpio_8  J1
 
-set_io gpio_19  B8
-set_io gpio_20  A8
-set_io gpio_21  A7
-set_io gpio_22  B7
-set_io gpio_23  B6
-set_io gpio_24  A6
-set_io gpio_25  B5
-set_io gpio_26  C7
-set_io gpio_27  A9
-set_io gpio_28  B9
-set_io gpio_29  D5
-set_io gpio_30  C8
-set_io gpio_31  C9
-set_io gpio_32  B3
-set_io gpio_33  A2
-set_io gpio_34  A1
-set_io gpio_35  H1
-set_io gpio_36  J1
+set_io gpio_9  D2
+set_io gpio_10 C3
+set_io gpio_11 D1
+set_io gpio_12 E1
+set_io gpio_13 F2
+set_io gpio_14 F4
+set_io gpio_15 H3
+set_io gpio_16 J2
 
-# GPIO_37 through GPIO_53 are not exposed on this PCB revision.  The redundant
-# six-pin J4/J6 headers were removed, and J5 is reserved for external SPI flash
-# programming.
+set_io gpio_17 E2
+set_io gpio_18 D3
+set_io gpio_19 E3
+set_io gpio_20 A5
+set_io gpio_21 K1
+set_io gpio_22 K2
+set_io gpio_23 L1
+set_io gpio_24 L2
+
+set_io gpio_25 F1
+set_io gpio_26 F3
+set_io gpio_27 G3
+set_io gpio_28 G1
+set_io gpio_29 K3
+set_io gpio_30 L3
+set_io gpio_31 L4
+set_io gpio_32 K4
+
+set_io gpio_33 G2
+set_io gpio_34 H2
+set_io gpio_35 B8
+set_io gpio_36 A8
+set_io gpio_37 D7
+set_io gpio_38 A10
+set_io gpio_39 A11
+set_io gpio_40 B11
+
+set_io gpio_41 A7
+set_io gpio_42 B7
+set_io gpio_43 B6
+set_io gpio_44 A6
+set_io gpio_45 C11
+set_io gpio_46 D9
+set_io gpio_47 D10
+set_io gpio_48 D11
+
+set_io gpio_49 B5
+set_io gpio_50 C7
+set_io gpio_51 A9
+set_io gpio_52 B9
+set_io gpio_53 E8
+set_io gpio_54 E9
+set_io gpio_55 E11
+set_io gpio_56 F9
+
+set_io gpio_57 D5
+set_io gpio_58 C8
+set_io gpio_59 C9
+set_io gpio_60 B3
+set_io gpio_61 F10
+set_io gpio_62 G8
+set_io gpio_63 G10
+set_io gpio_64 G11
+
+# J4 is the six-pin header reserved for external SPI flash programming.
 
 # Reserved configuration bus.  These balls are shared by the W25Q32 and FPGA.
 # Do not expose them as ordinary user outputs.

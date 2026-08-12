@@ -1,4 +1,5 @@
 board/out/*
+breakout/out/*
 **/.history/
 *.lck
 *.kicad_prl

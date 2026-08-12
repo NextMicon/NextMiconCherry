@@ -1,9 +1,0 @@
-Reference,Quantity,Value,Populate,Note
-J1,1,2x24 2.54mm header,yes,Cherry J2 breakout
-J2,1,2x24 2.54mm header,yes,Cherry J3 breakout
-J3,1,1x6 2.54mm header,yes,Cherry J5 breakout
-P_J2_1-P_J2_24,24,H100LA-7.6 + F10014B130G150,selective,pogo for Cherry J2
-P_J3_1-P_J3_24,24,H100LA-7.6 + F10014B130G150,selective,pogo for Cherry J3
-P_J5_1-P_J5_6,6,H100LA-7.6 + F10014B130G150,selective,pogo for Cherry J5
-MH1-MH4,4,M3 NPTH,yes,clamp/side guide
-
