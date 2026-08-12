@@ -1,5 +1,11 @@
 # NextMicon FPGA
 
+**This repository has been split into per-board repositories and is archived.**
+Development continues at
+[NextMicon/cherry](https://github.com/NextMicon/cherry),
+[NextMicon/grape](https://github.com/NextMicon/grape), and
+[NextMicon/melon](https://github.com/NextMicon/melon).
+
 NextMicon is a family of open-source FPGA development boards. Choose the compact Cherry to get started, or Grape for a larger FPGA and more I/O.
 
 |       | [🍒 Cherry](boards/cherry/) | [🍇 Grape](boards/grape/)     | [🍈 Melon](boards/melon/)      |
